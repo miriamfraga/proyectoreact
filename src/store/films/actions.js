@@ -25,10 +25,10 @@ export function getFilms(){
      return async(dispatch)=>{
         dispatch(actionGetFilms())
         try {
-            const films = [];
-            const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=84d794a5b6f706450c3ee085b451575c&language=en-US`);
-            films.push(response.data)
-            dispatch(actionGetFilmsOk(films))
+            // const films = [];
+            const response = await axios.get('https://api.themoviedb.org/3/discover/movie?api_key=84d794a5b6f706450c3ee085b451575c');
+            // films.push(response.data)
+            dispatch(actionGetFilmsOk(response.data))
         } catch (error) {
             dispatch(actionGetFilmsFail(error))
         }
