@@ -1,10 +1,18 @@
 import './App.scss';
-import FilmsComponent from './components/FilmsComponent/FilmsComponent';
+
+import FilmsPage from './pages/FilmsPages/FilmsPage';
+
+
+
 
 function App() {
   return (
     <div className="App">
+
+    <FilmsPage></FilmsPage>
+
     
+
     </div>
   );
 }
