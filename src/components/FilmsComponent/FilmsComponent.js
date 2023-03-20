@@ -17,15 +17,35 @@ if(loadingFilms){
 }
   return (
   <div className={styles.FilmsComponent}>
-{films.map((film)=>{
+
+{films.map((film,index)=>{
+  return (
+    <div key={index}>
+    {film.map(f=>{
+     return(  <div key={f.id}>
+        <h1 > id:{f.id}</h1>
+        <h1>titulo:{f.original_title}</h1>
+        <h1>titulo:{f.release_date}</h1>
+        <h3>reseña:{f.overview}</h3>
+        <img src={f.backdrop_path} alt={f.title}></img>
+        <img src={f.poster_path} alt={f.title}></img>
+        <h3>popularity:{f.popularity}</h3>
+        {f.genre_ids.map((x,index)=>{
+return (
+  <ul key={index}>
+  <li> géneros id:{x}</li>
   
-  console.log(film.title)
-  
- 
- 
- 
   
   
+  </ul>
+)
+})}
+
+      </div>)
+    })}
+   </div>
+    
+  )
 })}
    
   </div>)
