@@ -3,7 +3,7 @@ import FilmsComponent from '../../components/FilmsComponent/FilmsComponent';
 const FilmsPage = () => {
   return (
     <div>
-      <FilmsComponent></FilmsComponent>
+      <FilmsComponent ></FilmsComponent>
     </div>
   )
 }

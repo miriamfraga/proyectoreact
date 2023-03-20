@@ -10,10 +10,24 @@ const FilmsComponent = () => {
   useEffect(()=>{
     dispatch(getFilms())
   }, [])
-
+if(loadingFilms){
+  return(
+    "Loading..."
+  )
+}
   return (
   <div className={styles.FilmsComponent}>
-    
+{films.map((film)=>{
+  
+  console.log(film.title)
+  
+ 
+ 
+ 
+  
+  
+})}
+   
   </div>)
 };
 
