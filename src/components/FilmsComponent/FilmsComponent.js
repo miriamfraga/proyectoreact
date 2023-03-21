@@ -1,8 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './FilmsComponent.module.scss';
+
+/* IMPORT STYLES */
+import styles from './FilmsComponent.scss';
+
+/* IMPORT USEDISPATCH USEEFFECT USESELECTOR */
 import { useDispatch, useEffect, useSelector } from 'react-redux';
+
+/* IMPORT GETFILMS */
 import {getFilms} from '../../store/films/actions';
+
 const FilmsComponent = () => { 
   
   const dispatch = useDispatch()

@@ -1,0 +1,23 @@
+/* -- START HEADERCOMPONENT STYLES -- */
+
+.header {
+    background-color: #e5e5e5;
+    
+    &-container {
+        margin: 0 auto;
+        width: 90%;
+        padding: 2em 0;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        height: 50px;
+    }
+}
+
+/* -- END FOOTERCOMPONENT STYLES -- */
