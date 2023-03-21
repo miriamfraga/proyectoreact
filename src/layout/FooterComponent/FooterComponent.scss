@@ -1,0 +1,55 @@
+/* -- START FOOTERCOMPONENT STYLES -- */
+
+.footer {
+    background-color: #101010;
+    
+    &-container {
+        margin: 0 auto;
+        width: 90%;
+        padding: 2em 0;
+    }
+
+    &-menu__section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nav, &__nav-social {
+        color: white;
+        padding: 2em 0;
+    }
+
+    &__ul, &__ul-social  {
+        display: flex;
+        gap: 2em;
+    }
+
+    &__a, &__a-social {
+        color: white;
+    
+
+        &:hover {
+            text-decoration: underline;
+            color: #02ffa1;
+        }
+    }
+
+    &-copyright__section {
+        display: flex;
+        gap: 2em;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    &-copyright__p {
+        color: white;
+        padding: 2em 0;
+    }
+
+    &__logo {
+        height: 50px;
+    }
+}
+
+/* -- END FOOTERCOMPONENT STYLES -- */

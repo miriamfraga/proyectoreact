@@ -1,0 +1,20 @@
+/* -- START NAVIGATIONCOMPONENT STYLES -- */
+
+.main-nav {
+    
+    &__ul {
+        display: flex;
+        gap: 1.5em;
+    }
+
+    &__link {
+        color: #101010;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* -- END NAVIGATIONCOMPONENT STYLES -- */

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './LoginComponent.module.scss';
+import styles from './LoginComponent.scss';
 
 const LoginComponent = () => (
   <div className={styles.LoginComponent}>
