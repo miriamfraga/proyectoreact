@@ -15,17 +15,21 @@ if(loadingFilms){
     "Loading..."
   )
 }
+ const urlImage = "https://image.tmdb.org/t/p/w500/"
   return (
   <section className="div__section">
 {/* --ANOTACIONES SOBRE OTROS DATOS EXTRAÍDOS EN NOTES-- */}
 {films.map((film,index)=>{
+
   return (
+   
     <ul key={index} className="div__section__ul">
     {film.map(f=>{
+      
      return(  <li key={f.id} className="div__section__ul__li">
 
-          <div className="div__section__ul__li__div">
-               <img className="div__section__ul__li__div__img" src={`https://image.tmdb.org/t/p/w500/${f.poster_path}`} alt={f.title} ></img>
+          <div className="div__section__ul__li__div">         
+               <img className="div__section__ul__li__div__img" src={`${urlImage}${f.poster_path}`}  alt={f.title} ></img>
           </div>
            <section className="section__div"> 
               <div className="section__div__wrapper"> 
