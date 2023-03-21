@@ -29,7 +29,7 @@ export function getFilms(){
              for (let i=1; i<20; i++){
                 const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=84d794a5b6f706450c3ee085b451575c&page=${i}`);
                  films.push(response.data.results)
-                 console.log(response.data.page,"response.data")
+                //  console.log(response.data.results,"response.data")
              }
             dispatch(actionGetFilmsOk(films))
             // console.log(response.data)
