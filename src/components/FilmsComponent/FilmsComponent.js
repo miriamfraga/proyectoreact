@@ -1,26 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 /* IMPORT STYLES */
-import styles from './FilmsComponent.scss';
+import './FilmsComponent.scss';
 
-/* IMPORT USEDISPATCH USEEFFECT USESELECTOR */
-import { useDispatch, useEffect, useSelector } from 'react-redux';
+/* IMPORT USEDISPATCH USESELECTOR */
+import { useDispatch, useSelector } from 'react-redux';
 
 /* IMPORT GETFILMS */
-import {getFilms} from '../../store/films/actions';
+import { getFilms } from '../../store/films/actions';
 
 const FilmsComponent = () => { 
   
   const dispatch = useDispatch()
   const {films, loadingFilms} = useSelector((state)=> state.FilmsReducer)
+
   useEffect(()=>{
     dispatch(getFilms())
   }, [])
- return <div className={styles.FilmsComponent}>
-    
-  </div>
-};
+
+  return (
+    <div></div>
+  )
+}
 
 FilmsComponent.propTypes = {};
 

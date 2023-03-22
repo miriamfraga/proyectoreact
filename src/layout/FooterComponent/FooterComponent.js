@@ -42,7 +42,7 @@ const FooterComponent = () => {
                     </nav>
                 </section>
                 <section className='footer-copyright__section section'>
-                    <p class="footer-copyright__p p">Copyright FilmsHub © {getCurrentYear()}</p>
+                    <p className="footer-copyright__p p">Copyright FilmsHub © {getCurrentYear()}</p>
                     <a className='footer-logo__a a' href='/'><img src={logo} className='footer__logo img' alt='logo'/></a>
                 </section>
             </div>

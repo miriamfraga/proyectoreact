@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import PopularFilmsComponent from '../../components/PopularFilmsComponent/PopularFilmsComponent';
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>HOME PAGE</h1>
-    </div>
+    <>
+    <PopularFilmsComponent></PopularFilmsComponent>
+    </>
   )
 }
 
