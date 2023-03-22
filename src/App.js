@@ -1,6 +1,7 @@
 import './App.scss';
 
 import FilmsPage from './pages/FilmsPages/FilmsPage';
+import VideoPage from './pages/VideoPage/VideoPage';
 
 
 
@@ -10,7 +11,7 @@ function App() {
     <div className="App">
 
     <FilmsPage ></FilmsPage>
-
+    <VideoPage></VideoPage>
     
 
     </div>
