@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './GenreComponent.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { getGenreFilms } from '../../store/genreFilms/actions';
+import { getGenreFilms } from '../../store/films/actions';
 
 const GenreComponent = () => { 
 
   const dispatch = useDispatch();
-  const {genres, loadingGenres}= useSelector((state)=> state.GenreFilmsReducer)
+  const {genres, loadingGenres}= useSelector((state)=> state.FilmsReducer)
   useEffect(()=>{
     dispatch(getGenreFilms())
   },[])
@@ -17,14 +17,14 @@ const GenreComponent = () => {
     "Loading..."
    )
   }
-  return(<div className="div">
+  return(<div>
 {genres.map((genre, index)=>{
-  return (<div key={index}  className='div__genres'>
+  return (<div key={index} className="div__wrapper">
     {genre.map((g)=>{
 return(
-  <div key={g.id}>
-   <h2>{g.name} </h2> 
-   <h3> {g.id}</h3>
+  <div  className='div__wrapper__genres' key={g.id}>
+  {/* {genre.id.includes("99")} */}
+   <button className='div__wrapper__genres__title'>{g.name} </button> 
   </div>
 )
     })}

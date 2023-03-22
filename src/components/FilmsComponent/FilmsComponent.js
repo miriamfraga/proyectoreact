@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import  './FilmsComponent.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import {getFilms} from '../../store/films/actions'
+import {getFilms} from '../../store/films/actions';
 const FilmsComponent = () => { 
 
   const dispatch = useDispatch()
