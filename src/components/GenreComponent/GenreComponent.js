@@ -22,7 +22,7 @@ const GenreComponent = () => {
   return (<div key={index}  className='div__genres'>
     {genre.map((g)=>{
 return(
-  <div>
+  <div key={g.id}>
    <h2>{g.name} </h2> 
    <h3> {g.id}</h3>
   </div>

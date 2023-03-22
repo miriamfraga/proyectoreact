@@ -31,6 +31,7 @@ export function getGenreFilms(){
             const response = await axios.get("https://api.themoviedb.org/3/genre/movie/list?api_key=84d794a5b6f706450c3ee085b451575c")
              genres.push(response.data.genres)
              dispatch(actionGetGenreOk(genres))
+             console.log(response.data)
             
         } catch (error) {
             dispatch(actionGetGenreFail)

@@ -26,8 +26,9 @@ export function getVideos(){
         try {
             const videos = [];
             for (let i=0; i<20; i++){
-                const response = await axios.get(`https://api.themoviedb.org/${i}/movie/videos?api_key=84d794a5b6f706450c3ee085b451575c&append_to_response=videos`)
-                 videos.push(response.data)
+                const response = await axios.get(`https://api.themoviedb.org/3/movie/${i}/videos?api_key=84d794a5b6f706450c3ee085b451575c&append_to_response=videos`)
+                 videos.push(response.data.results)
+                 console.log(response.data)
             }
             dispatch(actionGetVideosOk(videos))
         } catch (error) {
