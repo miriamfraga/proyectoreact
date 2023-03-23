@@ -1,10 +1,12 @@
-import { GET_FILMS, GET_FILMS_OK, GET_FILMS_FAIL, GET_FILMS_GENRE, GET_FILMS_GENRE_OK, GET_FILMS_GENRE_FAIL  } from "./actionTypes";
+import { GET_FILMS, GET_FILMS_OK, GET_FILMS_FAIL, GET_FILMS_GENRE, GET_FILMS_GENRE_OK, GET_FILMS_GENRE_FAIL, GET_DOC, GET_DOC_OK, GET_DOC_FAIL  } from "./actionTypes";
 
 const initialState ={
     films: [], 
     genres: [],
+    docs: [],
     loadingFilms: false,
     loadingGenres: false,
+    loadingDocs: false,
     error: { 
         message: ""
     }
@@ -29,6 +31,15 @@ export default function FilmsReducer(state = initialState, action){
             break 
             case GET_FILMS_GENRE_FAIL: 
             state = {...state, loadingGenres:false, error: {message: action.payload}}
+            break
+            case GET_DOC:
+            state = {...state, loadingDocs:true}
+            break
+            case GET_DOC_OK:
+            state = {...state, loadingDocs:false, docs:action.payload}
+            break
+            case GET_DOC_FAIL:
+            state = {...state, loadingDocs:false, error: {message: action.payload}}
             break
             default:
                 break

@@ -10,3 +10,6 @@
     // <ul key={index}>
     // {/* <li> géneros id:{x}</li> */}
     // </ul>
+    // <div className="section__div__wrapper">
+    // {/* <h3 className="section__div__wrapper__title">{f.release_date}</h3> */}
+//  </div>
