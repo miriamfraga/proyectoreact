@@ -10,10 +10,11 @@ const FilmsPage = () => {
   return (
     <div>
       <h1>FILMS PAGE</h1>
+      <GenreComponent></GenreComponent>
       <FilmsComponent ></FilmsComponent>
       <FilmsDocComponent></FilmsDocComponent>
       <RomanceFilmsComponent></RomanceFilmsComponent>
-      <GenreComponent></GenreComponent>
+     
     </div>
   )
 }
