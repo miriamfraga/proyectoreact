@@ -66,6 +66,7 @@ if(loadingFilms){
   )
 };
 
+
 FilmsComponent.propTypes = {};
 
 FilmsComponent.defaultProps = {};

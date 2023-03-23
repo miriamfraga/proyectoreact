@@ -1,4 +1,8 @@
-import { GET_FILMS, GET_FILMS_OK, GET_FILMS_FAIL, GET_FILMS_GENRE, GET_FILMS_GENRE_OK, GET_FILMS_GENRE_FAIL, GET_DOC, GET_DOC_OK, GET_DOC_FAIL  } from "./actionTypes";
+import { GET_FILMS, GET_FILMS_OK, GET_FILMS_FAIL,
+GET_FILMS_GENRE, GET_FILMS_GENRE_OK, GET_FILMS_GENRE_FAIL,
+GET_DOC, GET_DOC_OK, GET_DOC_FAIL,
+GET_POPULAR_FILMS,GET_POPULAR_FILMS_OK,GET_POPULAR_FILMS_FAIL
+} from "./actionTypes";
 
 const initialState ={
     films: [], 
@@ -7,10 +11,9 @@ const initialState ={
     loadingFilms: false,
     loadingGenres: false,
     loadingDocs: false,
-    error: { 
-        message: ""
-    }
 }
+
+ 
 export default function FilmsReducer(state = initialState, action){
 
     switch(action.type){
@@ -41,8 +44,21 @@ export default function FilmsReducer(state = initialState, action){
             case GET_DOC_FAIL:
             state = {...state, loadingDocs:false, error: {message: action.payload}}
             break
+            case GET_POPULAR_FILMS:
+            state = {...state, loadingFilms: true}
+            break
+
+        case GET_POPULAR_FILMS_OK:
+            state = {...state, loadingFilms:false, films: action.payload}
+            break
+
+        case GET_POPULAR_FILMS_FAIL:
+            state = {...state, loadingFilms:false, error: {message: action.payload}}
+            break
             default:
                 break
     }
 return state
+
+       
 }
