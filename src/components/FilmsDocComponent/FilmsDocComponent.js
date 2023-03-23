@@ -5,7 +5,7 @@ import './FilmsDocComponent.scss';
 //IMPORTACIONES DE HOOKS Y FUNCIÓN GETFILMSDOC
 import { useDispatch, useSelector } from 'react-redux';
 import { getFilmsDoc } from '../../store/films/actions';
-
+import { Link } from 'react-router-dom';
 //IMPORTACIONES DE SWIPER
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Navigation, Scrollbar} from 'swiper'
@@ -52,8 +52,10 @@ const FilmsDocComponent = () => {
         {docs.map((doc)=>
      
           <SwiperSlide key={doc.id} className="div__section__ul__li">
-           <li className="div__section__ul__li__div">         
+           <li className="div__section__ul__li__div">   
+           <Link to={`/film/${doc.id}`}>      
               <img className="div__section__ul__li__div__img" src={`${urlImage}${doc.poster_path}`}  alt={doc.title} ></img>
+              </Link> 
               <h2 className="section__div__wrapper__title">{doc.original_title}</h2>
            </li>
            </SwiperSlide>  )}

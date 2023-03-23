@@ -1,10 +1,11 @@
-// IMPORT COMPONENTS
+// IMPORT ACTIONS
 
 import { GET_FILMS, GET_FILMS_OK, GET_FILMS_FAIL,
          GET_FILMS_GENRE, GET_FILMS_GENRE_OK, GET_FILMS_GENRE_FAIL,
          GET_POPULAR_FILMS,GET_POPULAR_FILMS_OK, GET_POPULAR_FILMS_FAIL,
          GET_DOC, GET_DOC_OK, GET_DOC_FAIL,
-         GET_ROMANCE_FILMS, GET_ROMANCE_FILMS_OK, GET_ROMANCE_FILMS_FAIL}
+         GET_ROMANCE_FILMS, GET_ROMANCE_FILMS_OK, GET_ROMANCE_FILMS_FAIL,
+         GET_SINGLE_FILM, GET_SINGLE_FILM_OK, GET_SINGLE_FILM_FAIL}
          from "./actionTypes";
          
 // IMPORT AXIOS         
@@ -124,6 +125,28 @@ export function actionGetRomanceFilmsFail(error){
         payload:error
     }
 }
+
+/* GET SINGLE FILMS */
+export function actionGetSingleFilm(filmId){
+    return{
+        type: GET_SINGLE_FILM,
+        payload: filmId
+        
+    }
+}
+export function actionGetSingleFilmOK(film){
+    return{
+        type: GET_SINGLE_FILM_OK,
+        payload:film
+    }
+}
+export function actionGetSingleFilmFail(error){
+    return{
+        type: GET_SINGLE_FILM_FAIL,
+        payload:error
+    }
+}
+
 // -- API QUE TRAE LOS NOMBRES DE LOS GÉNEROS -- 
 
 export function getGenreFilms(){
@@ -199,5 +222,20 @@ export function getRomanceFilms(){
 
        }
       
+    }
+ }
+
+ //API QUE TRAE UNA SOLA PELI PARA LOS GÉNEROS DRAMA, ROMANCE Y DOCS
+
+ export function getSingleFilm(filmId){
+    return async (dispatch)=>{
+        dispatch(actionGetSingleFilm(filmId))
+        try {
+            const response = await axios.get(`${baseUrl}3/discover/movie/${filmId}${apiKey}`)
+            dispatch(actionGetSingleFilmOK(response.data.results))
+            //data o data results?
+        } catch (error) {
+            dispatch(actionGetSingleFilmFail(error))
+        }
     }
  }

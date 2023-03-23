@@ -5,6 +5,8 @@ import  './RomanceFilmsComponent.scss';
 // IMPORT DE LA FUNCIÓN QUE TRAE LAS PELIS Y HOOKS
 import { useDispatch, useSelector } from 'react-redux';
 import { getRomanceFilms } from '../../store/films/actions';
+import { Link } from 'react-router-dom';
+
 //IMPORTACIONES DE SWIPER
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Navigation, Scrollbar} from 'swiper'
@@ -50,8 +52,10 @@ return (
        {romanceFilms.map((film)=>
     
          <SwiperSlide key={film.id} className="div__section__ul__li">
-          <li className="div__section__ul__li__div">         
+          <li className="div__section__ul__li__div"> 
+          <Link to={`/film/${film.id}`}>         
              <img className="div__section__ul__li__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title} ></img>
+             </Link>
              <h2 className="section__div__wrapper__title">{film.original_title}</h2>
           </li>
           </SwiperSlide>  )}

@@ -5,6 +5,7 @@ import  './FilmsComponent.scss';
 // IMPORTACIONES DE HOOKS Y FUNCIÓN GETFILMS
 import { useDispatch, useSelector } from 'react-redux';
 import {getFilms} from '../../store/films/actions';
+import { Link } from 'react-router-dom';
 
 // IMPORTACIONES DE SWIPER 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -53,10 +54,14 @@ if(loadingFilms){
     
     
            <SwiperSlide key={film.id} className="div__section__ul__li">
-            <li className="div__section__ul__li__div">         
+          
+                <li className="div__section__ul__li__div">  
+                <Link to={`/film/${film.id}`}>        
                <img className="div__section__ul__li__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title} ></img>
+               </Link>  
                <h2 className="section__div__wrapper__title">{film.original_title}</h2>
             </li>
+            
             </SwiperSlide>  )}
               </ul>
               </Swiper>

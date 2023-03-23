@@ -6,7 +6,7 @@ import './PopularFilmsComponent.scss';
 
 /* IMPORT REDUX */
 import { useDispatch, useSelector } from 'react-redux';
-
+import { Link } from 'react-router-dom';
 // IMPORT GETPOPULARFILMS
 import { getPopularFilms } from '../../store/films/actions';
 
@@ -55,7 +55,9 @@ const PopularFilmsComponent = () => {
           {films.map((film) =>
             <SwiperSlide key={film.id}>
               <li className='popular-movies__li li'>
+              <Link to={`/film/${film.id}`}>   
                 <img src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} alt={film.title}/>
+                </Link>
                 <h4 className='popular-movies__h3 h3'>{film.title}</h4>
               </li>
             </SwiperSlide>)}
