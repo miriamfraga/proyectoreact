@@ -1,6 +1,7 @@
 /* IMPORT STYLES */
 import './App.scss';
 
+
 /* IMPORT REACT ROUTER */
 import { Route, Routes } from 'react-router-dom';
 
@@ -20,6 +21,7 @@ import LoginPage from './pages/LoginPage/LoginPage';
 function App() {
   return (
     <div className="App">
+
       <HeaderComponent></HeaderComponent>
       <main className='main'>
         <div className='main-container container'>

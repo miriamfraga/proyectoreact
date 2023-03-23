@@ -1,0 +1,21 @@
+
+*{
+    margin: 0 auto;
+    padding-inline-start: 0;
+}
+
+.div__wrapper{
+    display:flex;
+    // flex-direction: row;
+    background-color: aqua;
+    &__genres{
+        display:flex;
+        flex-direction: row;
+        background-color: beige;
+        width: 50%;
+
+        &__title{
+            display:flex;
+        }
+    }
+}
