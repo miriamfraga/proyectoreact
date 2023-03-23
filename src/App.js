@@ -16,6 +16,7 @@ import SeriesPage from './pages/SeriesPage/SeriesPage';
 import FavouritesPage from './pages/FavouritesPage/FavouritesPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import LoginPage from './pages/LoginPage/LoginPage';
+import SinglePage from './pages/SinglePage/SinglePage';
 
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
             <Route exact path='/favourites' element={<FavouritesPage/>}></Route>
             <Route exact path='/about' element={<AboutPage/>}></Route>
             <Route exact path='/login' element={<LoginPage/>}></Route>
+            <Route exact path='/film/:id' element={<SinglePage/>}></Route>
+
           </Routes>
         </div>
       </main>
