@@ -37,7 +37,7 @@ if(loadingFilms){
  const urlImage = "https://image.tmdb.org/t/p/w500/"
   return (
     <section className="div__section">
-      <h2>Las películas que vería Sartre después de una ruptura amorosa</h2>
+      <h2>Películas que desestresan de un "compiled whith problems"</h2>
       <Swiper style={{"--swiper-navigation-color": "#02ffa1", "--swiper-pagination-color": "#02ffa1", "--swiper-scrollbar-drag-bg-color": "#02ffa1" }}  
         modules={[Navigation, A11y, Scrollbar]}
         spaceBetween={50}
