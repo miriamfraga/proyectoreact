@@ -1,7 +1,6 @@
 /* IMPORT STYLES */
 import './App.scss';
 
-
 /* IMPORT REACT ROUTER */
 import { Route, Routes } from 'react-router-dom';
 
@@ -22,7 +21,6 @@ import SinglePage from './pages/SinglePage/SinglePage';
 function App() {
   return (
     <div className="App">
-
       <HeaderComponent></HeaderComponent>
       <main className='main'>
         <div className='main-container container'>
@@ -34,7 +32,6 @@ function App() {
             <Route exact path='/about' element={<AboutPage/>}></Route>
             <Route exact path='/login' element={<LoginPage/>}></Route>
             <Route exact path='/film/:id' element={<SinglePage/>}></Route>
-
           </Routes>
         </div>
       </main>
