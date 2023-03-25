@@ -20,7 +20,7 @@ const GenreComponent = () => {
   return(<select>
 {genres.map((genre, index)=>{
   return (
-     <option key={index}>{genre.name} </option>
+     <option key={index}>{genre.name}{genre.id}  </option>
  
 )
   

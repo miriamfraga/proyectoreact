@@ -1,0 +1,32 @@
+
+.wrapper{
+   display: flex;
+   flex-direction: column;
+    // background-color: blue;
+    flex-wrap: nowrap;
+}
+.section__wrapper{
+    background-color: red;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    &__div{
+        background-color: pink;
+        display:flex;
+        gap: 1em;
+        padding-inline-start: 0;
+        flex-wrap: wrap;
+        margin: 1%;
+         padding: 1%;
+    &__img{
+        
+        
+    }
+        &__title{
+          display:flex;
+             background-color: aqua;
+        }
+}
+
+}

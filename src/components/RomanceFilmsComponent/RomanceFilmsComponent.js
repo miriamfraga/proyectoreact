@@ -49,8 +49,9 @@ return (
       onSlideChange={() => console.log('slide change')}
     >
      <ul className="div__section__ul">
+     
        {romanceFilms.map((film)=>
-    
+        
          <SwiperSlide key={film.id} className="div__section__ul__li">
           <li className="div__section__ul__li__div"> 
           <Link to={`/film/${film.id}`}>         

@@ -5,7 +5,8 @@ import { GET_FILMS, GET_FILMS_OK, GET_FILMS_FAIL,
          GET_POPULAR_FILMS,GET_POPULAR_FILMS_OK, GET_POPULAR_FILMS_FAIL,
          GET_DOC, GET_DOC_OK, GET_DOC_FAIL,
          GET_ROMANCE_FILMS, GET_ROMANCE_FILMS_OK, GET_ROMANCE_FILMS_FAIL,
-         GET_SINGLE_FILM, GET_SINGLE_FILM_OK, GET_SINGLE_FILM_FAIL}
+         GET_SINGLE_FILM, GET_SINGLE_FILM_OK, GET_SINGLE_FILM_FAIL, 
+         GET_ALL_FILMS,GET_ALL_FILMS_OK,GET_ALL_FILMS_FAIL}
          from "./actionTypes";
          
 // IMPORT AXIOS         
@@ -16,7 +17,27 @@ const apiKey = '?api_key=84d794a5b6f706450c3ee085b451575c';
 const baseUrl = 'https://api.themoviedb.org/';
 
 
-/* GET FILMS */
+/* GET ALL FILMS */
+export function actionGetAll(){
+    return{
+        type: GET_ALL_FILMS
+        
+    }
+}
+export function actionGetAllOk(films){
+    return{
+        type:GET_ALL_FILMS_OK,
+        payload: films
+    }
+}
+export function actionGetAllFail(error){
+    return{
+        type:GET_ALL_FILMS_FAIL,
+        payload: error
+    }
+}
+
+/*GET DRAMA FILMS*/ 
 export function actionGetFilms(){
     return{
         type: GET_FILMS
@@ -91,10 +112,10 @@ export function actionGetPopularFilms(){
     }
 }
 
-export function actionGetPopularFilmsOk(popularFilms){
+export function actionGetPopularFilmsOk(films){
     return {
         type: GET_POPULAR_FILMS_OK,
-        payload: popularFilms
+        payload: films
     }
 }
 
@@ -162,13 +183,34 @@ export function getGenreFilms(){
     }
 }
 
+// -- API QUE TRAE TODAS LAS PELIS MEZCLADAS POR GÉNEROS--
+export function getAll(){
+    return async(dispatch)=>{
+        dispatch(actionGetAll())
+        try {
+            
+            const films= []
+            const response = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=10752|99|14&page=3`)
+            const response1 = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=36|10402|37&page=5`)
+            const response2 = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=36|10402|37&page=4`)
+              films.push(response1.data.results, response.data.results, response2.data.results)
+            dispatch(actionGetAllOk(films))
+            console.log(films, "1")
+        } catch (error) {
+            dispatch(actionGetAllFail(error))
+        }
+    }
+}
+
+
 // -- API QUE TRAE LAS PELIS DE GÉNERO DRAMA -- 
-export function getFilms(){
+export function getDramaFilms(){
     return async(dispatch)=>{
        dispatch(actionGetFilms())
        try {
                const response = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=18`);
                dispatch(actionGetFilmsOk(response.data.results))
+               console.log(response)
 
             }
         catch (error) {
@@ -233,7 +275,7 @@ export function getRomanceFilms(){
         try {
             const response = await axios.get(`${baseUrl}3/discover/movie/${filmId}${apiKey}`)
             dispatch(actionGetSingleFilmOK(response.data.results))
-            //data o data results?
+            {console.log(response.data)}
         } catch (error) {
             dispatch(actionGetSingleFilmFail(error))
         }

@@ -4,7 +4,7 @@ import  './FilmsComponent.scss';
 
 // IMPORTACIONES DE HOOKS Y FUNCIÓN GETFILMS
 import { useDispatch, useSelector } from 'react-redux';
-import {getFilms} from '../../store/films/actions';
+import { getDramaFilms} from '../../store/films/actions';
 import { Link } from 'react-router-dom';
 
 // IMPORTACIONES DE SWIPER 
@@ -23,8 +23,9 @@ const FilmsComponent = () => {
   const dispatch = useDispatch()
   const {films, loadingFilms} = useSelector((state)=> state.FilmsReducer)
   useEffect(()=>{
-    dispatch(getFilms())
+    dispatch(getDramaFilms())
   }, [])
+
 // MIENTRAS ESTÉ CARGANDO MUESTRA ESTO
 if(loadingFilms){
   return(
@@ -38,7 +39,7 @@ if(loadingFilms){
  const urlImage = "https://image.tmdb.org/t/p/w500/"
   return (
     <section className="div__section">
-      <h2>Películas que desestresan de un "compiled whith problems"</h2>
+      <h2>DRAMA : películas que desestresan de un "compiled whith problems"</h2>
       <Swiper style={{"--swiper-navigation-color": "#02ffa1", "--swiper-pagination-color": "#02ffa1", "--swiper-scrollbar-drag-bg-color": "#02ffa1" }}  
         modules={[Navigation, A11y, Scrollbar]}
         spaceBetween={50}
@@ -50,19 +51,18 @@ if(loadingFilms){
       >
 
        <ul className="div__section__ul">
-         {films.map((film)=>
-    
-    
-           <SwiperSlide key={film.id} className="div__section__ul__li">
-          
-                <li className="div__section__ul__li__div">  
-                <Link to={`/film/${film.id}`}>        
-               <img className="div__section__ul__li__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title} ></img>
-               </Link>  
-               <h2 className="section__div__wrapper__title">{film.original_title}</h2>
-            </li>
-            
-            </SwiperSlide>  )}
+       {films.map((film)=>
+  <SwiperSlide key={film.id} className="div__section__ul__li">
+ 
+       <li className="div__section__ul__li__div">  
+       <Link to={`/film/${film.id}`}>        
+      <img className="div__section__ul__li__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title} ></img>
+      </Link>  
+      <h2 className="section__div__wrapper__title">{film.original_title}</h2>
+   </li>
+   
+   </SwiperSlide>  )}    
+
               </ul>
               </Swiper>
            </section>

@@ -9,9 +9,13 @@ import FilmsReducer from "./films/reducer";
 /* IMPORT AUTH REDUCER */
 import AuthReducer from './auth/reducer';
 
+/* IMPORT VIDEO REDUCER */
+import VideosReducer from './videos/reducer'
+
 const rootReducer = combineReducers({
     FilmsReducer,
-    AuthReducer
+    AuthReducer,
+    VideosReducer
 
 })
 

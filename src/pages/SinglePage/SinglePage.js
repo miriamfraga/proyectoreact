@@ -9,10 +9,9 @@ const SinglePage = () => {
   const params = useParams()
   useEffect(()=>{
     dispatch(getSingleFilm(params.id))
-  })
+  },[])
   return (
     <div>
-    
       <SingleFilmComponent></SingleFilmComponent>
     </div>
   )

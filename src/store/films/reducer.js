@@ -3,15 +3,20 @@ GET_FILMS_GENRE, GET_FILMS_GENRE_OK, GET_FILMS_GENRE_FAIL,
 GET_DOC, GET_DOC_OK, GET_DOC_FAIL,
 GET_POPULAR_FILMS,GET_POPULAR_FILMS_OK,GET_POPULAR_FILMS_FAIL,
 GET_ROMANCE_FILMS, GET_ROMANCE_FILMS_OK, GET_ROMANCE_FILMS_FAIL, 
-GET_SINGLE_FILM, GET_SINGLE_FILM_OK, GET_SINGLE_FILM_FAIL
+GET_SINGLE_FILM, GET_SINGLE_FILM_OK, GET_SINGLE_FILM_FAIL, 
+GET_ALL_FILMS, GET_ALL_FILMS_OK, GET_ALL_FILMS_FAIL
 } from "./actionTypes";
 
 const initialState ={
     films: [], 
-    film: {},
+    // dFilms: [],
     romanceFilms: [],
     genres: [],
     docs: [],
+    // all: [],
+    film: {},
+    // loadingAll: false,
+    // loadingDrama: false,
     loadingFilms: false,
     loadingGenres: false,
     loadingDocs: false,
@@ -24,13 +29,23 @@ const initialState ={
 export default function FilmsReducer(state = initialState, action){
 
     switch(action.type){
-        case GET_FILMS:
+
+            case GET_ALL_FILMS: 
+            state ={...state, loadingFilms:true}
+            break
+            case GET_ALL_FILMS_OK: 
+            state ={...state, loadingFilms: false, films:action.payload}
+            break
+            case GET_ALL_FILMS_FAIL: 
+            state ={...state, loadingFilms: false, error:{message:action.payload}}
+            break
+            case GET_FILMS:
             state=   {...state, loadingFilms: true}
             break
-        case GET_FILMS_OK:
+            case GET_FILMS_OK:
             state = {...state, loadingFilms:false, films: action.payload}
             break
-        case GET_FILMS_FAIL:
+            case GET_FILMS_FAIL:
             state = {...state, loadingFilms:false, error: {message: action.payload}}
             break   
             case GET_FILMS_GENRE: 

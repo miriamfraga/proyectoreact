@@ -12,12 +12,13 @@ const SingleFilmComponent = () => {
     )
   }
   const urlImage = "https://image.tmdb.org/t/p/w500/"
-  return(<div className={styles.SingleFilmComponent}>
+  return(<div>
     <div>
-      <img src={`${urlImage}${film.poster_path}`} alt={film.title}></img>
-      <h2 className="section__div__wrapper__title">{film.original_title}</h2>
+      {/* <img src={`${film.poster_path}`} alt={film.title}></img> */}
+      {/* <h2 className="section__div__wrapper__title">{film.original_title}</h2> */}
       <h2 className="section__div__wrapper__title">{film.release_date}</h2>
-      <h3>{film.popularity}</h3>
+      <h3>hola{film.popularity}</h3>
+      {console.log(film)}
         
           </div>
   </div>)
