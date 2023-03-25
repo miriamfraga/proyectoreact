@@ -4,8 +4,11 @@ import './AllFilmsComponent.scss';
 import { useDispatch } from 'react-redux';
 import { getAll } from '../../store/films/actions';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 const AllFilmsComponent = () => { 
 
+  
   const dispatch  = useDispatch()
   const {films,loadingFilms}= useSelector((state)=>state.FilmsReducer)
   useEffect(()=>{
@@ -22,7 +25,10 @@ const AllFilmsComponent = () => {
     
   }
 
+
 const urlImage = "https://image.tmdb.org/t/p/w500/"
+
+/** --DOBLE MAPEO PARA UNIR PELÍCULAS DE DIFERENTES GÉNEROS DE UNA SOLA VEZ*/
 
  return(  <section className='section__wrapper'>
   {films.map((array)=> 
@@ -30,7 +36,7 @@ const urlImage = "https://image.tmdb.org/t/p/w500/"
 
     {array.map((film)=>
   <div className='section__wrapper__div'> 
-  <img  className="section__wrapper__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title}></img>
+  <Link to={`/film/${film.id}`}> <img  className="section__wrapper__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title}></img></Link>
   <div className='section__wrapper__div__title'>
   <h4>{film.original_title} </h4>
   {console.log(array.length)}

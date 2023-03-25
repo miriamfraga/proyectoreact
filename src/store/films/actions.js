@@ -6,7 +6,9 @@ import { GET_FILMS, GET_FILMS_OK, GET_FILMS_FAIL,
          GET_DOC, GET_DOC_OK, GET_DOC_FAIL,
          GET_ROMANCE_FILMS, GET_ROMANCE_FILMS_OK, GET_ROMANCE_FILMS_FAIL,
          GET_SINGLE_FILM, GET_SINGLE_FILM_OK, GET_SINGLE_FILM_FAIL, 
-         GET_ALL_FILMS,GET_ALL_FILMS_OK,GET_ALL_FILMS_FAIL}
+         GET_ALL_FILMS,GET_ALL_FILMS_OK,GET_ALL_FILMS_FAIL,
+         GET_SELECT, GET_SELECT_OK, GET_SELECT_FAIL
+        }
          from "./actionTypes";
          
 // IMPORT AXIOS         
@@ -15,7 +17,7 @@ import axios from "axios";
 //VARIABLES CON DATA INFO DE LA API
 const apiKey = '?api_key=84d794a5b6f706450c3ee085b451575c';
 const baseUrl = 'https://api.themoviedb.org/';
-
+const selectMovie = 'search/movie'
 
 /* GET ALL FILMS */
 export function actionGetAll(){
@@ -79,6 +81,27 @@ export function actionGetGenreFail(error){
     }
        
     
+}
+
+/* GET SELECT GENRE */
+
+export function actionGetSelect(param){
+    return{
+        type: GET_SELECT,
+        payload: param
+    }
+}
+export function actionGetSelectOk(select){
+    return{
+        type: GET_SELECT_OK,
+        payload: select
+    }
+}
+export function actionGetSelectFail(error){
+    return{
+        type: GET_SELECT_FAIL,
+        payload: error
+    }
 }
 
 /* GET DOCS */
@@ -183,6 +206,22 @@ export function getGenreFilms(){
     }
 }
 
+
+// -- FUNCIÓN PARA BINDEAR EL SELECT --
+
+export function getSelect(selectParam){
+    return async(dispatch)=>{
+        dispatch(actionGetSelect(selectParam))
+        try {
+            const response = await axios.get(`${baseUrl}3/${selectMovie}${apiKey}&query${selectParam}`)
+         dispatch(actionGetSelectOk(response.data.results))
+            
+        } catch (error) {
+            dispatch(actionGetSelectFail(error))
+        }
+    }
+}
+
 // -- API QUE TRAE TODAS LAS PELIS MEZCLADAS POR GÉNEROS--
 export function getAll(){
     return async(dispatch)=>{
@@ -195,7 +234,6 @@ export function getAll(){
             const response2 = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=36|10402|37&page=4`)
               films.push(response1.data.results, response.data.results, response2.data.results)
             dispatch(actionGetAllOk(films))
-            console.log(films, "1")
         } catch (error) {
             dispatch(actionGetAllFail(error))
         }

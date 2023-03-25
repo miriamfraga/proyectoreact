@@ -4,19 +4,18 @@ GET_DOC, GET_DOC_OK, GET_DOC_FAIL,
 GET_POPULAR_FILMS,GET_POPULAR_FILMS_OK,GET_POPULAR_FILMS_FAIL,
 GET_ROMANCE_FILMS, GET_ROMANCE_FILMS_OK, GET_ROMANCE_FILMS_FAIL, 
 GET_SINGLE_FILM, GET_SINGLE_FILM_OK, GET_SINGLE_FILM_FAIL, 
-GET_ALL_FILMS, GET_ALL_FILMS_OK, GET_ALL_FILMS_FAIL
+GET_ALL_FILMS, GET_ALL_FILMS_OK, GET_ALL_FILMS_FAIL,
+GET_SELECT, GET_SELECT_OK, GET_SELECT_FAIL
 } from "./actionTypes";
 
 const initialState ={
     films: [], 
-    // dFilms: [],
     romanceFilms: [],
     genres: [],
     docs: [],
-    // all: [],
     film: {},
-    // loadingAll: false,
-    // loadingDrama: false,
+    selectMovie: [],
+    loadingSelect: false,
     loadingFilms: false,
     loadingGenres: false,
     loadingDocs: false,
@@ -88,11 +87,21 @@ export default function FilmsReducer(state = initialState, action){
             state = {...state, loadingSingle:true}
             break
             case GET_SINGLE_FILM_OK:
-            state = {...state, loadingSingle:false, film:action.payload}
+            state = {...state, loadingSingle:false,  film:action.payload}
             break
             case GET_SINGLE_FILM_FAIL:
-            state = {...state, loadingSingle:false, error: {message:action.payload}}
+            state = {...state, loadingSingle:false, film: {}, error: {message:action.payload}}
             break
+            case GET_SELECT:
+            state= {...state, loadingSelect:true}
+            break
+            case GET_SELECT_OK:
+            state= {...state, loadingSelect:false, selectMovie: action.payload}
+            break
+            case GET_SELECT_FAIL:
+            state= {...state, loadingSelect:false, selectMovie: [], error:{message: action.payload}}
+            break
+
 
             
             default:
