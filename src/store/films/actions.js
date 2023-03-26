@@ -224,8 +224,8 @@ export function getAll() {
             // const response = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=10752|99|14&page=3`)
             const response1 = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=36|10402|37&page=5`)
             // const response2 = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=36|10402|37&page=4`)
-            films.push(response1.data.results)
-            // films.push(response1.data.results, response.data.results, response2.data.results)
+              films.push(response1.data.results)
+            //   films.push(response1.data.results, response.data.results, response2.data.results)
             dispatch(actionGetAllOk(films))
         } catch (error) {
             dispatch(actionGetAllFail(error))
