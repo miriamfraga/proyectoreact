@@ -5,8 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getVideos } from '../../store/videos/actions';
 
 const VideoFilmsComponent = () => { 
-
-
   const dispatch = useDispatch()
   const {videos, loadingVideos}= useSelector((state)=>state.VideosReducer)
   useEffect(()=>{
@@ -19,10 +17,12 @@ const VideoFilmsComponent = () => {
     )
   }
 
+
  return(  <div className="div">
     {videos.map((video,index)=>{
       return( <div> 
-        {/* <h1 key={index}>{video} </h1> */}
+        <h1 key={index}> holaaaaa </h1>
+        {console.log(videos, "videos")}
         </div>
        )
      
