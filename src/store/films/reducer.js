@@ -1,4 +1,4 @@
-import { GET_FILMS, GET_FILMS_OK, GET_FILMS_FAIL,
+import { GET_DRAMA_FILMS, GET_DRAMA_FILMS_OK, GET_DRAMA_FILMS_FAIL,
 GET_FILMS_GENRE, GET_FILMS_GENRE_OK, GET_FILMS_GENRE_FAIL,
 GET_DOC, GET_DOC_OK, GET_DOC_FAIL,
 GET_POPULAR_FILMS, GET_POPULAR_FILMS_OK, GET_POPULAR_FILMS_FAIL,
@@ -10,12 +10,14 @@ GET_SELECT, GET_SELECT_OK, GET_SELECT_FAIL
 
 const initialState = {
     films: [], 
+    dramaFilms: [],
     romanceFilms: [],
     genres: [],
     popularFilms: [],
     docs: [],
     film: {},
     selectMovie: [],
+    loadingDramaFilms: false,
     loadingSelect: false,
     loadingFilms: false,
     loadingGenres: false,
@@ -41,16 +43,16 @@ export default function FilmsReducer(state = initialState, action) {
             break
         
         /* CASE GET FILMS */
-        case GET_FILMS:
-            state = {...state, loadingFilms: true}
+        case GET_DRAMA_FILMS:
+            state = {...state, loadingDramaFilms: true}
             break
 
-        case GET_FILMS_OK:
-            state = {...state, loadingFilms: false, films: action.payload}
+        case GET_DRAMA_FILMS_OK:
+            state = {...state, loadingDramaFilms: false, dramaFilms: action.payload}
             break
 
-        case GET_FILMS_FAIL:
-            state = {...state, loadingFilms: false, error: {message: action.payload}}
+        case GET_DRAMA_FILMS_FAIL:
+            state = {...state, loadingDramaFilms: false, error: {message: action.payload}}
             break 
         
         /* CASE GET FILMS GENRE */

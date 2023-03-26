@@ -3,10 +3,10 @@ export const GET_ALL_FILMS = "GET_ALL_FILMS"
 export const GET_ALL_FILMS_OK = "GET_ALL_FILMS_OK"
 export const GET_ALL_FILMS_FAIL = "GET_ALL_FILMS_FAIL"
 
-/* GET_FILMS */
-export const GET_FILMS = "GET_FILMS"
-export const GET_FILMS_OK = "GET_FILMS_OK"
-export const GET_FILMS_FAIL = "GET_FILMS_FAIL"
+/* GET_DRAMA_FILMS */
+export const GET_DRAMA_FILMS = "GET_FILMS"
+export const GET_DRAMA_FILMS_OK = "GET_FILMS_OK"
+export const GET_DRAMA_FILMS_FAIL = "GET_FILMS_FAIL"
 
 /* GET_FILMS_GENRE */
 export const GET_FILMS_GENRE = "GET_FILMS_GENRE"
@@ -33,7 +33,7 @@ export const GET_SINGLE_FILM = "GET_SINGLE_FILM"
 export const GET_SINGLE_FILM_OK = "GET_SINGLE_FILM_OK"
 export const GET_SINGLE_FILM_FAIL = "GET_SINGLE_FILM_FAIL"
 
-/* GET_SELECT */
+/* GET_SELECT  (BUSCADOR)*/ 
 export const GET_SELECT = "GET_SELECT"
 export const GET_SELECT_OK = "GET_SELECT_OK"
 export const GET_SELECT_FAIL = "GET_SELECT_FAIL"

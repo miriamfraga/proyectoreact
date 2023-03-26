@@ -13,9 +13,9 @@ export default function SinglePage(){
     dispatch(getSingleFilm(params.id))
   },[])
   return (
+    
     <div>
       <SingleFilmComponent></SingleFilmComponent>
-   {params.id}
     </div>
   )
 }

@@ -25,21 +25,22 @@ const FilmsComponent = () => {
 
   //DISPATCH DISPARA LA FUNCIÓN DE OBTENER PELIS Y OCURRE AL INICIO POR USEFFECT
   const dispatch = useDispatch()
-  const {films, loadingFilms} = useSelector((state)=> state.FilmsReducer)
+  const {dramaFilms, loadingDramaFilms} = useSelector((state)=> state.FilmsReducer)
+  const urlImage = "https://image.tmdb.org/t/p/w500/"
   useEffect(()=>{
     dispatch(getDramaFilms())
   }, [])
 
-// MIENTRAS ESTÉ CARGANDO MUESTRA ESTO
-if(loadingFilms){
+// MIENTRAS ESTÉ CARGANDO MUESTRA ESTO Y SI NO, DEVUELVE EL MAPEO
+if(loadingDramaFilms){
   return(
     <p> 
     "Loading..."
     </p>
   )
 
-}
- const urlImage = "https://image.tmdb.org/t/p/w500/"
+} else{ 
+
   return (
     <section className="div__section">
       <h2>DRAMA : películas que desestresan de un "compiled whith problems"</h2>
@@ -50,28 +51,30 @@ if(loadingFilms){
         navigation
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
-      >
+        onSlideChange={() => console.log('slide change')} >
 
-       <ul className="div__section__ul">
-       {films.map((film)=>
-  <SwiperSlide key={film.id} className="div__section__ul__li">
-       <li className="div__section__ul__li__div">  
-       <Link to={`/film/${film.id}`}>        
-      <img className="div__section__ul__li__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title} ></img>
-      </Link>  
-      <h4 className="section__div__wrapper__title">{film.original_title}</h4>
-   </li>
+          <ul className="div__section__ul">
+
+           {dramaFilms.map((film)=>
+              <SwiperSlide key={film.id} className="div__section__ul__li">
+
+                 <li className="div__section__ul__li__div">  
+
+                   <Link to={`/film/${film.id}`}>        
+                      <img className="div__section__ul__li__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title} ></img>
+                   </Link>  
+                      <h4 className="section__div__wrapper__title">{film.original_title}</h4>
+                  </li>
    
-   </SwiperSlide>  )}    
+              </SwiperSlide>  )}    
 
-              </ul>
-              </Swiper>
-           </section>
+           </ul>
+      </Swiper>
+     </section>
            
     
   )
-};
+}};
 
 
 FilmsComponent.propTypes = {};
