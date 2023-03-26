@@ -2,7 +2,7 @@
 import './App.scss';
 
 /* IMPORT REACT ROUTER */
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 /* IMPORT COMPONENTS */
 import FooterComponent from './layout/FooterComponent/FooterComponent';
@@ -16,9 +16,15 @@ import FavouritesPage from './pages/FavouritesPage/FavouritesPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import SinglePage from './pages/SinglePage/SinglePage';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
 
+/* IMPORT REDUX */
+import { useSelector } from 'react-redux';
 
 function App() {
+
+  const {user} = useSelector((state) => state.AuthReducer);
+
   return (
     <div className="App">
       <HeaderComponent></HeaderComponent>
@@ -32,6 +38,7 @@ function App() {
             <Route exact path='/about' element={<AboutPage/>}></Route>
             <Route exact path='/login' element={<LoginPage/>}></Route>
             <Route exact path='/film/:id' element={<SinglePage/>}></Route>
+            <Route exact path="/profile" element={user && user.id?<ProfilePage/>:<Navigate to="/login" replace></Navigate>}></Route>
           </Routes>
         </div>
       </main>
