@@ -1,8 +1,7 @@
 // IMPORT ACTIONS
-
 import { GET_FILMS, GET_FILMS_OK, GET_FILMS_FAIL,
          GET_FILMS_GENRE, GET_FILMS_GENRE_OK, GET_FILMS_GENRE_FAIL,
-         GET_POPULAR_FILMS,GET_POPULAR_FILMS_OK, GET_POPULAR_FILMS_FAIL,
+         GET_POPULAR_FILMS, GET_POPULAR_FILMS_OK, GET_POPULAR_FILMS_FAIL,
          GET_DOC, GET_DOC_OK, GET_DOC_FAIL,
          GET_ROMANCE_FILMS, GET_ROMANCE_FILMS_OK, GET_ROMANCE_FILMS_FAIL,
          GET_SINGLE_FILM, GET_SINGLE_FILM_OK, GET_SINGLE_FILM_FAIL}
@@ -18,20 +17,20 @@ const baseUrl = 'https://api.themoviedb.org/';
 
 /* GET FILMS */
 export function actionGetFilms(){
-    return{
+    return {
         type: GET_FILMS
     }
 }
 
 export function actionGetFilmsOk(films){
-    return{
+    return {
         type: GET_FILMS_OK,
         payload: films
     }
 }
 
 export function actionGetFilmsFail(error){
-    return{
+    return {
         type: GET_FILMS_FAIL,
         payload: error
     }
@@ -41,45 +40,41 @@ export function actionGetFilmsFail(error){
 export function actionGetGenre(){
     return {
         type: GET_FILMS_GENRE
-       
-         }    
+    }    
 }
+
 export function actionGetGenreOk(genres){
     return {
-         type: GET_FILMS_GENRE_OK,
-         payload: genres
+        type: GET_FILMS_GENRE_OK,
+        payload: genres
     }
-
 }
+
 export function actionGetGenreFail(error){
     return {
         type: GET_FILMS_GENRE_FAIL,
         payload: error
-    }
-       
-    
+    }   
 }
 
 /* GET DOCS */
-export function actionGetFilmsDoc (){
-    return{
-
+export function actionGetFilmsDoc(){
+    return {
         type: GET_DOC
-        
     }
 }
-export function actionGetFilmsDocOk (docs){
-    return{
 
+export function actionGetFilmsDocOk(docs){
+    return {
         type:GET_DOC_OK,
-        payload:docs
+        payload: docs
     }
 }
-export function actionGetFilmsDocFail (error){
-    return{
 
+export function actionGetFilmsDocFail(error){
+    return {
         type: GET_DOC_FAIL,
-        payload:error
+        payload: error
     }
 }
 
@@ -105,45 +100,46 @@ export function actionGetPopularFilmsFail(error){
     }
 }
 
-
 /* GET ROMANCE FILMS */
 export function actionGetRomanceFilms(){
-    return{
+    return {
         type: GET_ROMANCE_FILMS
-       
     }
 }
+
 export function actionGetRomanceFilmsOk(romanceFilms){
-    return{
+    return {
         type: GET_ROMANCE_FILMS_OK,
         payload: romanceFilms
     }
 }
+
 export function actionGetRomanceFilmsFail(error){
-    return{
+    return {
         type: GET_ROMANCE_FILMS_FAIL,
-        payload:error
+        payload: error
     }
 }
 
 /* GET SINGLE FILMS */
 export function actionGetSingleFilm(filmId){
-    return{
+    return {
         type: GET_SINGLE_FILM,
         payload: filmId
-        
     }
 }
+
 export function actionGetSingleFilmOK(film){
-    return{
+    return {
         type: GET_SINGLE_FILM_OK,
-        payload:film
+        payload: film
     }
 }
+
 export function actionGetSingleFilmFail(error){
-    return{
+    return {
         type: GET_SINGLE_FILM_FAIL,
-        payload:error
+        payload: error
     }
 }
 
@@ -201,6 +197,7 @@ export function getPopularFilms() {
         try {
             const response = await axios.get(`${baseUrl}3/movie/popular${apiKey}`);
             dispatch(actionGetPopularFilmsOk(response.data.results))
+            console.log(response.data.results)
         } catch (error) {
             dispatch(actionGetPopularFilmsFail(error))
         }

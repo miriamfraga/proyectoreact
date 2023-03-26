@@ -1,17 +1,23 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+
+/* IMPORT STYLES */
 import  './FilmsComponent.scss';
 
-// IMPORTACIONES DE HOOKS Y FUNCIÓN GETFILMS
+/* IMPORT REDUX */
 import { useDispatch, useSelector } from 'react-redux';
-import {getFilms} from '../../store/films/actions';
+
+/* IMPORT LINK */
 import { Link } from 'react-router-dom';
 
-// IMPORTACIONES DE SWIPER 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { A11y, Navigation, Scrollbar} from 'swiper'
+/* IMPORT GETFILMS */
+import {getFilms} from '../../store/films/actions';
 
-// IMPORTACIONES DE ESTILOS DE SWIPER
+// import Swiper core and required modules
+import { Navigation, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -41,7 +47,7 @@ if(loadingFilms){
       <h2>Películas que desestresan de un "compiled whith problems"</h2>
       <Swiper style={{"--swiper-navigation-color": "#02ffa1", "--swiper-pagination-color": "#02ffa1", "--swiper-scrollbar-drag-bg-color": "#02ffa1" }}  
         modules={[Navigation, A11y, Scrollbar]}
-        spaceBetween={50}
+        spaceBetween={25}
         slidesPerView={6}
         navigation
         scrollbar={{ draggable: true }}
@@ -59,7 +65,7 @@ if(loadingFilms){
                 <Link to={`/film/${film.id}`}>        
                <img className="div__section__ul__li__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title} ></img>
                </Link>  
-               <h2 className="section__div__wrapper__title">{film.original_title}</h2>
+               <h4 className="section__div__wrapper__title">{film.original_title}</h4>
             </li>
             
             </SwiperSlide>  )}
