@@ -30,10 +30,10 @@ const AllFilmsComponent = () => {
 /** --DOBLE MAPEO PARA UNIR PELÍCULAS DE DIFERENTES GÉNEROS DE UNA SOLA VEZ*/
 
  return(  <section className='section__wrapper'>
-  {films.map((array)=> 
+  {films?.map((array)=> 
        <div className='wrapper'> 
 
-         {array.map((film)=>  
+         {array?.map((film)=>  
     
             <div className='section__wrapper__div'> 
                   <Link to={`/film/${film.id}`}> <img  className="section__wrapper__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title}></img></Link>

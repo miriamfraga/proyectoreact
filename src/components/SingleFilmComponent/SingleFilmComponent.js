@@ -37,8 +37,8 @@ const SingleFilmComponent = () => {
            <h3 className="section__detail__div__wrapper__title">{film.release_date}</h3>
 
       {/* // -- AQUÍ ESTAN LOS NOMBRES DE LOS GÉNEROS EN UN ARRAY Y SOLO FUNCIONAN UNA VEZ QUE LA PAG SE HA CARGADO-- */}
-             {/* {film.genres.map((genre)=> <div key={genre.id}>  */}
-             {/* <h4 key={genre.id} > { genre.name } </h4> </div> )} */}
+             {film.genres?.map((genre)=> <div key={genre.id}> 
+             <h4 key={genre.id} > { genre.name } </h4> </div> )}
   
   
      {/* { -- METER EL ICONO DE REPRODUCIR EL VÍDEO } */}
