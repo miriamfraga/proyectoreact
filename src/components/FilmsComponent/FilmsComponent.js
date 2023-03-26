@@ -19,6 +19,10 @@ import 'swiper/css/scrollbar';
 
 const FilmsComponent = () => { 
 
+
+
+
+
   //DISPATCH DISPARA LA FUNCIÓN DE OBTENER PELIS Y OCURRE AL INICIO POR USEFFECT
   const dispatch = useDispatch()
   const {films, loadingFilms} = useSelector((state)=> state.FilmsReducer)
@@ -35,7 +39,6 @@ if(loadingFilms){
   )
 
 }
-
  const urlImage = "https://image.tmdb.org/t/p/w500/"
   return (
     <section className="div__section">
@@ -53,12 +56,11 @@ if(loadingFilms){
        <ul className="div__section__ul">
        {films.map((film)=>
   <SwiperSlide key={film.id} className="div__section__ul__li">
- 
        <li className="div__section__ul__li__div">  
        <Link to={`/film/${film.id}`}>        
       <img className="div__section__ul__li__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title} ></img>
       </Link>  
-      <h2 className="section__div__wrapper__title">{film.original_title}</h2>
+      <h4 className="section__div__wrapper__title">{film.original_title}</h4>
    </li>
    
    </SwiperSlide>  )}    

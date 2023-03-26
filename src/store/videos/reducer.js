@@ -1,7 +1,7 @@
 import { GET_VIDEOS,GET_VIDEOS_OK,GET_VIDEOS_FAIL } from "./actionTypes";
 
 const initialState = {
-    videos: [],
+    videos: {},
     loadingVideos: false, 
     error: {
         message: ""

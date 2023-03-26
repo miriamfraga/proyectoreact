@@ -1,31 +1,35 @@
 
 .wrapper{
-   display: flex;
-   flex-direction: column;
-    // background-color: blue;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: blue;
+    justify-items:center;
 }
 .section__wrapper{
     background-color: red;
     display:flex;
-    flex-wrap: nowrap;
     justify-content: center;
+    margin: 0 auto;
 
     &__div{
         background-color: pink;
         display:flex;
         gap: 1em;
         padding-inline-start: 0;
-        flex-wrap: wrap;
-        margin: 1%;
-         padding: 1%;
-    &__img{
+        flex-wrap: nowrap;
+        flex-direction: column;
         
+        padding: 1%;
+    &__img{
+        width: 300px;
+        height: 400px;
         
     }
         &__title{
-          display:flex;
-             background-color: aqua;
+         display:flex;
+         flex-wrap: wrap;
+         background-color: aqua;
         }
 }
 

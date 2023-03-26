@@ -30,7 +30,10 @@ const [searchMovie, setSearchMovie] = useState()
   }
   return( <div>
   {/* // CREAR INPUT Y BINDEAR EL VALOR DE BÚSQUEDA CON LOS NOMBRES DE LAS PELÍCULAS */}
-<input type="text" placeholder="search" onChange={} ></input>
+{/* CREAR EVENTO DE ONCHANGE PARA CUANDO SE VAYA METIENDO CADA LETRA VAYA SUGIRIENDO UNA PELI Y 
+OBTENCIÓN DEL VALOR CON E.T.VALUE */}
+<input type="text" placeholder="search"  ></input>
+
   
    <select>
 {genres.map((genre, index)=>{

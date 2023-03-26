@@ -24,13 +24,13 @@ import 'swiper/css/scrollbar';
 const PopularFilmsComponent = () => {
   
   const dispatch = useDispatch();
-  const { films, loadingFilms } = useSelector((state) => state.FilmsReducer);
+  const { popularFilms, loadingPopularFilms } = useSelector((state) => state.FilmsReducer);
 
   useEffect(() => {
     dispatch(getPopularFilms())
   },[])
 
-  if (loadingFilms) {
+  if (loadingPopularFilms) {
     return (
       <p>
         Loading...
@@ -52,7 +52,7 @@ const PopularFilmsComponent = () => {
       onSlideChange={() => console.log('slide change')}
       >
         <ul className='popular-movies__ul ul'>
-          {films.map((film) =>
+          {popularFilms.map((film) =>
             <SwiperSlide key={film.id}>
               <li className='popular-movies__li li'>
               <Link to={`/film/${film.id}`}>   

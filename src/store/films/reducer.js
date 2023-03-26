@@ -12,12 +12,14 @@ const initialState ={
     films: [], 
     romanceFilms: [],
     genres: [],
+    popularFilms: [],
     docs: [],
     film: {},
     selectMovie: [],
     loadingSelect: false,
     loadingFilms: false,
     loadingGenres: false,
+    loadingPopular: false,
     loadingDocs: false,
     loadingRomanceFilms: false,
     loadingSingle: false,
@@ -66,13 +68,13 @@ export default function FilmsReducer(state = initialState, action){
             state = {...state, loadingDocs:false, error: {message: action.payload}}
             break
             case GET_POPULAR_FILMS:
-            state = {...state, loadingFilms: true}
+            state = {...state, loadingPopularFilms: true}
             break
             case GET_POPULAR_FILMS_OK:
-            state = {...state, loadingFilms:false, films: action.payload}
+            state = {...state, loadingPopularFilms:false, popularFilms: action.payload}
             break
             case GET_POPULAR_FILMS_FAIL:
-            state = {...state, loadingFilms:false, error: {message: action.payload}}
+            state = {...state, loadingPopularFilms:false, error: {message: action.payload}}
             break
             case GET_ROMANCE_FILMS:
             state ={...state, loadingRomanceFilms: true}
@@ -90,7 +92,7 @@ export default function FilmsReducer(state = initialState, action){
             state = {...state, loadingSingle:false,  film:action.payload}
             break
             case GET_SINGLE_FILM_FAIL:
-            state = {...state, loadingSingle:false, film: {}, error: {message:action.payload}}
+            state = {...state, loadingSingle:false, error: {message:action.payload}}
             break
             case GET_SELECT:
             state= {...state, loadingSelect:true}

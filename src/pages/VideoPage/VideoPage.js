@@ -4,7 +4,7 @@ import VideoFilmsComponent from '../../components/VideoFilmsComponent/VideoFilms
 const VideoPage = () => {
   return (
     <div>
-      <VideoFilmsComponent></VideoFilmsComponent>
+      
     </div>
   )
 }

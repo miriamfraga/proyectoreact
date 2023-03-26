@@ -19,26 +19,6 @@ const apiKey = '?api_key=84d794a5b6f706450c3ee085b451575c';
 const baseUrl = 'https://api.themoviedb.org/';
 const selectMovie = 'search/movie'
 
-/* GET ALL FILMS */
-export function actionGetAll(){
-    return{
-        type: GET_ALL_FILMS
-        
-    }
-}
-export function actionGetAllOk(films){
-    return{
-        type:GET_ALL_FILMS_OK,
-        payload: films
-    }
-}
-export function actionGetAllFail(error){
-    return{
-        type:GET_ALL_FILMS_FAIL,
-        payload: error
-    }
-}
-
 /*GET DRAMA FILMS*/ 
 export function actionGetFilms(){
     return{
@@ -135,10 +115,10 @@ export function actionGetPopularFilms(){
     }
 }
 
-export function actionGetPopularFilmsOk(films){
+export function actionGetPopularFilmsOk(popularFilms){
     return {
         type: GET_POPULAR_FILMS_OK,
-        payload: films
+        payload: popularFilms
     }
 }
 
@@ -170,6 +150,26 @@ export function actionGetRomanceFilmsFail(error){
     }
 }
 
+
+/* GET ALL FILMS */
+export function actionGetAll(){
+    return{
+        type: GET_ALL_FILMS
+        
+    }
+}
+export function actionGetAllOk(films){
+    return{
+        type:GET_ALL_FILMS_OK,
+        payload: films
+    }
+}
+export function actionGetAllFail(error){
+    return{
+        type:GET_ALL_FILMS_FAIL,
+        payload: error
+    }
+}
 /* GET SINGLE FILMS */
 export function actionGetSingleFilm(filmId){
     return{
@@ -178,7 +178,7 @@ export function actionGetSingleFilm(filmId){
         
     }
 }
-export function actionGetSingleFilmOK(film){
+export function actionGetSingleFilmOk(film){
     return{
         type: GET_SINGLE_FILM_OK,
         payload:film
@@ -229,10 +229,11 @@ export function getAll(){
         try {
             
             const films= []
-            const response = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=10752|99|14&page=3`)
+            // const response = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=10752|99|14&page=3`)
             const response1 = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=36|10402|37&page=5`)
-            const response2 = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=36|10402|37&page=4`)
-              films.push(response1.data.results, response.data.results, response2.data.results)
+            // const response2 = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=36|10402|37&page=4`)
+              films.push(response1.data.results)
+            //   films.push(response1.data.results, response.data.results, response2.data.results)
             dispatch(actionGetAllOk(films))
         } catch (error) {
             dispatch(actionGetAllFail(error))
@@ -295,7 +296,6 @@ export function getRomanceFilms(){
        try {
                const response = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=10749`);
                dispatch(actionGetRomanceFilmsOk(response.data.results))
-               console.log(response.data.results)
             
        } catch (error) {
            dispatch(actionGetRomanceFilmsFail(error))
@@ -311,8 +311,8 @@ export function getRomanceFilms(){
     return async (dispatch)=>{
         dispatch(actionGetSingleFilm(filmId))
         try {
-            const response = await axios.get(`${baseUrl}3/discover/movie/${filmId}${apiKey}`)
-            dispatch(actionGetSingleFilmOK(response.data.results))
+            const response = await axios.get(`${baseUrl}3/movie/${filmId}${apiKey}`)
+            dispatch(actionGetSingleFilmOk(response.data))
             {console.log(response.data)}
         } catch (error) {
             dispatch(actionGetSingleFilmFail(error))

@@ -5,6 +5,7 @@ import FilmsDocComponent from '../../components/FilmsDocComponent/FilmsDocCompon
 import GenreComponent from '../../components/GenreComponent/GenreComponent';
 import FilmsComponent from '../../components/FilmsComponent/FilmsComponent';
 import AllFilmsComponent from '../../components/AllFilmsComponent/AllFilmsComponent';
+import PopularMovies from '../../components/PopularFilmsComponent/PopularFilmsComponent'
 // import VideoFilmsComponent from '../../components/VideoFilmsComponent/VideoFilmsComponent';
 const FilmsPage = () => {
   return (
@@ -12,9 +13,6 @@ const FilmsPage = () => {
       <h1>FILMS PAGE</h1>
       <GenreComponent></GenreComponent>
       <AllFilmsComponent></AllFilmsComponent>
-
-      {/* <FilmsComponent></FilmsComponent> */}
-      {/* <FilmsDocComponent></FilmsDocComponent> */}
 
     </div>
   )

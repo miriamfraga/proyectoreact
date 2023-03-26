@@ -21,8 +21,8 @@ const VideoFilmsComponent = () => {
  return(  <div className="div">
     {videos.map((video,index)=>{
       return( <div> 
-        <h1 key={index}>{video}  </h1>
-        {console.log(videos)}
+        <h1 key={index}> holaaaaa </h1>
+        {console.log(videos, "videos")}
         </div>
        )
      
