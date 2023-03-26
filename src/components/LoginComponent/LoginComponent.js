@@ -33,13 +33,13 @@ const LoginComponent = () => {
   return (
     <div>
       <h2>Iniciar sesión</h2>
-      <form>
+      <form >
         <div>
-          <label htmlFor="username">Usuario:</label>
+          <label>Usuario:</label>
           <input type="text" name="username" value={username} onChange={(e) => setUsername(e.target.value)} required/>
         </div>
         <div>
-          <label htmlFor="password">Contraseña:</label>
+          <label>Contraseña:</label>
           <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
         </div>
         <button onClick={tryLogin} type="submit">Iniciar sesión</button>
