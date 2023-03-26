@@ -1,4 +1,4 @@
-/* GLOBAL GLOBALES */
+/*  START GLOBAL STYLES */
 
 * {
   list-style: none;
@@ -24,7 +24,6 @@ p {
   line-height: 1.5;
 }
 
-
 p, a {
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -33,6 +32,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
 }
 
-main {
-  padding: 2em 0;
+.overlay {
+  overflow: hidden;
 }
+
+/*  END GLOBAL STYLES */
