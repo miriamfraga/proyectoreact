@@ -25,7 +25,6 @@ const AllFilmsComponent = () => {
     
   }
 
-
 const urlImage = "https://image.tmdb.org/t/p/w500/"
 
 /** --DOBLE MAPEO PARA UNIR PELÍCULAS DE DIFERENTES GÉNEROS DE UNA SOLA VEZ*/
@@ -34,14 +33,14 @@ const urlImage = "https://image.tmdb.org/t/p/w500/"
   {films.map((array)=> 
   <div className='wrapper'> 
 
-    {array.map((film)=>
+  {array.map((film)=>  
+
   <div className='section__wrapper__div'> 
-  <Link to={`/film/${film.id}`}> <img  className="section__wrapper__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title}></img></Link>
-  <div className='section__wrapper__div__title'>
-  <h4 className='section__wrapper__div__title__h4'>{film.title} </h4>
-  {console.log(array.length)}
-    </div>
-    </div>
+        <Link to={`/film/${film.id}`}> <img  className="section__wrapper__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title}></img></Link>
+          <div className='section__wrapper__div__title'>
+            <h4 className='section__wrapper__div__title__h4'>{film.title} </h4>
+          </div>
+  </div>
  
 )}
 </div>   

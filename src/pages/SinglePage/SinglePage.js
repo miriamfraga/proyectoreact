@@ -15,7 +15,7 @@ export default function SinglePage(){
   return (
     <div>
       <SingleFilmComponent></SingleFilmComponent>
-   
+   {params.id}
     </div>
   )
 }
