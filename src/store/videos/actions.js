@@ -28,7 +28,9 @@ export function getVideos(movieId){
     return async (dispatch)=>{
         dispatch(actionGetVideos())
         try { 
-//   https://api.themoviedb.org/3/movie/4?api_key=84d794a5b6f706450c3ee085b451575c&language=en-US&append_to_response=videos
+
+
+    //  https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=84d794a5b6f706450c3ee085b451575c&language=en-US
 
                 const response = await axios.get(`${baseUrl}3/movie/${movieId}${apiKey}&language=en-US${videoUrl}`)
                 dispatch(actionGetVideosOk(response))
