@@ -10,6 +10,9 @@ import { faTwitter, faFacebook, faInstagram, faLinkedin, faGithub } from '@forta
 /* IMPORT LOGO */
 import logo from '../../assets/images/filmshub-logo-text.svg';
 
+/* IMPORT LINK REACT ROUTER */
+import { Link } from 'react-router-dom';
+
 const FooterComponent = () => {
 
     const getCurrentYear = () => {
@@ -43,7 +46,7 @@ const FooterComponent = () => {
                 </section>
                 <section className='footer-copyright__section section'>
                     <p className="footer-copyright__p p">© {getCurrentYear()} FilmsHub. All Rights Reserved</p>
-                    <a className='footer-logo__a a' href='/'><img src={logo} className='footer__logo img' alt='logo'/></a>
+                    <Link className='footer-logo__a a' to='/'><img src={logo} className='footer__logo img' alt='logo'/></Link>
                 </section>
             </div>
         </footer>

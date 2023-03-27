@@ -9,13 +9,16 @@ import NavigationComponent from '../../components/NavigationComponent/Navigation
 /* IMPORT LOGO */
 import logo from '../../assets/images/filmshub-logo.svg';
 
+/* IMPORT LINK REACT ROUTER */
+import { Link } from 'react-router-dom';
+
 const HeaderComponent = () => {
   return (
     // START HEADER
     <header className='header'>
       <div className='header-container container'>
         <nav className='header__nav nav'>
-          <a className='header-logo__a a' href='/'><img src={logo} className='header__logo img' alt='logo'/></a>
+          <Link className='header-logo__a a' to='/'><img src={logo} className='header__logo img' alt='logo'/></Link>
           <NavigationComponent></NavigationComponent>
         </nav>
       </div>
