@@ -44,7 +44,7 @@ return   (<div className="div__searcher">
 <input value={searchMovie} type="text" onChange={e=>setSearchMovie(e.target.value)}   placeholder="search a movie..."></input>
 {console.log(searchMovie,"search", searched, "searched")}
 
-<button onClick={searcher} >SEARCH</button>
+<button className="section__detail__div__button__watch" onClick={searcher} >SEARCH</button>
 {searched.images?.map((film)=>{   
  return( 
   
