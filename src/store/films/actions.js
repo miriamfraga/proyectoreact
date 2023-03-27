@@ -203,6 +203,7 @@ export function getGenreFilms() {
 }
 
 /* FUNCIÓN PARA BINDEAR EL SELECT */
+
 // Y response data.results o response.data?
 export function getSelect(userFilmSearched) {
     return async(dispatch) => {
