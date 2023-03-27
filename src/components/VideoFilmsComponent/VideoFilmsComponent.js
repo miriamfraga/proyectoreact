@@ -3,12 +3,21 @@ import PropTypes from 'prop-types';
 import './VideoFilmsComponent.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { getVideos } from '../../store/videos/actions';
+/* import Youtube from 'react/youtube'; */
+
+/* IMPORT LINK REACT ROUTER */
+import { Link } from 'react-router-dom';
+
+import { useParams } from 'react-router-dom'
 
 const VideoFilmsComponent = () => { 
   const dispatch = useDispatch()
-  const {videos, loadingVideos}= useSelector((state)=>state.VideosReducer)
+  const params = useParams()
+
+  const {video, loadingVideos}= useSelector((state)=>state.VideosReducer)
+
   useEffect(()=>{
-    dispatch(getVideos())
+    dispatch(getVideos(params.id))
   },[])
 
   if(loadingVideos){
@@ -17,18 +26,13 @@ const VideoFilmsComponent = () => {
     )
   }
 
+ return (
+  <div>
+    {/* <Link className="main-nav__link link" to={`https://www.youtube.com/watch?v=${video.key}`}>Ver ahora</Link> */}
 
- return(  <div className="div">
-    {videos.map((video,index)=>{
-      return( <div> 
-        <h1 key={index}> holaaaaa </h1>
-        {console.log(videos, "videos")}
-        </div>
-       )
-     
-    })}
-
-  </div>)
+  </div>
+  
+  )
 };
 
 VideoFilmsComponent.propTypes = {};

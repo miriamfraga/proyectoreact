@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import  './SingleFilmComponent.scss';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
+/* IMPORT REDUX */
+import { useDispatch } from 'react-redux';
+
+/* IMPORT LINK REACT ROUTER */
+import { Link } from 'react-router-dom';
+
+/* IMPORT GETPOPULARFILMS */
+import { getVideos } from '../../store/videos/actions';
+
 const SingleFilmComponent = () => { 
+
+  const dispatch = useDispatch();
+  const {video, loadingVideo} = useSelector((state) => state.FilmsReducer);
+
+  useEffect(() => {
+    dispatch(getVideos());
+  }, []);
 
 // -- FUNCIÓN PARA VOLVER ATRÁS
 
@@ -54,6 +70,7 @@ const SingleFilmComponent = () => {
             <button className="section__detail__div__button__watch">▷</button>  
             {/* <button className="section__detail__div__button__watch">*</button>   */}
             <button className="section__detail__div__button__watch" onClick={goBack}> GO BACK</button>
+            {/* <Link to={`https://www.youtube.com/watch?v=${video.key}`}>Ver ahora</Link> */}
 
           </div>
 

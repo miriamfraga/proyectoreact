@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import SingleFilmComponent from '../../components/SingleFilmComponent/SingleFilmComponent'
+import VideoFilmsComponent from '../../components/VideoFilmsComponent/VideoFilmsComponent'
 import {getSingleFilm} from '../../store/films/actions'
 
 export default function SinglePage(){
@@ -16,6 +17,7 @@ export default function SinglePage(){
     
     <div>
       <SingleFilmComponent></SingleFilmComponent>
+      <VideoFilmsComponent></VideoFilmsComponent>
     </div>
   )
 }
