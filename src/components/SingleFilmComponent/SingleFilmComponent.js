@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import  './SingleFilmComponent.scss';
 import { useSelector } from 'react-redux';
-import { useState } from 'react';
+
 const SingleFilmComponent = () => { 
 
 

@@ -31,11 +31,11 @@ const AllFilmsComponent = () => {
 
  return(  <section className='section__wrapper'>
   {films?.map((array)=> 
-       <div className='wrapper'> 
+       <div key={array.id} className='wrapper'> 
 
          {array?.map((film)=>  
     
-            <div className='section__wrapper__div'> 
+            <div key={film.id} className='section__wrapper__div'> 
                   <Link to={`/film/${film.id}`}> <img  className="section__wrapper__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title}></img></Link>
                     <div className='section__wrapper__div__title'>
                       <h4 className='section__wrapper__div__title__h4'>{film.title} </h4>

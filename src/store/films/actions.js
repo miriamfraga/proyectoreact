@@ -61,18 +61,18 @@ export function actionGetGenreFail(error) {
     }   
 }
 
-/* GET SELECT GENRE */
-export function actionGetSelect(param) {
+/* GET SELECT SEARCHEDMOVIE */
+export function actionGetSelect(paramFilm) {
     return {
         type: GET_SELECT,
-        payload: param
+        payload: paramFilm
     }
 }
 
-export function actionGetSelectOk(select) {
+export function actionGetSelectOk(searchedFilm) {
     return {
         type: GET_SELECT_OK,
-        payload: select
+        payload: searchedFilm
     }
 }
 
@@ -203,11 +203,12 @@ export function getGenreFilms() {
 }
 
 /* FUNCIÓN PARA BINDEAR EL SELECT */
-export function getSelect(selectParam) {
+// Y response data.results o response.data?
+export function getSelect(userFilmSearched) {
     return async(dispatch) => {
-        dispatch(actionGetSelect(selectParam))
+        dispatch(actionGetSelect(userFilmSearched))
         try {
-            const response = await axios.get(`${baseUrl}3/${selectMovie}${apiKey}&query${selectParam}`)
+            const response = await axios.get(`${baseUrl}3/${selectMovie}${apiKey}&query${userFilmSearched}`)
             dispatch(actionGetSelectOk(response.data.results))
         } catch (error) {
             dispatch(actionGetSelectFail(error))
