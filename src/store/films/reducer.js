@@ -16,7 +16,7 @@ const initialState = {
     popularFilms: [],
     docs: [],
     film: {},
-    selectMovie: [],
+    searched: {},
     loadingDramaFilms: false,
     loadingSelect: false,
     loadingFilms: false,
@@ -42,7 +42,7 @@ export default function FilmsReducer(state = initialState, action) {
             state = {...state, loadingFilms: false, error: {message:action.payload}}
             break
         
-        /* CASE GET FILMS */
+        /* CASE GET DRAMA FILMS */
         case GET_DRAMA_FILMS:
             state = {...state, loadingDramaFilms: true}
             break
@@ -120,17 +120,17 @@ export default function FilmsReducer(state = initialState, action) {
             state = {...state, loadingSingle: false, error: {message:action.payload}}
             break
 
-        /* CASE GET SELECT */
+        /* CASE GET SELECT SEARCHED MOVIE*/
         case GET_SELECT:
             state = {...state, loadingSelect: true}
             break
 
         case GET_SELECT_OK:
-            state = {...state, loadingSelect: false, selectMovie: action.payload}
+            state = {...state, loadingSelect: false, searched: action.payload}
             break
 
         case GET_SELECT_FAIL:
-            state = {...state, loadingSelect:false, selectMovie: [], error: {message: action.payload}}
+            state = {...state, loadingSelect:false, searched: {}, error: {message: action.payload}}
             break
 
         /* DEFAULT */
