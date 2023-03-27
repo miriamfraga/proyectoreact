@@ -197,7 +197,7 @@ export function getGenreFilms() {
             const response = await axios.get(`${baseUrl}3/genre/movie/list${apiKey}`)
             dispatch(actionGetGenreOk(response.data.genres))
         } catch (error) {
-            dispatch(actionGetGenreFail)
+            dispatch(actionGetGenreFail) 
         }
     }
 }
