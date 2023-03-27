@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './SearcherComponent.scss';
+import './SearcherComponent.scss';
 
 // --IMPORT LA FUNCIÓN QUE BUSCA 
 import { getSelect } from '../../store/films/actions';
@@ -45,13 +45,11 @@ return   (<div className="div__searcher">
 {console.log(searchMovie,"search", searched, "searched")}
 
 <button onClick={searcher} >SEARCH</button>
-{console.log(searched, "searchedmovie")}
-{/* <h1>{searched.title } </h1> */}
-{searched?.map((film)=>{   
+{searched.images?.map((film)=>{   
  return( 
   
   <Link to={`/film/${film.id}`}> <div> 
-  <img src={`${urlImage}${film.backdrop_path}`}></img>
+  <img src={`${urlImage}${film.backdrop_path}`} alt={film.title} ></img>
   </div></Link>)
 })}
 
