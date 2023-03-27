@@ -2,8 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import  './SingleFilmComponent.scss';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const SingleFilmComponent = () => { 
+
+// -- FUNCIÓN PARA VOLVER ATRÁS
+
+ const navigate = useNavigate();
+ const goBack = () => {
+  navigate(-1);
+ }
 
 
   const {film, loadingSingle}= useSelector((state)=>state.FilmsReducer)
@@ -22,9 +30,9 @@ const SingleFilmComponent = () => {
       //    TITULO DE LA PELI 
       //    RESEÑA DE LA PELI       
       //    AÑO DE LANZAMIENTO 
+
   
   return(<section className="section__detail">
-
         <div className='section__detail__div'>
            <h3 className="section__detail__div__wrapper__title">{film.popularity}</h3>
      
@@ -42,8 +50,13 @@ const SingleFilmComponent = () => {
   
   
      {/* { -- METER EL ICONO DE REPRODUCIR EL VÍDEO } */}
-      <button className="section__detail__div__button__watch">Ver ahora</button>  <button className="section__detail__div__button__watch">▷</button>      <button className="section__detail__div__button__watch">*</button>  
+            <button className="section__detail__div__button__watch">Ver ahora</button> 
+            <button className="section__detail__div__button__watch">▷</button>  
+            {/* <button className="section__detail__div__button__watch">*</button>   */}
+            <button className="section__detail__div__button__watch" onClick={goBack}> GO BACK</button>
+
           </div>
+
   </section>)
 }};
 
