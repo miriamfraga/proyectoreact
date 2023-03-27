@@ -8,8 +8,8 @@ import { getSelect } from '../../store/films/actions';
 // --IMPORT USESTATE, USEDISPATCH Y USESELECTOR
 import { useState } from 'react';
 import { useDispatch,useSelector  } from 'react-redux';
-
-
+// --IMPORT LINK PARA REDIRIGIRME A UNA SOLA PAG
+import { Link } from 'react-router-dom';
 const SearcherComponent = () => { 
 
      const dispatch = useDispatch()
@@ -17,7 +17,9 @@ const SearcherComponent = () => {
      const {searched, loadingSelect} = useSelector((state)=>state.FilmsReducer)
   //-- CREAR ESTADO PARA EL INPUT SEARCHER --
      const [searchMovie, setSearchMovie] = useState('')
-  
+  // --URL CONST IMG   
+     const urlImage = "https://image.tmdb.org/t/p/w500/"
+     
   // --CREAR FUNCIÓN PARA BUSCAR QUE HACE UNA PETICIÓN A LA API PASANDO LA QUERY DEL NOMBRE DE LA PELI--
   function searcher(){
     dispatch(getSelect(searchMovie))
@@ -41,10 +43,19 @@ return   (<div className="div__searcher">
  {/* -- INPUT RECOGIENDO EL VALOR DEL SETEO DE LO QUE ESCRIBE EL USER */}
 <input value={searchMovie} type="text" onChange={e=>setSearchMovie(e.target.value)}   placeholder="search a movie..."></input>
 {console.log(searchMovie,"search", searched, "searched")}
-<button onClick={searcher} >SEARCH</button>
-<h1> {searched.id} </h1>
 
-  </div>)
+<button onClick={searcher} >SEARCH</button>
+{console.log(searched, "searchedmovie")}
+{/* <h1>{searched.title } </h1> */}
+{searched?.map((film)=>{   
+ return( 
+  
+  <Link to={`/film/${film.id}`}> <div> 
+  <img src={`${urlImage}${film.backdrop_path}`}></img>
+  </div></Link>)
+})}
+
+</div>)
 } };
 
 SearcherComponent.propTypes = {};

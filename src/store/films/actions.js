@@ -18,6 +18,8 @@ const apiKey = '?api_key=84d794a5b6f706450c3ee085b451575c';
 const baseUrl = 'https://api.themoviedb.org/';
 const selectMovie = 'search/movie'
 
+
+
 /* GET DRAMA FILMS */ 
 export function actionGetDramaFilms() {
     return {
@@ -197,18 +199,20 @@ export function getGenreFilms() {
             const response = await axios.get(`${baseUrl}3/genre/movie/list${apiKey}`)
             dispatch(actionGetGenreOk(response.data.genres))
         } catch (error) {
-            dispatch(actionGetGenreFail)
+            dispatch(actionGetGenreFail) 
         }
     }
 }
 
 /* FUNCIÓN PARA BINDEAR EL SELECT */
+
 // Y response data.results o response.data?
 export function getSelect(userFilmSearched) {
     return async(dispatch) => {
         dispatch(actionGetSelect(userFilmSearched))
         try {
-            const response = await axios.get(`${baseUrl}3/${selectMovie}${apiKey}&query${userFilmSearched}`)
+
+            const response = await axios.get(`${baseUrl}3/${selectMovie}${apiKey}&query=${userFilmSearched}`)
             dispatch(actionGetSelectOk(response.data.results))
         } catch (error) {
             dispatch(actionGetSelectFail(error))
