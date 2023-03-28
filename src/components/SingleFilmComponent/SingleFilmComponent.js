@@ -37,7 +37,7 @@ const SingleFilmComponent = () => {
   
   return(<section className="section__detail">
         <div className='section__detail__div'>
-           <h3 className="section__detail__div__wrapper__title">{film.popularity}</h3>
+           <h3 className="section__detail__div__wrapper__popularity">{film.popularity}</h3>
      
            <img className="section__detail__div__img__bg" src={`${urlImage}${film.poster_path}`} alt={film.title}></img>
 
@@ -45,11 +45,11 @@ const SingleFilmComponent = () => {
            {/* <img  className="section__detail__div__img__pstr" src={`${urlImage}${film.backdrop_path}`} alt={film.title}></img> */}
            <h2 className="section__detail__div__wrapper__title"> {film.original_title}  </h2>
            <h4 className="section__detail__div__wrapper__ovvw">{film.overview} </h4>
-           <h3 className="section__detail__div__wrapper__title">{film.release_date}</h3>
+           <h3 className="section__detail__div__wrapper__year">{film.release_date}</h3>
 
       {/* // -- AQUÍ ESTAN LOS NOMBRES DE LOS GÉNEROS EN UN ARRAY Y SOLO FUNCIONAN UNA VEZ QUE LA PAG SE HA CARGADO-- */}
-             {film.genres?.map((genre)=> <div key={genre.id}> 
-             <h4 key={genre.id} > { genre.name } </h4> </div> )}
+             {film.genres?.map((genre)=> <div className="div__wrapper__genre" key={genre.id}> 
+             <h4 className='div__wrapper__genre__h4' key={genre.id} > { genre.name } </h4> </div> )}
   
   
      {/* { -- METER EL ICONO DE REPRODUCIR EL VÍDEO } */}

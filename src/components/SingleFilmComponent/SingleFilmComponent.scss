@@ -4,6 +4,7 @@
 //  position: relative;
 
  &__div{
+
     // background-color: pink;
     &__button__watch{
             background-color: #02ffa1;
@@ -29,13 +30,7 @@
             }
     }
     &__img__bg{
-       
-       
-       
-       
-       
-       
-
+    
 
     }
     &__img__pstr{
@@ -43,11 +38,34 @@
         width: 10%;
         // top: 30%;
     }
-    &__wrapper__title{
-        position: relative;
-        // bottom: 90%;
+    &__wrapper__popularity{
+        // position: relative;
+        display: flex;
+        background-color: rgb(14, 13, 13);
+         width:100px;
+        border-radius: 20px;
+        border: 8px solid rgb(95, 95, 95);
+        padding: 10px;
+        // padding-right: 2px;
+    }
+    &__wrapper__year{
+        background-color: rgb(14, 13, 13);
+        padding: 10px;
+        border-radius: 20px;
+        border: 8px solid rgb(95, 95, 95);
+        width:140px;
     }
  }
+
 }
+.div__wrapper__genre{
+    display:flex;
+     margin: 1%;
+     width: 90px;
+    align-items: flex-start;
+    &__h4{
+        
+        }
+    }
 
 /* -- END SINGLEFILMCOMPONENT STYLES -- */
