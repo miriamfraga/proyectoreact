@@ -24,8 +24,9 @@ const SearcherComponent = () => {
   // --CREAR FUNCIÓN PARA BUSCAR QUE HACE UNA PETICIÓN A LA API PASANDO LA QUERY DEL NOMBRE DE LA PELI--
   
  
- async function searcher(){
-   
+ 
+  function searcher(){
+
     dispatch (getSelect(searchMovie))
     setSearchMovie('')
   }
