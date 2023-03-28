@@ -24,8 +24,10 @@ const SearcherComponent = () => {
   // --CREAR FUNCIÓN PARA BUSCAR QUE HACE UNA PETICIÓN A LA API PASANDO LA QUERY DEL NOMBRE DE LA PELI--
   
  
+ 
   function searcher(){
-    dispatch(getSelect(searchMovie))
+
+    dispatch (getSelect(searchMovie))
     setSearchMovie('')
   }
 
@@ -57,7 +59,7 @@ return   (<div className="div__searcher">
 {console.log(searchMovie,"searchMovie")}
 
 <Link to="/search"> <button className="section__detail__div__button__watch" onClick={searcher} >SEARCH 🍿</button></Link>
- {searched?.map((film)=>{   
+ {searched.images?.map((film)=>{   
   console.log(searched, "soy searched")
  return ( 
    
