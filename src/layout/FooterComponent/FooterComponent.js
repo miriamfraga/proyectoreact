@@ -36,11 +36,11 @@ const FooterComponent = () => {
                     </nav>
                     <nav className='footer__nav-social nav'>
                         <ul className="footer__ul-social ul">
-                            <li className="footer__li-social li"><a className='footer__a-social a' href='/'><FontAwesomeIcon icon={faTwitter}/></a></li>
-                            <li className="footer__li-social li"><a className='footer__a-social a' href='/'><FontAwesomeIcon icon={faFacebook}/></a></li>
-                            <li className="footer__li-social li"><a className='footer__a-social a' href='/'><FontAwesomeIcon icon={faInstagram}/></a></li>
-                            <li className="footer__li-social li"><a className='footer__a-social a' href='/'><FontAwesomeIcon icon={faLinkedin}/></a></li>
-                            <li className="footer__li-social li"><a className='footer__a-social a' href='/'><FontAwesomeIcon icon={faGithub}/></a></li>
+                            <li className="footer__li-social li"><a className='footer__a-social a' href='/'><FontAwesomeIcon icon={faTwitter} size="lg"/></a></li>
+                            <li className="footer__li-social li"><a className='footer__a-social a' href='/'><FontAwesomeIcon icon={faFacebook} size="lg"/></a></li>
+                            <li className="footer__li-social li"><a className='footer__a-social a' href='/'><FontAwesomeIcon icon={faInstagram} size="lg"/></a></li>
+                            <li className="footer__li-social li"><a className='footer__a-social a' href='/'><FontAwesomeIcon icon={faLinkedin} size="lg"/></a></li>
+                            <li className="footer__li-social li"><a className='footer__a-social a' href='/'><FontAwesomeIcon icon={faGithub} size="lg"/></a></li>
                         </ul>
                     </nav>
                 </section>
