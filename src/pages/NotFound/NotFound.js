@@ -3,9 +3,6 @@ import './NotFound.scss';
 import medusa0 from '../../assets/images/medusa0.jpeg'
 const NotFound = () => {
 
-  setTimeout(()=>{
-    NotFound()
-  }, 3000)
   return (
     <div className='div__notFound'>
     <h2>Turned into stone.</h2>
