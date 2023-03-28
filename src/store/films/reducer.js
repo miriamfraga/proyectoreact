@@ -16,7 +16,7 @@ const initialState = {
     popularFilms: [],
     docs: [],
     film: {},
-    searched: {},
+    searched: [],
     loadingDramaFilms: false,
     loadingSelect: false,
     loadingFilms: false,
