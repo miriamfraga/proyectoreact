@@ -31,7 +31,7 @@ const LoginComponent = () => {
   }
 
   return (
-    <div>
+    <div id="login">
       <h2>Iniciar sesión</h2>
       <form>
         <div>

@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import PropTypes from 'prop-types';
 import  './SingleFilmComponent.scss';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 const SingleFilmComponent = () => { 
+
+  const {user} = useSelector((state) => state.AuthReducer);
 
 // -- FUNCIÓN PARA VOLVER ATRÁS
 
@@ -50,8 +53,10 @@ const SingleFilmComponent = () => {
   
   
      {/* { -- METER EL ICONO DE REPRODUCIR EL VÍDEO } */}
-            <button className="section__detail__div__button__watch">Ver ahora</button> 
-            <button className="section__detail__div__button__watch">▷</button>  
+          {user && user.id? "" : <button  className="section__detail__div__button__watch"><Link className='section__detail__div__button__watch__link' to="/login">Ver ahora</Link></button>  }
+          {user && user.id?  <button  className="section__detail__div__button__watch"><Link className='section__detail__div__button__watch__link' to="/notFound">Ver ahora</Link></button> : ""}   
+            {/* <button  className="section__detail__div__button__watch"><Link className='section__detail__div__button__watch__link' to="/login">Ver ahora</Link></button>  */}
+            {/* <button className="section__detail__div__button__watch">▷</button>   */}
             {/* <button className="section__detail__div__button__watch">*</button>   */}
             <button className="section__detail__div__button__watch" onClick={goBack}> GO BACK</button>
 

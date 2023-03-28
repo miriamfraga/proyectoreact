@@ -39,6 +39,7 @@ function App() {
             <Route exact path='/about' element={<AboutPage/>}></Route>
             <Route exact path='/login' element={<LoginPage/>}></Route>
             <Route exact path='/film/:id' element={<SinglePage/>}></Route>
+            <Route exact path='/notFound' element={<NotFound/>}></Route>
             <Route exact path='/profile' element={user && user.id?<ProfilePage/>:<Navigate to="/login" replace></Navigate>}></Route>
             <Route path='*' element={<NotFound/>}></Route>
          
