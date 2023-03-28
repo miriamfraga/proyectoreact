@@ -45,27 +45,26 @@ return (
 return   (<div className="div__searcher">
  {/* -- INPUT RECOGIENDO EL VALOR DEL SETEO DE LO QUE ESCRIBE EL USER */}
 
- <div className="box">
-    <form name="search">
-        <input type="text" className="input" name="txt"  value={searchMovie}  onChange={e=>setSearchMovie(e.target.value)}   placeholder="find..."></input>
-    </form>
-    <i className="fas fa-search"></i>
-</div>
+     <div className="box">
+        <form name="box__search">
+            <input type="text" className="box__search__input" name="txt"  value={searchMovie}  onChange={e=>setSearchMovie(e.target.value)}   placeholder="find..."></input>
+        </form>
+        <i className="fa fa-search"></i>
+     </div>
 
-
-{/* <input value={searchMovie} type="text" onChange={e=>setSearchMovie(e.target.value)}   placeholder="search a movie..."></input> */}
 {console.log(searchMovie,"searchMovie")}
-
+<section className='section__results'> 
 <Link to="/search"> <button className="section__detail__div__button__watch" onClick={searcher} >SEARCH 🍿</button></Link>
  {searched?.map((film)=>{   
   console.log(searched, "soy searched")
  return ( 
    
-  <div>  <Link to={`/film/${film.id}`}> <div> 
-  <h3>{film.title} </h3>
+  <div className='div__searcher__div'>  <Link to={`/film/${film.id}`}> <div> 
+  <h3 className='div__searcher__div__title'>{film.title} </h3>
   <img src={`${urlImage}${film.backdrop_path}`} alt={film.title} ></img>
   </div></Link></div>)
 })}
+</section>
 
 </div>)
 } };
