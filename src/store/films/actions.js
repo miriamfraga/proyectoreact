@@ -213,8 +213,9 @@ export function getSelect(userFilmSearched) {
         try {
 
             const response = await axios.get(`${baseUrl}3/${selectMovie}${apiKey}&query=${userFilmSearched}`)
-            console.log(response, "response")
+            
             dispatch(actionGetSelectOk(response.data.results))
+            console.log(response.data.results, "responsedataresults")
         } catch (error) {
             dispatch(actionGetSelectFail(error))
         }

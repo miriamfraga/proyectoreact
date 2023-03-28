@@ -54,7 +54,7 @@ return   (<div className="div__searcher">
 {console.log(searchMovie,"searchMovie")}
 <section className='section__results'> 
 <Link to="/search"> <button className="section__detail__div__button__watch" onClick={searcher} >SEARCH 🍿</button></Link>
- {searched && searched.images?.map((film)=>{   
+ {searched && searched.original_title?.map((film)=>{   
   console.log(searched, "soy searched")
  return ( 
    
