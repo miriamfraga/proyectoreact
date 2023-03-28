@@ -16,7 +16,9 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import SinglePage from './pages/SinglePage/SinglePage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
+import NotFound from './pages/NotFound/NotFound';
 import SearcherPage from './pages/SearcherPage/SearcherPage';
+
 /* IMPORT REDUX */
 import { useSelector } from 'react-redux';
 
@@ -38,6 +40,8 @@ function App() {
             <Route exact path='/login' element={<LoginPage/>}></Route>
             <Route exact path='/film/:id' element={<SinglePage/>}></Route>
             <Route exact path='/profile' element={user && user.id?<ProfilePage/>:<Navigate to="/login" replace></Navigate>}></Route>
+            <Route path='*' element={<NotFound/>}></Route>
+         
           </Routes>
         </div>
       </main>
