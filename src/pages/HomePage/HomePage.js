@@ -3,12 +3,14 @@ import PopularFilmsComponent from '../../components/PopularFilmsComponent/Popula
 import RomanceFilmsComponent from '../../components/RomanceFilmsComponent/RomanceFilmsComponent';
 import FilmsDocComponent from '../../components/FilmsDocComponent/FilmsDocComponent';
 import SlideshowComponent from '../../components/SlideshowComponent/SlideshowComponent';
+import SearcherComponent from '../../components/SearcherComponent/SearcherComponent';
 
 const HomePage = () => {
 
   return (
     <>
     <SlideshowComponent></SlideshowComponent>
+
     <PopularFilmsComponent></PopularFilmsComponent>
     <RomanceFilmsComponent></RomanceFilmsComponent>
     <FilmsDocComponent></FilmsDocComponent>
