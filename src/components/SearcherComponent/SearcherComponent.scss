@@ -2,12 +2,13 @@
 
 .div__searcher{
     display:flex;
-    background-color: pink;
+    // background-color: pink;
     flex-direction: column;
     flex-wrap: wrap;
-     padding: 5%;
+     padding: 10px;
     justify-content: center;
     align-items: center;
+
     &__div{
          background-color: rgb(208, 57, 83);
          margin: 1em;

@@ -1,8 +1,9 @@
 
 .wrapper{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-between;
     // background-color: blue;
  
     
@@ -24,20 +25,22 @@
         align-items: flex-start;
         padding: 1%;
     &__img{
-         width: 80%;
+        
         
     }
         &__title{
-         display:flex;
-         flex-wrap: nowrap;
-         text-align: justify;
-         position: relative;
+        
+        
+        
+        
         //  background-color: aqua;
       
         }
         &__h4{
-          
-            
+            text-align: justify;
+            position: relative;
+            display:flex;
+            flex-wrap: nowrap;
         }
 }
 

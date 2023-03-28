@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './SearcherComponent.scss';
 
 // --IMPORT LA FUNCIÓN QUE BUSCA 
 import { getSelect } from '../../store/films/actions';
-
 // --IMPORT USESTATE, USEDISPATCH Y USESELECTOR
 import { useState } from 'react';
 import { useDispatch,useSelector  } from 'react-redux';
@@ -22,10 +21,12 @@ const SearcherComponent = () => {
      const urlImage = "https://image.tmdb.org/t/p/w500/"
      
   // --CREAR FUNCIÓN PARA BUSCAR QUE HACE UNA PETICIÓN A LA API PASANDO LA QUERY DEL NOMBRE DE LA PELI--
-  
- 
-  function searcher(){
-    dispatch(getSelect(searchMovie))
+
+
+
+
+ function searcher(){
+   dispatch(getSelect(searchMovie))
     setSearchMovie('')
   }
 
@@ -55,7 +56,7 @@ return   (<div className="div__searcher">
 {console.log(searchMovie,"searchMovie")}
 <section className='section__results'> 
 <Link to="/search"> <button className="section__detail__div__button__watch" onClick={searcher} >SEARCH 🍿</button></Link>
- {searched?.map((film)=>{   
+ {searched && searched.backdrop_path?.map((film)=>{   
   console.log(searched, "soy searched")
  return ( 
    
@@ -64,7 +65,7 @@ return   (<div className="div__searcher">
   <img src={`${urlImage}${film.backdrop_path}`} alt={film.title} ></img>
   </div></Link></div>)
 })}
-</section>
+</section> 
 
 </div>)
 } };
