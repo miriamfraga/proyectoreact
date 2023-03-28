@@ -24,11 +24,11 @@ const NavigationComponent = () => {
       <ul className='main-nav__ul ul'>
         <li className='main-nav__li li'><Link className="main-nav__link link" to='/'>Home</Link></li>
         <li className='main-nav__li li'><Link className="main-nav__link link" to='/films'>Films</Link></li>
-        <li className='main-nav__li li'><Link className="main-nav__link link" to='/series'>Series</Link></li>
+        <li className='main-nav__li li'><Link className="main-nav__link link" to='/search'>Search</Link></li>
         <li className='main-nav__li li'><Link className="main-nav__link link" to='/favourites'>Favourites</Link></li>
         <li className='main-nav__li li'><Link className="main-nav__link link" to='/about'>About</Link></li>|
         {user && user.id? "" : <li className='main-nav__li li'><Link className="main-nav__link link" to='/login'>Login</Link></li>}
-        {user && user.id? <li className='main-nav__li li'><Link className="main-nav__link link" to='/profile'><FontAwesomeIcon icon={faCircleUser} size="lg" /></Link></li> : ""}
+        {user && user.id? <li className='main-nav__li li'><Link className="main-nav__link link" to='/profile'><FontAwesomeIcon icon={faCircleUser} size="lg" /> {user.firstName}</Link></li> : ""}
       </ul>
     </nav>
   )

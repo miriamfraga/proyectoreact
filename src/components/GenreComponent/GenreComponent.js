@@ -2,14 +2,18 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './GenreComponent.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { getGenreFilms } from '../../store/films/actions';
+import { actionGetGenre, getGenreFilms } from '../../store/films/actions';
 
 const GenreComponent = () => { 
 
   const dispatch = useDispatch();
   const {genres, loadingGenres}= useSelector((state)=> state.FilmsReducer)
   
- 
+  const [gender, setGender] = useState('') 
+ function selectGenre(){
+  dispatch(getGenreFilms(gender))
+  setGender('')
+ }
 
   useEffect(()=>{
     dispatch(getGenreFilms())
@@ -25,7 +29,7 @@ const GenreComponent = () => {
    <select>
        {genres.map((genre, index)=>{
          return (
-            <option key={index}>{genre.name}{genre.id}  </option>
+            <option  value={gender} onChange={e=>setGender(e.target.value)} onMouseEnter={selectGenre} key={index}>{genre.name}{genre.id}  </option>
 
 )
  })}

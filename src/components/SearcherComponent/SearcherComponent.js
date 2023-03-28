@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 const SearcherComponent = () => { 
 
      const dispatch = useDispatch()
+
   // --TRAIGO EL ESTADO QUE ME INTERESA DEL REDUCER QUE ME INTERESA
      const {searched, loadingSelect} = useSelector((state)=>state.FilmsReducer)
   //-- CREAR ESTADO PARA EL INPUT SEARCHER --
@@ -21,6 +22,8 @@ const SearcherComponent = () => {
      const urlImage = "https://image.tmdb.org/t/p/w500/"
      
   // --CREAR FUNCIÓN PARA BUSCAR QUE HACE UNA PETICIÓN A LA API PASANDO LA QUERY DEL NOMBRE DE LA PELI--
+  
+ 
   function searcher(){
     dispatch(getSelect(searchMovie))
     setSearchMovie('')
@@ -41,16 +44,27 @@ return (
 
 return   (<div className="div__searcher">
  {/* -- INPUT RECOGIENDO EL VALOR DEL SETEO DE LO QUE ESCRIBE EL USER */}
-<input value={searchMovie} type="text" onChange={e=>setSearchMovie(e.target.value)}   placeholder="search a movie..."></input>
-{console.log(searchMovie,"search", searched, "searched")}
 
-<button onClick={searcher} >SEARCH</button>
-{searched.images?.map((film)=>{   
- return( 
-  
-  <Link to={`/film/${film.id}`}> <div> 
+ <div className="box">
+    <form name="search">
+        <input type="text" className="input" name="txt"  value={searchMovie}  onChange={e=>setSearchMovie(e.target.value)}   placeholder="find..."></input>
+    </form>
+    <i className="fas fa-search"></i>
+</div>
+
+
+{/* <input value={searchMovie} type="text" onChange={e=>setSearchMovie(e.target.value)}   placeholder="search a movie..."></input> */}
+{console.log(searchMovie,"searchMovie")}
+
+<Link to="/search"> <button className="section__detail__div__button__watch" onClick={searcher} >SEARCH 🍿</button></Link>
+ {searched?.map((film)=>{   
+  console.log(searched, "soy searched")
+ return ( 
+   
+  <div>  <Link to={`/film/${film.id}`}> <div> 
+  <h3>{film.title} </h3>
   <img src={`${urlImage}${film.backdrop_path}`} alt={film.title} ></img>
-  </div></Link>)
+  </div></Link></div>)
 })}
 
 </div>)
