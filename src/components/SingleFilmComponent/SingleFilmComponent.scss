@@ -1,11 +1,11 @@
 /* -- START SINGLEFILMCOMPONENT STYLES -- */
 .section__detail{
  display:flex;
-//  position: relative;
-
+  position: relative;
+//  background-color: pink;
  &__div{
 
-    // background-color: pink;
+    //  background-color: rgb(129, 98, 104);
     &__button__watch{
             background-color: #02ffa1;
             font-size: 1.25rem;
@@ -22,38 +22,55 @@
             }
           
             &__link{
-                font-weight: 600;
+                font-weight: 600px;
                 text-transform: uppercase;
                 font-size: 1.25rem;
-                // background-color: pink;
+                color: black;
                 
             }
     }
     &__img__bg{
-    
+     position: relative;
 
     }
     &__img__pstr{
-        // position:relative;
-        width: 10%;
-        // top: 30%;
+         position:absolute;
+         width: 10%;
+         right: 90%;
+         top: 50%;
     }
     &__wrapper__popularity{
-        // position: relative;
+         position: absolute;
         display: flex;
         background-color: rgb(14, 13, 13);
-         width:100px;
+        width:85px;
         border-radius: 20px;
         border: 8px solid rgb(95, 95, 95);
         padding: 10px;
+        bottom: 50%;
+        
         // padding-right: 2px;
     }
     &__wrapper__year{
-        background-color: rgb(14, 13, 13);
+        position: absolute;
+        // background-color: rgb(14, 13, 13);
         padding: 10px;
         border-radius: 20px;
-        border: 8px solid rgb(95, 95, 95);
-        width:140px;
+        // border: 8px solid rgb(95, 95, 95);
+        width:160px;
+        bottom: 22%;
+        left: 11%;
+        display: flex;
+    }
+    &__wrapper__ovvw{
+        position: absolute;
+        bottom: 10%;
+    }
+    &__wrapper__title{
+        position: absolute;
+        bottom: 30%;
+        left: 11%;
+        
     }
  }
 
@@ -62,9 +79,13 @@
     display:flex;
      margin: 1%;
      width: 90px;
-    align-items: flex-start;
+     align-items: flex-start;
+    //   position: relative;
+     bottom: 40%;
+     left: 15%;
     &__h4{
-        
+        // background-color: red;
+        bottom: 10%;
         }
     }
 
