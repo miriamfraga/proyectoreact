@@ -18,7 +18,8 @@ const SearcherComponent = () => {
   //-- CREAR ESTADO PARA EL INPUT SEARCHER --
      const [searchMovie, setSearchMovie] = useState('')
   // --URL CONST IMG   
-     const urlImage = "https://image.tmdb.org/t/p/w500/"
+     const urlImage = "https://image.tmdb.org/t/p/original/"
+     const urlImage1 = "https://image.tmdb.org/t/p/w500/"
      
   // --CREAR FUNCIÓN PARA BUSCAR QUE HACE UNA PETICIÓN A LA API PASANDO LA QUERY DEL NOMBRE DE LA PELI--
 
@@ -26,7 +27,7 @@ const SearcherComponent = () => {
    dispatch(getSelect(searchMovie))
     setSearchMovie('')
   }
-
+console.log(searched, "soy searched")
 //    CREAR INPUT Y BINDEAR EL VALOR DE BÚSQUEDA CON LOS NOMBRES DE LAS PELÍCULAS 
 //    CREAR EVENTO DE ONCHANGE PARA CUANDO SE VAYA METIENDO CADA LETRA VAYA SUGIRIENDO UNA PELI Y 
 //    OBTENCIÓN DEL VALOR CON E.T.VALUE  
@@ -38,12 +39,11 @@ return (
     "Loading..."
   </p>
 )
- }else{
+ }
 
 
 return   (<div className="div__searcher">
- {/* -- INPUT RECOGIENDO EL VALOR DEL SETEO DE LO QUE ESCRIBE EL USER */}
-
+{console.log(searched)}
      <div className="box">
         <form name="box__search">
             <input type="text" className="box__search__input" name="txt"  value={searchMovie}  onChange={e=>setSearchMovie(e.target.value)}   placeholder="find..."></input>
@@ -51,22 +51,30 @@ return   (<div className="div__searcher">
         <i className="fa fa-search"></i>
      </div>
 
-{console.log(searchMovie,"searchMovie")}
 <section className='section__results'> 
 <Link to="/search"> <button className="section__detail__div__button__watch" onClick={searcher} >SEARCH 🍿</button></Link>
- {searched && searched.images?.map((film)=>{   
-  console.log(searched, "soy searched")
- return ( 
-   
-  <div className='div__searcher__div'>  <Link to={`/film/${film.id}`}> <div> 
-  <h3 className='div__searcher__div__title'>{film.title} </h3>
-  <img src={`${urlImage}${film.backdrop_path}`} alt={film.title} ></img>
-  </div></Link></div>)
-})}
+ 
+ 
+ {/* --CONDICIONALES PARA QUE NO MUESTRE LAS PELÍCULAS QUE NO TENGAN IMÁGENES-- */}
+  {searched && searched?.map((film)=>
+  <div key={film.id} className='div__searcher__div'> 
+   <Link to={`/film/${film.id}`}> <div> 
+  {`${urlImage}${film.backdrop_path}` !== `${urlImage}null` && `${urlImage1}null`  ?
+  <h3 className='div__searcher__div__title'>{film.title} </h3> &&
+ 
+   <img src={`${urlImage}${film.backdrop_path}`} alt={film.title} ></img>: '' } 
+
+   {`${urlImage}${film.poster_path}` !== `${urlImage}null` && `${urlImage1}null`  ?
+   <h3 className='div__searcher__div__title'>{film.title} </h3> &&
+  <img src={`${urlImage}${film.poster_path}`} alt={film.title} ></img>: '' } 
+
+ 
+  </div></Link></div>
+)}
 </section> 
 
 </div>)
-} };
+} ;
 
 SearcherComponent.propTypes = {};
 

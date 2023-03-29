@@ -130,7 +130,7 @@ export default function FilmsReducer(state = initialState, action) {
             break
 
         case GET_SELECT_FAIL:
-            state = {...state, loadingSelect:false, searched: {}, error: {message: action.payload}}
+            state = {...state, loadingSelect:false, searched: [], error: {message: action.payload}}
             break
 
         /* DEFAULT */
