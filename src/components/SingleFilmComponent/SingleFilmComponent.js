@@ -41,16 +41,19 @@ const SingleFilmComponent = () => {
            <img className="section__detail__div__img__bg" src={`${urlImage}${film.backdrop_path}`} alt={film.title}></img>
       </div>
 
-      <div className='detail__info'> 
 
+      <div className='detail__info'> 
+           <div className='detail__block-info'>  
+             <img  className="detail__info__pstr" src={`${urlImage}${film.poster_path}`} alt={film.title}></img>
+           </div>
+<div className='detail__info-text'> 
            <h4 className="detail__info__popularity">{film.popularity}</h4>
-           <img  className="detail__info__pstr" src={`${urlImage}${film.poster_path}`} alt={film.title}></img>
            <h1 className="detail__info__title"> {film.original_title}  </h1>
            <h4 className="detail__info__ovvw">{film.overview} </h4>
            <h3 className="detail__info__year">{film.release_date}</h3>
            {film.genres?.map((genre)=> <div className="div__wrapper__genre" key={genre.id}> 
            <h4 className='div__wrapper__genre__h4' key={genre.id} > { genre.name } </h4> </div> )}
-  
+       </div>
        </div>
 
           {user && user.id? "" : <button  className="section__detail__div__button__watch"><Link className='section__detail__div__button__watch__link' to="/login">Ver ahora</Link></button>  }
