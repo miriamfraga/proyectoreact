@@ -31,20 +31,25 @@ const LoginComponent = () => {
   }
 
   return (
-    <div id="login">
-      <h2>Iniciar sesión</h2>
-      <form>
-        <div>
-        <label htmlFor="username">Usuario:</label>
-          <input placeholder='username' type="email" value={username} onChange={(e) => setUsername(e.target.value)} required />
-        </div>
-        <div>
-        <label htmlFor="password">Contraseña:</label>
-          <input placeholder='password' type='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
-        </div>
-        <button onClick={tryLogin} type="submit">Iniciar sesión</button>
-      </form>
-    </div>
+    <>
+    <h1 className='login__h1 h1'>LOGIN PAGE</h1>
+    <section className='section__login section'>
+      <div className="login">
+        <h2 className='login__h2 h2'>Iniciar sesión</h2>
+        <form className=''>
+          <div className='form__label'>
+            <label htmlFor="username">Usuario:</label>
+            <input placeholder='username' type="email" value={username} onChange={(e) => setUsername(e.target.value)} required />
+          </div>
+          <div className='form__label'>
+            <input placeholder='password' type='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
+            <label htmlFor="password">Contraseña:</label>
+          </div>
+          <button onClick={tryLogin} type="submit">Iniciar sesión</button>
+        </form>
+      </div>
+    </section>
+    </>
   )
 }
 
