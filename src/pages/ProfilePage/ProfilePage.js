@@ -13,18 +13,18 @@ const ProfilePage = () => {
           <h1> Profile page</h1>
           <h2>Hey {user.firstName}! Nice to see you again!</h2>
             <div className='div__info'>
-              <div className='div__info__label'>
-                <label>Nombre: </label>
-                  {user.firstName}
-              </div>
-              <div className='div__info__label'> 
-                <label>Apellidos: </label>
-                  {user.lastName}
-              </div>
-              <div className='div__info__label'>
-                <label>Email: </label>
-                  {user.email}
-              </div>
+               <div className='div__info__label'>
+                   <label>Nombre: </label>
+                   {user.firstName}
+               </div>
+               <div className='div__info__label'> 
+                   <label>Apellidos: </label>
+                   {user.lastName}
+               </div>
+               <div className='div__info__label'>
+                   <label>Email: </label>
+                   {user.email}
+               </div>
         </div>
    </div>
    <div className='div__image'>
