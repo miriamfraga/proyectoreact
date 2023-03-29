@@ -55,7 +55,7 @@ return   (<div className="div__searcher">
 <Link to="/search"> <button className="section__detail__div__button__watch" onClick={searcher} >SEARCH 🍿</button></Link>
  
  
-
+ {/* --CONDICIONALES PARA QUE NO MUESTRE LAS PELÍCULAS QUE NO TENGAN IMÁGENES-- */}
   {searched && searched?.map((film)=>
   <div key={film.id} className='div__searcher__div'> 
    <Link to={`/film/${film.id}`}> <div> 
