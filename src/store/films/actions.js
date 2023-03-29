@@ -64,17 +64,17 @@ export function actionGetGenreFail(error) {
 }
 
 /* GET SELECT SEARCHEDMOVIE */
-export function actionGetSelect(paramFilm) {
+export function actionGetSelect(searchedFilm) {
     return {
         type: GET_SELECT,
-        payload: paramFilm
+        payload: searchedFilm
     }
 }
 
-export function actionGetSelectOk(searchedFilm) {
+export function actionGetSelectOk(searched) {
     return {
         type: GET_SELECT_OK,
-        payload: searchedFilm
+        payload: searched
     }
 }
 
@@ -211,10 +211,9 @@ export function getSelect(userFilmSearched) {
     return async(dispatch) => {
         dispatch(actionGetSelect(userFilmSearched))
         try {
-
             const response = await axios.get(`${baseUrl}3/${selectMovie}${apiKey}&query=${userFilmSearched}`)
-            
             dispatch(actionGetSelectOk(response.data.results))
+
             console.log(response.data.results, "responsedataresults")
         } catch (error) {
             dispatch(actionGetSelectFail(error))
@@ -231,7 +230,6 @@ export function getAll() {
             const response = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=10752|99|14&page=3`)
             const response1 = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=878|10402|37&page=5`)
             const response2 = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=36|10402|37&page=4`)
-            //   films.push(response1.data.results)
               films.push(response1.data.results, response.data.results, response2.data.results)
             dispatch(actionGetAllOk(films))
         } catch (error) {

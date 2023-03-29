@@ -18,7 +18,7 @@ const SearcherComponent = () => {
   //-- CREAR ESTADO PARA EL INPUT SEARCHER --
      const [searchMovie, setSearchMovie] = useState('')
   // --URL CONST IMG   
-     const urlImage = "https://image.tmdb.org/t/p/w500/"
+     const urlImage = "https://image.tmdb.org/t/p/original/"
      
   // --CREAR FUNCIÓN PARA BUSCAR QUE HACE UNA PETICIÓN A LA API PASANDO LA QUERY DEL NOMBRE DE LA PELI--
 
@@ -38,12 +38,11 @@ return (
     "Loading..."
   </p>
 )
- }else{
+ }
 
 
 return   (<div className="div__searcher">
- {/* -- INPUT RECOGIENDO EL VALOR DEL SETEO DE LO QUE ESCRIBE EL USER */}
-
+{console.log(searched)}
      <div className="box">
         <form name="box__search">
             <input type="text" className="box__search__input" name="txt"  value={searchMovie}  onChange={e=>setSearchMovie(e.target.value)}   placeholder="find..."></input>
@@ -51,22 +50,21 @@ return   (<div className="div__searcher">
         <i className="fa fa-search"></i>
      </div>
 
-{console.log(searchMovie,"searchMovie")}
 <section className='section__results'> 
 <Link to="/search"> <button className="section__detail__div__button__watch" onClick={searcher} >SEARCH 🍿</button></Link>
- {searched && searched.original_title?.map((film)=>{   
-  console.log(searched, "soy searched")
- return ( 
-   
-  <div className='div__searcher__div'>  <Link to={`/film/${film.id}`}> <div> 
-  <h3 className='div__searcher__div__title'>{film.title} </h3>
+ {searched && searched?.map((film)=>
+
+  <div key={film.id} className='div__searcher__div'> 
+  
+   <Link to={`/film/${film.id}`}> <div> 
+  <h3 className='div__searcher__div__title'>{film.title} </h3>{console.log(film, "film")}
   <img src={`${urlImage}${film.backdrop_path}`} alt={film.title} ></img>
-  </div></Link></div>)
-})}
+  </div></Link></div>
+)}
 </section> 
 
 </div>)
-} };
+} ;
 
 SearcherComponent.propTypes = {};
 
