@@ -42,7 +42,7 @@ const SingleFilmComponent = () => {
            <img className="section__detail__div__img__bg" src={`${urlImage}${film.poster_path}`} alt={film.title}></img>
 
            {/* -- IMAGEN APAISADA PARA PONER DE FONDO ?-- */}
-           {/* <img  className="section__detail__div__img__pstr" src={`${urlImage}${film.backdrop_path}`} alt={film.title}></img> */}
+           <img  className="section__detail__div__img__pstr" src={`${urlImage}${film.backdrop_path}`} alt={film.title}></img>
            <h2 className="section__detail__div__wrapper__title"> {film.original_title}  </h2>
            <h4 className="section__detail__div__wrapper__ovvw">{film.overview} </h4>
            <h3 className="section__detail__div__wrapper__year">{film.release_date}</h3>
