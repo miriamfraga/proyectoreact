@@ -1,3 +1,10 @@
 /* -- START SLIDESHOWCOMPONENT STYLES -- */
 
+.section__slideshow .swiper-slide {
+    max-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* -- END SLIDESHOWCOMPONENT STYLES -- */

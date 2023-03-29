@@ -27,7 +27,7 @@ const AboutPage = () => {
           <li className='about__li li'>
             <h2 className='about__h2 h2'><FontAwesomeIcon icon={faHeart} style={{color: "#02ffa1",}} /> Nuestros valores</h2>
             <hr/>
-            <p className='about__p p'><b>En nuestra empresa,</b> creemos en la integridad, 
+            <p className='about__p p'><b>En nuestra empresa</b>, creemos en la integridad, 
             la honestidad y la ética en los negocios. Nos esforzamos por mantener 
             altos estándares en todo lo que hacemos y tratamos a nuestros clientes, 
             empleados y colaboradores con respeto y consideración. Además, estamos 

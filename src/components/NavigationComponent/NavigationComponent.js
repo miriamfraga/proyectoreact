@@ -17,7 +17,6 @@ import { useSelector } from 'react-redux';
 const NavigationComponent = () => {
 
   const {user} = useSelector((state) => state.AuthReducer);
-  <FontAwesomeIcon icon={faCircleUser} size="lg" />
 
   return (
     <nav className='header__main-nav nav'>
@@ -27,9 +26,8 @@ const NavigationComponent = () => {
         <li className='main-nav__li li'><Link className="main-nav__link link" to='/search'>Search</Link></li>
         <li className='main-nav__li li'><Link className="main-nav__link link" to='/favourites'>Favourites</Link></li>
         <li className='main-nav__li li'><Link className="main-nav__link link" to='/about'>About</Link></li>|
-
         {user && user.id? "" : <li className='main-nav__li li'><Link className="main-nav__link link" to='/login'>Login</Link></li>}
-        {user && user.id? <li className='main-nav__li li'><Link className="main-nav__link link" to='/profile'><FontAwesomeIcon icon={faCircleUser} size="lg" /> Hello, {user.firstName}</Link></li> : ""}
+        {user && user.id? <li className='main-nav__li li'><Link className="main-nav__link link" to='/profile'><FontAwesomeIcon icon={faCircleUser} style={{color: "#02ffa1",}} size="lg" /> Hello, {user.firstName}</Link></li> : ""}
       </ul>
     </nav>
   )
