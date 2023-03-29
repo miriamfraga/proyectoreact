@@ -61,7 +61,7 @@ const RomanceFilmsComponent = () => {
               <li className="div__section__ul__li__div"> 
                 <div className='overlay'>
                   <Link to={`/film/${film.id}`}>        
-                    <img className="div__section__ul__li__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title} ></img>
+                    <img className="romance-films__img img" src={`${urlImage}${film.poster_path}`}  alt={film.title} ></img>
                   </Link>
                 </div>
                 <h4 className="section__div__wrapper__title">{film.original_title}</h4>

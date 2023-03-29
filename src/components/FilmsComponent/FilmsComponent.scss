@@ -1,68 +1,14 @@
-// *{
-    // margin: 0 auto;
-    // box-sizing: border-box;
-    // padding-inline-start: 0;
-// }
-// .div__section{
-    // // background-color: pink;
-    // display:flex;
-    // align-items: flex-start;
-    // flex-direction: row;
+/* -- START DRAMAFILMSCOMPONENT STYLES -- */
 
-    // &__ul{
-        // display:flex;
-        // justify-content:flex-start;
-        // width: 90%;
-        // align-items: flex-start;
-        // padding: 2%;
-        // &__li{
-            // //   background-color: aquamarine;
-          // display: flex;
-          // width: calc(35%);
-          // margin: 1%;
-          // flex-direction: column;
-          // align-items: center;
-        
-          // &__div{
-            // // background-color: blue; 
-            // // margin: 2%;
-            
-          // }
-        // }
-      // }
-// }
-// .section__div{
-    // // display: flex;
-    // // padding: 2%;
-    // // background-color: bisque;
-    // flex-direction: column;
-    // justify-items: flex-start;
-    
-    // &__wrapper{
-        // // background-color: red;
-        // display:flex;
-        // align-items: flex-end;
-        // justify-content: left;
-        // // gap: 1em;
-    
-        // &__title{
-        //  padding: 1%;
-        //  height: 50px;
-        // //  background-color: blueviolet;
-        //  margin: 1%;
-        // }
-    // }
+.drama-films {
 
-// }
+    &__img {
+        transition: transform 0.3s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
 
-// // img{
-    // // max-width: 400px;
-    // // object-fit: cover;
-    // // height: 500px;
-// // }
-
-
-/* -- START FILMSCOMPONENT STYLES -- */
-
-/* -- END FILMSCOMPONENT STYLES -- */
+/* -- END DRAMAFILMSCOMPONENT STYLES -- */
 
