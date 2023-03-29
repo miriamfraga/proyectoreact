@@ -1,0 +1,33 @@
+.div__image{
+    // background-color: aquamarine;
+    width: 50%;
+
+    &__user{
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+        width: 300px;
+        height: 300px;
+         overflow: hidden;
+    }
+}
+
+.div{
+    display:flex;
+    // background-color: aqua;
+    flex-direction:column;
+
+    &__info{
+        display:flex;
+        flex-direction: column;
+        // background-color: pink;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 1%;
+       
+
+    }
+
+    &__label{
+
+    }
+}
