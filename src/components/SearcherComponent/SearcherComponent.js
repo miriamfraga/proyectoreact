@@ -56,6 +56,7 @@ return   (<div className="div__searcher">
  
  
  {/* --CONDICIONALES PARA QUE NO MUESTRE LAS PELÍCULAS QUE NO TENGAN IMÁGENES-- */}
+ 
   {searched && searched?.map((film)=>
   <div key={film.id} className='div__searcher__div'> 
    <Link to={`/film/${film.id}`}> <div> 
