@@ -1,11 +1,16 @@
 /* -- START SINGLEFILMCOMPONENT STYLES -- */
 .section__detail{
- display:flex;
+  display:flex;
   position: relative;
-//  background-color: pink;
+
+  &__first{
+    display:flex;
+    flex-direction: column;
+}
  &__div{
 
-    //  background-color: rgb(129, 98, 104);
+     position: relative;
+
     &__button__watch{
             background-color: #02ffa1;
             font-size: 1.25rem;
@@ -16,76 +21,79 @@
             border-radius: 0.25rem;
             font-weight: 600;
             text-transform: uppercase;
-            
+
             &:hover{
-                background-color: #42ffba;
+                background-color: #68fac5;
             }
-          
+
             &__link{
                 font-weight: 600px;
                 text-transform: uppercase;
                 font-size: 1.25rem;
                 color: black;
-                
+
             }
     }
     &__img__bg{
      position: relative;
+     &:hover{
+        filter:sepia(50%);
+     }
 
     }
     &__img__pstr{
          position:absolute;
          width: 10%;
          right: 90%;
-         top: 50%;
+         bottom: 25%;
+         &:hover{
+            scale: 1.4;
+               transform: translateX(18px);
+         }
     }
     &__wrapper__popularity{
-         position: absolute;
+        position: absolute;
         display: flex;
-        background-color: rgb(14, 13, 13);
-        width:85px;
+        width:10%;
         border-radius: 20px;
-        border: 8px solid rgb(95, 95, 95);
-        padding: 10px;
-        bottom: 50%;
-        
-        // padding-right: 2px;
+        bottom: 45%;
+        left: 2%;
     }
     &__wrapper__year{
         position: absolute;
-        // background-color: rgb(14, 13, 13);
         padding: 10px;
+        padding: 1%;
         border-radius: 20px;
-        // border: 8px solid rgb(95, 95, 95);
-        width:160px;
+         border: 2px solid rgb(95, 95, 95);
         bottom: 22%;
         left: 11%;
         display: flex;
     }
     &__wrapper__ovvw{
-        position: absolute;
-        bottom: 10%;
+        position: relative;
+        top:0;
     }
     &__wrapper__title{
         position: absolute;
-        bottom: 30%;
+        bottom: 41%;
         left: 11%;
-        
+        color:#02ffa1
     }
  }
 
 }
 .div__wrapper__genre{
-    display:flex;
-     margin: 1%;
-     width: 90px;
-     align-items: flex-start;
-    //   position: relative;
-     bottom: 40%;
-     left: 15%;
+     display:flex;
+     margin: 2%;
+     width: 190px;
+     flex-direction: row;
+     position: relative;
+     bottom: 30%;
+     background-color: #42ffba;
+     left: 10%;
     &__h4{
-        // background-color: red;
-        bottom: 10%;
+        position: absolute;
+
         }
     }
 

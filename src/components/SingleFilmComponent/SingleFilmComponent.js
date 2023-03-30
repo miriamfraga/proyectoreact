@@ -37,16 +37,16 @@ const SingleFilmComponent = () => {
   
   return(<section className="section__detail">
         <div className='section__detail__div'>
-     
            <img className="section__detail__div__img__bg" src={`${urlImage}${film.backdrop_path}`} alt={film.title}></img>
-           <h4 className="section__detail__div__wrapper__popularity">{film.popularity}</h4>
-
            {/* -- IMAGEN APAISADA PARA PONER DE FONDO ?-- */}
-
+        <div className='section__detail__first'> 
+           <h4 className="section__detail__div__wrapper__popularity">{film.popularity}</h4>
            <img  className="section__detail__div__img__pstr" src={`${urlImage}${film.poster_path}`} alt={film.title}></img>
+        </div>
+          
            <h1 className="section__detail__div__wrapper__title"> {film.original_title}  </h1>
 
-           <img  className="section__detail__div__img__pstr" src={`${urlImage}${film.backdrop_path}`} alt={film.title}></img>
+           {/* <img  className="section__detail__div__img__pstr" src={`${urlImage}${film.backdrop_path}`} alt={film.title}></img> */}
          
 
            <h4 className="section__detail__div__wrapper__ovvw">{film.overview} </h4>
