@@ -48,26 +48,28 @@
          bottom: 25%;
          &:hover{
             scale: 1.4;
-               transform: translateX(18px);
+            transform: translateX(18px);
          }
     }
+ 
+    
     &__wrapper__popularity{
-        position: absolute;
+         position: absolute;
         display: flex;
-        width:10%;
+        background-color: rgb(14, 13, 13);
         border-radius: 20px;
         bottom: 45%;
         left: 2%;
     }
     &__wrapper__year{
-        position: absolute;
-        padding: 10px;
-        padding: 1%;
-        border-radius: 20px;
-         border: 2px solid rgb(95, 95, 95);
-        bottom: 22%;
-        left: 11%;
-        display: flex;
+       position: absolute;
+       padding: 10px;
+       padding: 1%;
+       border-radius: 20px;
+       border: 2px solid rgb(95, 95, 95);
+       bottom: 22%;
+       left: 11%;
+       display: flex;
     }
     &__wrapper__ovvw{
         position: relative;
@@ -79,10 +81,13 @@
         left: 11%;
         color:#02ffa1
     }
+   
+
  }
 
 }
 .div__wrapper__genre{
+
      display:flex;
      margin: 2%;
      width: 190px;

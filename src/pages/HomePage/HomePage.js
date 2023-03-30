@@ -10,7 +10,6 @@ const HomePage = () => {
   return (
     <>
     <SlideshowComponent></SlideshowComponent>
-
     <PopularFilmsComponent></PopularFilmsComponent>
     <RomanceFilmsComponent></RomanceFilmsComponent>
     <FilmsDocComponent></FilmsDocComponent>

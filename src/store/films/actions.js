@@ -214,7 +214,6 @@ export function getSelect(userFilmSearched) {
             const response = await axios.get(`${baseUrl}3/${selectMovie}${apiKey}&query=${userFilmSearched}`)
             dispatch(actionGetSelectOk(response.data.results))
 
-            console.log(response.data.results, "responsedataresults")
         } catch (error) {
             dispatch(actionGetSelectFail(error))
         }
@@ -246,7 +245,6 @@ export function getDramaFilms() {
        try {
             const response = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=18`);
             dispatch(actionGetDramaFilmsOk(response.data.results))
-            console.log(response)
         } catch (error) {
             dispatch(actionGetDramaFilmsFail(error))
         }
@@ -260,7 +258,6 @@ export function getFilmsDoc() {
         try {
             const response = await axios.get(`${baseUrl}3/discover/movie${apiKey}&with_genres=99`);
             dispatch(actionGetFilmsDocOk(response.data.results))
-            console.log(response.data.results)
         } catch (error) {
             dispatch(actionGetFilmsDocFail(error))
         }
@@ -300,7 +297,6 @@ export function getRomanceFilms() {
         try {
             const response = await axios.get(`${baseUrl}3/movie/${filmId}${apiKey}`)
             dispatch(actionGetSingleFilmOk(response.data))
-            console.log(response.data)
         } catch (error) {
             dispatch(actionGetSingleFilmFail(error))
         }

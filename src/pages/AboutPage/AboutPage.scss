@@ -2,6 +2,10 @@
 
 .about {
 
+    &__h1 {
+        margin-top: 0;
+    }
+
     &__ul {
         display: flex;
         flex-wrap: wrap;
@@ -13,6 +17,8 @@
         padding: 0 2em 2em;
         background: whitesmoke;
         color: black;
+        box-shadow: 0px 5px 0px #00e08e;
+        border-radius: .5em;
     }
 }
 

@@ -29,21 +29,21 @@ const AllFilmsComponent = () => {
 
 /** --DOBLE MAPEO PARA UNIR PELÍCULAS DE DIFERENTES GÉNEROS DE UNA SOLA VEZ*/
 
- return(  <section className='section__wrapper'>
-  {films?.map((array)=> 
-       <div key={array.id} className='wrapper'> 
-
-         {array?.map((film)=>  
-    
-            <div key={film.id} className='section__wrapper__div'> 
-                  <Link to={`/film/${film.id}`}> <img  className="section__wrapper__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title}></img></Link>
-                    <div className='section__wrapper__div__title'>
-                      <h4 className='section__wrapper__div__title__h4'>{film.title} </h4>
-                    </div>
-             </div>)}
-        </div>   )}
-        
-            </section>)
+ return( 
+  <section className='section__wrapper'>
+    {films?.map((array)=> 
+      <div key={array.id} className='wrapper'> 
+        {array?.map((film)=>  
+          <div key={film.id} className='section__wrapper__div'>
+            <div className='overlay'>
+              <Link to={`/film/${film.id}`}> <img className="section__wrapper__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title}></img></Link>
+            </div>
+            <div className='section__wrapper__div__title'>
+              <h4 className='section__wrapper__div__title__h4'>{film.title}</h4>
+            </div>
+          </div>)}
+      </div>)}
+  </section>)
 }};
 
 AllFilmsComponent.propTypes = {};

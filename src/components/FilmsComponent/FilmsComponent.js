@@ -61,7 +61,7 @@ if(loadingDramaFilms){
                  <li className="div__section__ul__li__div">  
 
                    <Link to={`/film/${film.id}`}>        
-                      <img className="div__section__ul__li__div__img" src={`${urlImage}${film.poster_path}`}  alt={film.title} ></img>
+                      <img className="drama-films__img img" src={`${urlImage}${film.poster_path}`}  alt={film.title} >qqqqqqqqq</img>
                    </Link>  
                       <h4 className="section__div__wrapper__title">{film.original_title}</h4>
                   </li>

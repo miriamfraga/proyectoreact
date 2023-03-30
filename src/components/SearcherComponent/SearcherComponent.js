@@ -27,7 +27,7 @@ const SearcherComponent = () => {
    dispatch(getSelect(searchMovie))
     setSearchMovie('')
   }
-console.log(searched, "soy searched")
+
 //    CREAR INPUT Y BINDEAR EL VALOR DE BÚSQUEDA CON LOS NOMBRES DE LAS PELÍCULAS 
 //    CREAR EVENTO DE ONCHANGE PARA CUANDO SE VAYA METIENDO CADA LETRA VAYA SUGIRIENDO UNA PELI Y 
 //    OBTENCIÓN DEL VALOR CON E.T.VALUE  
@@ -43,7 +43,6 @@ return (
 
 
 return   (<div className="div__searcher">
-{console.log(searched)}
      <div className="box">
         <form name="box__search">
             <input type="text" className="box__search__input" name="txt"  value={searchMovie}  onChange={e=>setSearchMovie(e.target.value)}   placeholder="find..."></input>

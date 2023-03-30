@@ -13,6 +13,9 @@ import { doLogin } from '../../store/auth/actions';
 /* IMPORT NAVIGATE */
 import { Navigate } from 'react-router-dom';
 
+/* IMPORT LOGO */
+import logo from '../../assets/images/filmshub-logo-monster.svg';
+
 const LoginComponent = () => {
 
   const {user} = useSelector((state)=> state.AuthReducer);
@@ -31,20 +34,27 @@ const LoginComponent = () => {
   }
 
   return (
-    <div id="login">
-      <h2>Iniciar sesión</h2>
-      <form>
-        <div>
-        <label htmlFor="username">Usuario:</label>
-          <input placeholder='username' type="email" value={username} onChange={(e) => setUsername(e.target.value)} required />
+    <section className='section__login section'>
+      <form className='form'>
+        <header>
+          <h2 className='form__title h2'>Iniciar sesión</h2>
+          <img src={logo} className='footer__logo img' alt='logo'/>
+        </header>
+        <div className="form__container">
+          <div className='form__group'>
+            <input className='form__input' value={username} placeholder=' ' id='username' type="email" onChange={(e) => setUsername(e.target.value)} required />
+            <label className='form__label'>Usuario:</label>
+            <span className='form__line'></span>
+          </div>
+          <div className='form__group'>
+            <input className='form__input' value={password} placeholder=' ' id='password' type='password' onChange={(e) => setPassword(e.target.value)} required />
+            <label className='form__label'>Contraseña:</label>
+            <span className='form__line'></span>
+          </div>
+          <input className='form__submit' onClick={tryLogin} type="submit"/>
         </div>
-        <div>
-        <label htmlFor="password">Contraseña:</label>
-          <input placeholder='password' type='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
-        </div>
-        <button onClick={tryLogin} type="submit">Iniciar sesión</button>
       </form>
-    </div>
+    </section>
   )
 }
 

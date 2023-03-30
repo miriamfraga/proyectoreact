@@ -59,7 +59,7 @@ const PopularFilmsComponent = () => {
               <li className='popular-films__li li'>
                   <div className='overlay'>
                   <Link to={`/film/${film.id}`}>
-                    <img src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} alt={film.title}/>
+                    <img className='popular-films__img img' src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} alt={film.title}/>
                   </Link>
                   </div>
                 <h4 className='popular-films__h4 h4'>{film.title}</h4>
