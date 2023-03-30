@@ -51,7 +51,7 @@ const LoginComponent = () => {
             <label className='form__label'>Contraseña:</label>
             <span className='form__line'></span>
           </div>
-          <input className='form__submit' onClick={tryLogin} type="submit"/>
+         <input className='form__submit' onClick={tryLogin} type="submit"/>
         </div>
       </form>
     </section>
