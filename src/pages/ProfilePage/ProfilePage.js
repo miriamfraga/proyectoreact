@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from "react-redux";
+import { Link } from 'react-router-dom';
 import kateMillet from '../../assets/images/kateMillet.jpeg'
 import './ProfilePage.scss';
 
@@ -28,7 +29,7 @@ const ProfilePage = () => {
         </div>
    </div>
    <div className='div__image'>
-   <img  className='div__image__user' src={kateMillet} alt="photo user"></img>
+   <Link to="/favourites" ><img  className='div__image__user' src={kateMillet} alt="photo user" ></img></Link>
    </div>
 
       </> 
