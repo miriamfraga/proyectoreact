@@ -10,7 +10,7 @@ import { faTimeline, faHeart, faPeopleGroup, faHandFist } from '@fortawesome/fre
 const AboutPage = () => {
   return (
     <>
-      <h1 className='about__h1 h1'>Sobre FIlmsHub</h1>
+      <h1 className='about__h1 h1'>Sobre FilmsHub</h1>
       <section className='section__about section'>
         <ul className='about__ul ul'>
           <li className='about__li li'>
