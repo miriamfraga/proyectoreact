@@ -1,21 +1,18 @@
 
-.wrapper{
+.wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     // background-color: blue;
- 
-    
 }
 
-.section__wrapper{
+.section__wrapper {
     // background-color: red;
     display:flex;
     justify-content: center;
     margin: 0 auto;
 
-
-    &__div{
+    &__div {
         // background-color: pink;
         display:flex;
         padding-inline-start: 0;
@@ -23,22 +20,35 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 1%;
-    &__img{
-         width: 80%;
-        
+
+        &__img {
+            width: 80%;
+            transition: transform 0.3s;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    
+        &__title {
+            display:flex;
+            flex-wrap: nowrap;
+            text-align: justify;
+            position: relative;
+            //  background-color: aqua;
+        }
     }
-        &__title{
-         display:flex;
-         flex-wrap: nowrap;
-         text-align: justify;
-         position: relative;
-        //  background-color: aqua;
-      
-        }
-        &__h4{
-          
-            
-        }
 }
 
+/* -- START POPULARFILMSCOMPONENT STYLES -- */
+
+.popular-films {
+
+    &__img {
+        transition: transform 0.3s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }
+
+/* -- END POPULARFILMSCOMPONENT STYLES -- */
