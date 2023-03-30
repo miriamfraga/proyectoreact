@@ -8,6 +8,17 @@ import { useState } from 'react';
 const SingleFilmComponent = () => { 
 
   const {user} = useSelector((state) => state.AuthReducer);
+  const {film, loadingSingle}= useSelector((state)=>state.FilmsReducer)
+//   const [list, setList] = useState('')
+
+ // FUNCIÓN PARA AÑADIR A FAVORITOS
+
+function addToFavoritesList(film){
+  let favorites = []
+  favorites.push(film)
+  console.log(film, "film")
+  console.log(favorites, "favorites")
+}
 
 // -- FUNCIÓN PARA VOLVER ATRÁS
 
@@ -17,7 +28,6 @@ const SingleFilmComponent = () => {
  }
 
 
-  const {film, loadingSingle}= useSelector((state)=>state.FilmsReducer)
   const urlImage = "https://image.tmdb.org/t/p/original/";
   if(loadingSingle){
     return (
@@ -57,7 +67,7 @@ const SingleFilmComponent = () => {
           {user && user.id? "" : <button  className="section__detail__div__button__watch"><Link className='section__detail__div__button__watch__link' to="/login">Ver ahora ▷</Link></button>  }
           {user && user.id?  <button  className="section__detail__div__button__watch"><Link className='section__detail__div__button__watch__link' to="/notFound">Ver ahora</Link></button> : ""}   
           <button className="section__detail__div__button__watch" onClick={goBack}> GO BACK</button>
-
+         <button onClick={(e)=>addToFavoritesList(film)} > fav </button>
           </div>
 
   </section>)
