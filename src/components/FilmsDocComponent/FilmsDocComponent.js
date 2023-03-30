@@ -61,7 +61,7 @@ const FilmsDocComponent = () => {
             <li className="div__section__ul__li__div">   
             <Link to={`/film/${doc.id}`}>
               <div className='overlay'>
-                <img className="div__section__ul__li__div__img" src={`${urlImage}${doc.poster_path}`}  alt={doc.title} ></img>
+                <img className="doc-movies__img img" src={`${urlImage}${doc.poster_path}`}  alt={doc.title} ></img>
               </div>   
             </Link> 
             <h4 className="section__div__wrapper__title">{doc.original_title}</h4>

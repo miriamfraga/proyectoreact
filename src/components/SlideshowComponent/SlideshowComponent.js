@@ -28,9 +28,10 @@ const SlideshowComponent = () => {
         onSlideChange={() => console.log('slide change')}
       >
         <SwiperSlide><img src='https://static.filmin.es/images/wildcard/1838/1/highlighted_0_3_2400x1350.jpg' alt=''/></SwiperSlide>
-        <SwiperSlide><img src='https://static.filmin.es/images/media/5217/1/still_0_3_2400x1350.webp' alt=''/></SwiperSlide>
         <SwiperSlide><img src='https://static.filmin.es/images/media/16381/2/still_0_3_2400x1350.webp' alt=''/></SwiperSlide>
-        <SwiperSlide><img src='' alt=''/></SwiperSlide>
+        <SwiperSlide><img src='https://static.filmin.es/images/media/39898/7/still_0_3_2400x1350.webp' alt=''/></SwiperSlide>
+        <SwiperSlide><img src='https://static.filmin.es/images/media/39491/2/still_3_3_2400x1350.webp' alt=''/></SwiperSlide>
+        <SwiperSlide><img src='https://static.filmin.es/images/media/40952/12/still_0_3_2400x1350.webp' alt=''/></SwiperSlide>
       </Swiper>
     </section>
   )
