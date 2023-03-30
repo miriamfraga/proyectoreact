@@ -18,7 +18,7 @@ const AboutPage = () => {
             <hr/>
             <p className='about__p p'><b>Nuestra empresa</b> se fundó en el año 2005 
             por dos amigos que compartían una visión común: crear una empresa 
-            innovadora y ética que ofreciera soluciones de calidad a sus clientes. 
+            innovadora y ética que ofreciera soluciones de calidad a sus clientes.
             Desde entonces, hemos trabajado duro para consolidarnos como líderes 
             en nuestro sector y hemos logrado establecer una amplia red de contactos 
             y colaboradores en todo el mundo. Estamos muy orgullosos de lo que hemos 
