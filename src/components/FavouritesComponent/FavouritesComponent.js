@@ -6,7 +6,7 @@ import { getDb } from '../../store/favourites/actions';
 
 const FavouritesComponent = () => { 
 
-const {favouriteFilm, watchLaterFilm} = useSelector((state)=>state.FavouriteReducer);
+// const {favouriteFilm, watchLaterFilm} = useSelector((state)=>state.FavouriteReducer);
 
 const {dbList, loadingList} = useSelector((state)=>state.FavouriteReducer);
 const shoot = useDispatch()
@@ -20,13 +20,15 @@ if(loadingList){
 } else { 
 
  return (  <section className="section__lists">
-    {dbList.data && dbList.data?.map((list)=>{
+    {dbList.data && dbList.data?.map((list)=>{ 
+      return( 
       <div>
-        <img src={list.poster_path} alt={list.title}></img>
         <h2>titulo:{list.original_title} </h2>
-      </div>
+        {console.log(list.adult, "list")}
+        <h1>{list.adult} </h1>
+      </div>)
     })}
-{console.log(dbList.data, "dbList.data")}
+{console.log(dbList.data, "dbList.dataDDDD")}
   </section>)}
 };
 

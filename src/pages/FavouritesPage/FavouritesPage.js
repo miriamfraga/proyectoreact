@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import FavouritesComponent from '../../components/FavouritesComponent/FavouritesComponent'
 
 const FavouritesPage = () => {
