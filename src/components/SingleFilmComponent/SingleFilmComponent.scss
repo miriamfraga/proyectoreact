@@ -19,13 +19,32 @@
             user-select: none;
             border: none;
             border-radius: 0.25rem;
-            font-weight: 600;
             text-transform: uppercase;
-
+            margin-right:1%;
+             
             &:hover{
                 background-color: #68fac5;
             }
-
+            &__fav{
+                background-color: #68fac5;;
+                font-size: 1.25rem;
+                padding: 0 1.5rem;
+                height: 2.5rem;
+                user-select: none;
+                border: none;
+                border-radius: 0.25rem;
+                font-weight: 600;
+                // top: 10%;
+                position: relative;
+                left: 90%;
+                bottom: 70%;
+                z-index: 0;
+                &:hover{
+                    scale: 1.1;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
             &__link{
                 font-weight: 600px;
                 text-transform: uppercase;

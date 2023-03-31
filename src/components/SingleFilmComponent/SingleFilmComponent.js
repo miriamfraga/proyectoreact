@@ -8,13 +8,14 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addFavourite } from '../../store/favourites/actions';
 import { watchLater } from '../../store/favourites/actions';
+
 const SingleFilmComponent = () => { 
 
 const {user} = useSelector((state) => state.AuthReducer);
 const {film, loadingSingle}= useSelector((state)=>state.FilmsReducer);
 
 // IMPORTO LA FAVOURITE FILM
-const {favouriteFilm, watchLaterFilm} = useSelector((state)=>state.FavouriteReducer);
+// const {favouriteFilm, watchLaterFilm} = useSelector((state)=>state.FavouriteReducer);
 
 // 
 // CREO UN ESTADO PARA SETEAR EL VALOR DE LA PELI FAV CADA VEZ
@@ -41,12 +42,12 @@ const tryWatchLater = (e)=>{
 }
 
 // -- FUNCIÓN PARA REDIRECCIONAR A FAVORITOS
-if (favouriteFilm && favouriteFilm.id){
-  return (<Navigate to="/favourites" replace></Navigate>)
-}
-if (watchLaterFilm && watchLaterFilm.id){
-  return (<Navigate to="/favourites" replace></Navigate>)
-}
+// if (favouriteFilm && favouriteFilm.id){
+  // return (<Navigate to="/favourites" replace></Navigate>)
+// }
+// if (watchLaterFilm && watchLaterFilm.id){
+  // return (<Navigate to="/favourites" replace></Navigate>)
+// }
 
   const urlImage = "https://image.tmdb.org/t/p/original/";
   if(loadingSingle){
@@ -66,7 +67,8 @@ if (watchLaterFilm && watchLaterFilm.id){
            <h4 className="section__detail__div__wrapper__popularity">{film.popularity}</h4>
            <img  className="section__detail__div__img__pstr" src={`${urlImage}${film.poster_path}`} alt={film.title}></img>
         </div>
-          
+
+           <button className="section__detail__div__button__watch__fav" onClick={(e)=>addFav(film)}  onChange={(e)=>setFilmFav(e.target.value)} value={filmFav} > ♡ </button>
            <h1 className="section__detail__div__wrapper__title"> {film.original_title}  </h1>
            <h4 className="section__detail__div__wrapper__ovvw">{film.overview} </h4>
            <h3 className="section__detail__div__wrapper__year">{film.release_date}</h3>
@@ -79,9 +81,9 @@ if (watchLaterFilm && watchLaterFilm.id){
      {/* { -- METER EL ICONO DE REPRODUCIR EL VÍDEO } */}
           {user && user.id? "" : <button  className="section__detail__div__button__watch"><Link className='section__detail__div__button__watch__link' to="/login">Ver ahora ▷</Link></button>  }
           {user && user.id?  <button  className="section__detail__div__button__watch"><Link className='section__detail__div__button__watch__link' to="/notFound">Ver ahora</Link></button> : ""}   
+          <button className="section__detail__div__button__watch" onClick={(e)=>tryWatchLater(film)} onChange={(e)=>setFilmLater(e.target.value)} value={filmLater}> 🕒</button>
+        
           <button className="section__detail__div__button__watch" onClick={goBack}> GO BACK</button>
-          <button onClick={(e)=>addFav(film)}  onChange={(e)=>setFilmFav(e.target.value)} value={filmFav} > ❤️ </button>
-          <button onClick={(e)=>tryWatchLater(film)} onChange={(e)=>setFilmLater(e.target.value)} value={filmLater}> 🕒</button>
           </div>
 
   </section>)

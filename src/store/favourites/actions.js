@@ -33,7 +33,7 @@ export function addFavourite(userFavouriteFilm) {
         try {
             dispatch(actionAddFavourites(userFavouriteFilm))
             const response = await axios.post('http://localhost:3000/favourites', userFavouriteFilm)
-            // console.log(response, "response add fav")
+            console.log(response, "response add fav")
             dispatch(actionAddFavouritesOk(response.data))
             } catch (error) {
                 dispatch(actionAddFavouritesFail(error))
