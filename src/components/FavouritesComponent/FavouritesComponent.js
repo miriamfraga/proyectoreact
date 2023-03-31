@@ -10,11 +10,11 @@ const {favouriteFilm} = useSelector((state)=>state.FavouriteReducer);
 const [title, setTitle] = useState('');
 const [image, setImage] = useState('');
 
-const dispatch = useDispatch();
+// const dispatch = useDispatch();
 
-const tryToAdd = () => {
-  dispatch(actionAddFavourites({original_title: title, poster_path: image}));
-}
+// const tryToAdd = () => {
+  // dispatch(actionAddFavourites({original_title: title, poster_path: image}));
+// }
 
 
  return (  <div className={styles.FavouritesComponent}>

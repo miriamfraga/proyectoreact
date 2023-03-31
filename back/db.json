@@ -1,5 +1,368 @@
 {
-"favourites": [
-    
-]
-} 
+  "favourites": [
+    {
+      "adult": false,
+      "backdrop_path": "/wVxlmhk4OS2eCr0wTQcM4zJ20ml.jpg",
+      "belongs_to_collection": {
+        "id": 328247,
+        "name": "Magic Mike Collection",
+        "poster_path": "/rHoc6Br9DUKxF7Gs7e9pTxmbTib.jpg",
+        "backdrop_path": "/39cdZf56Umy8t2LN5hrwkDhM0dw.jpg"
+      },
+      "budget": 45000000,
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10749,
+          "name": "Romance"
+        }
+      ],
+      "homepage": "https://www.magicmikeslastdancemovie.com/",
+      "id": 906221,
+      "imdb_id": "tt16280138",
+      "original_language": "en",
+      "original_title": "Magic Mike's Last Dance",
+      "overview": "Mike Lane takes to the stage again after a lengthy hiatus, following a business deal that went bust, leaving him broke and taking bartender gigs in Florida. For what he hopes will be one last hurrah, Mike heads to London with a wealthy socialite who lures him with an offer he can’t refuse… and an agenda all her own. With everything on the line, once Mike discovers what she truly has in mind, will he—and the roster of hot new dancers he’ll have to whip into shape—be able to pull it off?",
+      "popularity": 357.715,
+      "poster_path": "/5C9rerMqV1X0jnRdbbsM1BswVI2.jpg",
+      "production_companies": [
+        {
+          "id": 174,
+          "logo_path": "/IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png",
+          "name": "Warner Bros. Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 8073,
+          "logo_path": null,
+          "name": "Nick Wechsler Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 57743,
+          "logo_path": "/fon2TaTj6WU8kVfAmlHsvpPdt2p.png",
+          "name": "Free Association",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2023-02-09",
+      "revenue": 52000000,
+      "runtime": 112,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "The final tease.",
+      "title": "Magic Mike's Last Dance",
+      "video": false,
+      "vote_average": 7.224,
+      "vote_count": 194
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uJAR8HJCNgedmgMz0G8EzGCoZAE.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 10749,
+          "name": "Romance"
+        }
+      ],
+      "homepage": "https://www.primevideo.com/dp/amzn1.dv.gti.893c0553-b517-46ab-92da-86fae154be6e",
+      "id": 1098239,
+      "imdb_id": "tt26919159",
+      "original_language": "es",
+      "original_title": "Tangos, tequilas, y algunas mentiras",
+      "overview": "Lu has a perfect life. Or so she pretends to have. She meets the handsome, short-tempered Argentinian, Diego, who is on a visit to Mexico, and she is confident to get him head over heels in love with her. In order to win a wager with her friends, her life will take a turn when she does the impossible to win him over, including taking a trip to Argentina to look for him.",
+      "popularity": 263.55,
+      "poster_path": "/o9S6GW9MGyQZpRpPj65k0RIqYNL.jpg",
+      "production_companies": [
+        {
+          "id": 133016,
+          "logo_path": null,
+          "name": "Traziende Films",
+          "origin_country": ""
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "MX",
+          "name": "Mexico"
+        }
+      ],
+      "release_date": "2023-03-09",
+      "revenue": 0,
+      "runtime": 114,
+      "spoken_languages": [
+        {
+          "english_name": "Spanish",
+          "iso_639_1": "es",
+          "name": "Español"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Tango, Tequila and Some Lies",
+      "video": false,
+      "vote_average": 7.556,
+      "vote_count": 36
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/1stUIsjawROZxjiCMtqqXqgfZWC.jpg",
+      "belongs_to_collection": {
+        "id": 1241,
+        "name": "Harry Potter Collection",
+        "poster_path": "/eVPs2Y0LyvTLZn6AP5Z6O2rtiGB.jpg",
+        "backdrop_path": "/4gV0rKUjB1nLUdZB4zIltLvNZZr.jpg"
+      },
+      "budget": 100000000,
+      "genres": [
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 14,
+          "name": "Fantasy"
+        }
+      ],
+      "homepage": "https://www.warnerbros.com/movies/harry-potter-and-chamber-secrets/",
+      "id": 672,
+      "imdb_id": "tt0295297",
+      "original_language": "en",
+      "original_title": "Harry Potter and the Chamber of Secrets",
+      "overview": "Cars fly, trees fight back, and a mysterious house-elf comes to warn Harry Potter at the start of his second year at Hogwarts. Adventure and danger await when bloody writing on a wall announces: The Chamber Of Secrets Has Been Opened. To save Hogwarts will require all of Harry, Ron and Hermione’s magical abilities and courage.",
+      "popularity": 202.392,
+      "poster_path": "/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg",
+      "production_companies": [
+        {
+          "id": 174,
+          "logo_path": "/IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png",
+          "name": "Warner Bros. Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 437,
+          "logo_path": "/nu20mtwbEIhUNnQ5NXVhHsNknZj.png",
+          "name": "Heyday Films",
+          "origin_country": "GB"
+        },
+        {
+          "id": 436,
+          "logo_path": "/A7WCkG3F0NFvjGCwUnclpGdIu9E.png",
+          "name": "1492 Pictures",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "GB",
+          "name": "United Kingdom"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2002-11-13",
+      "revenue": 876688482,
+      "runtime": 161,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Hogwarts is back in session.",
+      "title": "Harry Potter and the Chamber of Secrets",
+      "video": false,
+      "vote_average": 7.722,
+      "vote_count": 19658
+    }
+  ],
+  "later": [
+    {
+      "adult": false,
+      "backdrop_path": "/wVxlmhk4OS2eCr0wTQcM4zJ20ml.jpg",
+      "belongs_to_collection": {
+        "id": 328247,
+        "name": "Magic Mike Collection",
+        "poster_path": "/rHoc6Br9DUKxF7Gs7e9pTxmbTib.jpg",
+        "backdrop_path": "/39cdZf56Umy8t2LN5hrwkDhM0dw.jpg"
+      },
+      "budget": 45000000,
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10749,
+          "name": "Romance"
+        }
+      ],
+      "homepage": "https://www.magicmikeslastdancemovie.com/",
+      "id": 906221,
+      "imdb_id": "tt16280138",
+      "original_language": "en",
+      "original_title": "Magic Mike's Last Dance",
+      "overview": "Mike Lane takes to the stage again after a lengthy hiatus, following a business deal that went bust, leaving him broke and taking bartender gigs in Florida. For what he hopes will be one last hurrah, Mike heads to London with a wealthy socialite who lures him with an offer he can’t refuse… and an agenda all her own. With everything on the line, once Mike discovers what she truly has in mind, will he—and the roster of hot new dancers he’ll have to whip into shape—be able to pull it off?",
+      "popularity": 357.715,
+      "poster_path": "/5C9rerMqV1X0jnRdbbsM1BswVI2.jpg",
+      "production_companies": [
+        {
+          "id": 174,
+          "logo_path": "/IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png",
+          "name": "Warner Bros. Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 8073,
+          "logo_path": null,
+          "name": "Nick Wechsler Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 57743,
+          "logo_path": "/fon2TaTj6WU8kVfAmlHsvpPdt2p.png",
+          "name": "Free Association",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2023-02-09",
+      "revenue": 52000000,
+      "runtime": 112,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "The final tease.",
+      "title": "Magic Mike's Last Dance",
+      "video": false,
+      "vote_average": 7.224,
+      "vote_count": 194
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7QabKu8tizoqy8qCZJXljdSpP4A.jpg",
+      "belongs_to_collection": {
+        "id": 185103,
+        "name": "Hotel Transylvania Collection",
+        "poster_path": "/9nR1xIcDo84gbbNZeFb9NCZYTdw.jpg",
+        "backdrop_path": "/5MJt6g7k9gADQH4xHn5mOEMa3Vr.jpg"
+      },
+      "budget": 0,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        },
+        {
+          "id": 14,
+          "name": "Fantasy"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        }
+      ],
+      "homepage": "https://www.hoteltmovie.com",
+      "id": 585083,
+      "imdb_id": "tt9848626",
+      "original_language": "en",
+      "original_title": "Hotel Transylvania: Transformania",
+      "overview": "When Van Helsing's mysterious invention, the \"Monsterfication Ray,\" goes haywire, Drac and his monster pals are all transformed into humans, and Johnny becomes a monster. In their new mismatched bodies, Drac and Johnny must team up and race across the globe to find a cure before it's too late, and before they drive each other crazy.",
+      "popularity": 166.037,
+      "poster_path": "/teCy1egGQa0y8ULJvlrDHQKnxBL.jpg",
+      "production_companies": [
+        {
+          "id": 2251,
+          "logo_path": "/6l16UFSkZ1oPpyBYaILgffFZlTc.png",
+          "name": "Sony Pictures Animation",
+          "origin_country": "US"
+        },
+        {
+          "id": 34,
+          "logo_path": "/GagSvqWlyPdkFHMfQ3pNq6ix9P.png",
+          "name": "Sony Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 2531,
+          "logo_path": "/9MfCJ2G6Nrf9yyRj4tAgPmMiDcn.png",
+          "name": "MRC",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2022-02-25",
+      "revenue": 0,
+      "runtime": 87,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Change can be scary.",
+      "title": "Hotel Transylvania: Transformania",
+      "video": false,
+      "vote_average": 7.06,
+      "vote_count": 1460
+    }
+  ]
+}

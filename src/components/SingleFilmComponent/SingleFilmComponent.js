@@ -7,42 +7,46 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addFavourite } from '../../store/favourites/actions';
+import { watchLater } from '../../store/favourites/actions';
 const SingleFilmComponent = () => { 
 
-  const {user} = useSelector((state) => state.AuthReducer);
-  const {film, loadingSingle}= useSelector((state)=>state.FilmsReducer)
-//   const [list, setList] = useState('')
-const {favouriteFilm} = useSelector((state)=>state.FavouriteReducer);
-const [title, setTitle] = useState('');
-const [image, setImage] = useState('');
+const {user} = useSelector((state) => state.AuthReducer);
+const {film, loadingSingle}= useSelector((state)=>state.FilmsReducer);
+
+// IMPORTO LA FAVOURITE FILM
+const {favouriteFilm, watchLaterFilm} = useSelector((state)=>state.FavouriteReducer);
+
+// 
+// CREO UN ESTADO PARA SETEAR EL VALOR DE LA PELI FAV CADA VEZ
+const [filmFav, setFilmFav] = useState({})
+const [filmLater, setFilmLater] = useState({})
+
+
+// FUNCIÓN PARA VOLVER UNA PAG ATRÁS
 const navigate = useNavigate();
 const goBack = () => {
  navigate(-1);
 }
 const dispatch = useDispatch();
 
-const tryToAdd = () => {
-  dispatch(addFavourite({original_title: title, poster_path: image}));
-}
- // FUNCIÓN PARA AÑADIR A FAVORITOS
-// function addToFavoritesList(film){
-  // let favourites = []
-  // favourites.push(film)
-  
-  // console.log(film, "film")
-  // console.log(favourites, "favourites")
-// }
+// CON ESTA FUNCIÓN CAPTURO EL VALOR DEL EVENTO Y DISPARO CON EL CLICK DEL BOTÓN LA FUNCIÓN QUE VA A METERLA EN EL JSON DE FAVORITAS
 
-// -- FUNCIÓN PARA VOLVER ATRÁS
+const addFav = (e) => {
+  dispatch(addFavourite(e));
+
+}
+// ESTA FUNCIÓN CAPTURA EL VALOR DEL EVENTO Y DISPARA CON EL BOTÓN LA FUNCIÓN DE AÑADIR A VER MÁS TARDE
+const tryWatchLater = (e)=>{
+  dispatch(watchLater(e));
+}
+
+// -- FUNCIÓN PARA REDIRECCIONAR A FAVORITOS
 if (favouriteFilm && favouriteFilm.id){
   return (<Navigate to="/favourites" replace></Navigate>)
 }
-
- 
- 
- 
- 
-
+if (watchLaterFilm && watchLaterFilm.id){
+  return (<Navigate to="/favourites" replace></Navigate>)
+}
 
   const urlImage = "https://image.tmdb.org/t/p/original/";
   if(loadingSingle){
@@ -51,14 +55,7 @@ if (favouriteFilm && favouriteFilm.id){
     )
   }else {
 
-  
 
-      //    IMAGEN APAISADA DE LA PELI
-      //    POPULARIDAD DE LA PELI
-      //    IMAGEN POSTER 
-      //    TITULO DE LA PELI 
-      //    RESEÑA DE LA PELI       
-      //    AÑO DE LANZAMIENTO 
 
   
   return(<section className="section__detail">
@@ -83,8 +80,8 @@ if (favouriteFilm && favouriteFilm.id){
           {user && user.id? "" : <button  className="section__detail__div__button__watch"><Link className='section__detail__div__button__watch__link' to="/login">Ver ahora ▷</Link></button>  }
           {user && user.id?  <button  className="section__detail__div__button__watch"><Link className='section__detail__div__button__watch__link' to="/notFound">Ver ahora</Link></button> : ""}   
           <button className="section__detail__div__button__watch" onClick={goBack}> GO BACK</button>
-          <button onClick={(e)=>tryToAdd(film)}  onChange={(e)=>[setImage(e.target.value), setTitle(e.target.value)]} > fav </button>
-         {/* {console.log(favourites)} */}
+          <button onClick={(e)=>addFav(film)}  onChange={(e)=>setFilmFav(e.target.value)} value={filmFav} > ❤️ </button>
+          <button onClick={(e)=>tryWatchLater(film)} onChange={(e)=>setFilmLater(e.target.value)} value={filmLater}> 🕒</button>
           </div>
 
   </section>)
