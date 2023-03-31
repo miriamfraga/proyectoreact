@@ -1,31 +1,47 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import  './SingleFilmComponent.scss';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addFavourite } from '../../store/favourites/actions';
 const SingleFilmComponent = () => { 
 
   const {user} = useSelector((state) => state.AuthReducer);
   const {film, loadingSingle}= useSelector((state)=>state.FilmsReducer)
 //   const [list, setList] = useState('')
-
- // FUNCIÓN PARA AÑADIR A FAVORITOS
-
-function addToFavoritesList(film){
-  let favorites = []
-  favorites.push(film)
-  console.log(film, "film")
-  console.log(favorites, "favorites")
+const {favouriteFilm} = useSelector((state)=>state.FavouriteReducer);
+const [title, setTitle] = useState('');
+const [image, setImage] = useState('');
+const navigate = useNavigate();
+const goBack = () => {
+ navigate(-1);
 }
+const dispatch = useDispatch();
+
+const tryToAdd = () => {
+  dispatch(addFavourite({original_title: title, poster_path: image}));
+}
+ // FUNCIÓN PARA AÑADIR A FAVORITOS
+// function addToFavoritesList(film){
+  // let favourites = []
+  // favourites.push(film)
+  
+  // console.log(film, "film")
+  // console.log(favourites, "favourites")
+// }
 
 // -- FUNCIÓN PARA VOLVER ATRÁS
+if (favouriteFilm && favouriteFilm.id){
+  return (<Navigate to="/favourites" replace></Navigate>)
+}
 
- const navigate = useNavigate();
- const goBack = () => {
-  navigate(-1);
- }
+ 
+ 
+ 
+ 
 
 
   const urlImage = "https://image.tmdb.org/t/p/original/";
@@ -67,7 +83,8 @@ function addToFavoritesList(film){
           {user && user.id? "" : <button  className="section__detail__div__button__watch"><Link className='section__detail__div__button__watch__link' to="/login">Ver ahora ▷</Link></button>  }
           {user && user.id?  <button  className="section__detail__div__button__watch"><Link className='section__detail__div__button__watch__link' to="/notFound">Ver ahora</Link></button> : ""}   
           <button className="section__detail__div__button__watch" onClick={goBack}> GO BACK</button>
-         <button onClick={(e)=>addToFavoritesList(film)} > fav </button>
+          <button onClick={(e)=>tryToAdd(film)}  onChange={(e)=>[setImage(e.target.value), setTitle(e.target.value)]} > fav </button>
+         {/* {console.log(favourites)} */}
           </div>
 
   </section>)

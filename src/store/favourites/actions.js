@@ -24,15 +24,17 @@ export function actionAddFavouritesFail(error){
     }
 }
 
-export const addFavourite(userFavouriteFilm){
+// ESTA FUNCIÓN VA A AÑADIR EN FAVORITOS UNA PELI EN JSON
+//userFavouriteFilm es la peli que recibe el click para ser añadida a favoritos
+export function addFavourite(userFavouriteFilm) {
     return async (dispatch)=> {
         try {
             dispatch(actionAddFavourites(userFavouriteFilm))
-           
             const response = await axios.post(' http://localhost:3000/favourites', userFavouriteFilm)
-        dispatch(actionAddFavouritesOk(response.data))
-        } catch (error) {
-            dispatch(actionAddFavouritesFail(error))
-        }
+            console.log(response)
+            dispatch(actionAddFavouritesOk(response.data))
+            } catch (error) {
+                dispatch(actionAddFavouritesFail(error))
+            }
     }
 }
