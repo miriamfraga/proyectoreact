@@ -51,7 +51,7 @@ return   (<div className="div__searcher">
      </div>
 
 <section className='section__results'> 
-<Link to="/search"> <button className="section__detail__div__button__watch" onClick={searcher} >SEARCH 🍿</button></Link>
+<Link to="/search"> <button className="section__detail__div__button__watch1" onClick={searcher} >SEARCH 🍿</button></Link>
  
  
  {/* --CONDICIONALES PARA QUE NO MUESTRE LAS PELÍCULAS QUE NO TENGAN IMÁGENES-- */}

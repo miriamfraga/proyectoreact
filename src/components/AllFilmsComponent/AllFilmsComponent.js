@@ -10,7 +10,7 @@ const AllFilmsComponent = () => {
 
 
   const dispatch  = useDispatch()
-  const {films,film, loadingFilms}= useSelector((state)=>state.FilmsReducer)
+  const {films, loadingFilms}= useSelector((state)=>state.FilmsReducer)
   const urlImage = "https://image.tmdb.org/t/p/w500/"
 
   useEffect(()=>{

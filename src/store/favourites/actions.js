@@ -2,11 +2,13 @@
 
 import {
     ADD_FAVOURITES, ADD_FAVOURITES_OK, ADD_FAVOURITES_FAIL,
-    WATCH_LATER, WATCH_LATER_OK, WATCH_LATER_FAIL
+    WATCH_LATER, WATCH_LATER_OK, WATCH_LATER_FAIL,
+    GET_DB, GET_DB_OK, GET_DB_FAIL
 } from './actionTypes'
 
 import axios from 'axios'
 
+const dbUrl = 'http://localhost:3000/favourites'
 export function actionAddFavourites(favouriteData){
     return{
         type: ADD_FAVOURITES,
@@ -69,6 +71,40 @@ export function watchLater(userWatchLaterFilm){
             dispatch(actionWatchLaterOK(response.data))
         } catch (error) {
             dispatch(actionWatchLaterFail(error))
+        }
+    }
+}
+
+
+export function actionGetDb(){
+    return{
+        type: GET_DB
+       
+    }
+}
+export function actionGetDbOk(dbList){
+    return{
+        type: GET_DB_OK,
+        payload: dbList
+    }
+}
+export function actionGetDbFail(error){
+    return{
+        type: GET_DB_FAIL,
+        payload:error
+    }
+}
+
+// ESTA FUNCIÓN VA A PEDIR A LA DB QUE RENDERICE LAS PELIS GUARDADAS  EN FAVORITOS  Y EN VER MÁS TARDE EN JSON
+export function getDb(){
+    return async (dispatch)=> {
+        dispatch(actionGetDb())
+        try {
+            const response = await axios.get(dbUrl)
+            dispatch(actionGetDbOk(response))
+            console.log(response.data, "response del get")
+        } catch (error) {
+            dispatch(actionGetDbFail(error))
         }
     }
 }

@@ -1,11 +1,14 @@
 import {
     ADD_FAVOURITES,ADD_FAVOURITES_OK, ADD_FAVOURITES_FAIL,
-     WATCH_LATER, WATCH_LATER_OK, WATCH_LATER_FAIL
+     WATCH_LATER, WATCH_LATER_OK, WATCH_LATER_FAIL, 
+     GET_DB, GET_DB_OK, GET_DB_FAIL
 } from './actionTypes'
 
 const initialState = {
     favouriteFilm: {},
     watchLaterFilm: {},
+    dbList: [],
+    loadingList: false,
     loadingLater: false,
     loadingFavourite: false, 
     error: {
@@ -32,6 +35,15 @@ export default function FavouriteReducer(state = initialState, action){
             break
          case WATCH_LATER_FAIL:
             state = {...state, loadingLater: false, watchLaterFilm: {}, error: {message: action.payload}}
+            break
+         case GET_DB:
+            state = {...state, loadingList: true}
+            break
+         case GET_DB_OK:
+            state = {...state, loadingList: false, dbList: action.payload}
+            break
+         case GET_DB_FAIL:
+            state = {...state, loadingList: false, dbList: [], error: {message: action.payload}}
             break
 
          default:

@@ -1,14 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import FavouritesComponent from '../../components/FavouritesComponent/FavouritesComponent'
+
 const FavouritesPage = () => {
- 
-  return (
+
+
+   return( 
     <div>
+     <h1>FAVOURITES PAGE</h1>
+    <h2> Favourites List: </h2>
     <FavouritesComponent></FavouritesComponent>
-      <h1>FAVOURITES PAGE</h1>
-      <h2> Favourites List: </h2>
-    </div>
-  )
-}
+     
+    
+    </div> )
+  }
 
 export default FavouritesPage

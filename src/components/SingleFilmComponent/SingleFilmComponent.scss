@@ -10,21 +10,40 @@
  &__div{
 
      position: relative;
-
+     &__button__watch1{
+        background-color: #02ffa1;
+        font-size: 1.25rem;
+        padding: 0 1rem;
+        height: 2.5rem;
+        user-select: none;
+        border: none;
+        border-radius: 0.25rem;
+        text-transform: uppercase;
+    }
     &__button__watch{
             background-color: #02ffa1;
             font-size: 1.25rem;
-            padding: 0 1.5rem;
+            padding: 0 1rem;
             height: 2.5rem;
             user-select: none;
             border: none;
             border-radius: 0.25rem;
             text-transform: uppercase;
-            margin-right:1%;
+             margin-right:1%;
              
             &:hover{
                 background-color: #68fac5;
             }
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
             &__fav{
                 background-color: #68fac5;;
                 font-size: 1.25rem;
