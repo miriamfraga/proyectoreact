@@ -3,12 +3,16 @@
 import {    
     ADD_FAVOURITES, ADD_FAVOURITES_OK, ADD_FAVOURITES_FAIL,
     WATCH_LATER, WATCH_LATER_OK, WATCH_LATER_FAIL,
-    GET_DB, GET_DB_OK, GET_DB_FAIL
+    GET_DB, GET_DB_OK, GET_DB_FAIL, 
+    GET_DBL, GET_DBL_OK, GET_DBL_FAIL, 
+ 
+
 } from './actionTypes'
 
 import axios from 'axios'
 
 const dbUrl = 'http://localhost:3000/favourites'
+const dbUrlLater = 'http://localhost:3000/later '
 export function actionAddFavourites(favouriteData){
     return{
         type: ADD_FAVOURITES,
@@ -105,6 +109,39 @@ export function getDb(){
             console.log(response.data, "response del get")
         } catch (error) {
             dispatch(actionGetDbFail(error))
+        }
+    }
+}
+
+// ESTA FUNCIÓN PIDE EL RENDERIZADO DE VER MÁS TARDE 
+export function actionGetLater(laterData){
+    return{
+        type: GET_DBL,
+        payload:laterData
+    }
+}
+export function actionGetLaterOk(later){
+    return{
+        type: GET_DBL_OK,
+        payload:later
+    }
+}
+export function actionGetLaterFail(error){
+    return{
+        type: GET_DBL_FAIL,
+        payload:error
+    }
+}
+
+export function getDbl(){
+    return async (dispatch)=> {
+        dispatch(actionGetLater())
+        try {
+            const response = await axios.get(dbUrlLater)
+            dispatch(actionGetLaterOk(response))
+            console.log(response.data, "response del get")
+        } catch (error) {
+            dispatch(actionGetLaterFail(error))
         }
     }
 }

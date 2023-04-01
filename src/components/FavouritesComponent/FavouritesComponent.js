@@ -22,12 +22,13 @@ if(loadingList){
  return (  <section className="section__lists">
     {dbList.data && dbList.data?.map((list)=>{ 
       return( 
+
       <div className='section__lists__div'>
-        {/* <h3 className='section__lists__h3'>titulo:{list.original_title} </h3> */}
-        <img className='section__lists__div__img' src={`${urlImage}${list.poster_path}`} alt= {list.original_title}></img>
+       <img className='section__lists__div__img' src={`${urlImage}${list.poster_path}`} alt= {list.original_title}></img>
       
       </div>)
     })}
+
   </section>)}
 };
 
