@@ -1,12 +1,30 @@
 /* -- START SINGLEFILMCOMPONENT STYLES -- */
 .section__detail{
   display:flex;
-  position: relative;
+ align-items: center;
 
   &__first{
     display:flex;
     flex-direction: column;
-}
+    // justify-content: center;
+
+    &__img{
+        display:flex;
+
+        &__h4{
+            display:flex;
+        }
+        &__h3{
+            display:flex;
+        }
+        &__h1{
+            display:flex;
+            
+        }
+
+    }
+
+}  
  &__div{
 
      position: relative;
@@ -35,15 +53,6 @@
                 background-color: #68fac5;
             }
            
-           
-           
-           
-           
-           
-           
-           
-           
-           
             &__fav{
                 background-color: #68fac5;;
                 font-size: 1.25rem;
@@ -53,10 +62,7 @@
                 border: none;
                 border-radius: 0.25rem;
                 font-weight: 600;
-                // top: 10%;
                 position: relative;
-                left: 90%;
-                bottom: 70%;
                 z-index: 0;
                 &:hover{
                     scale: 1.1;
@@ -80,10 +86,10 @@
 
     }
     &__img__pstr{
-         position:absolute;
-         width: 10%;
-         right: 90%;
-         bottom: 25%;
+           position:absolute;
+           width: 10%;
+           top:0%;
+      
          &:hover{
             scale: 1.4;
             transform: translateX(18px);
@@ -92,21 +98,19 @@
  
     
     &__wrapper__popularity{
-         position: absolute;
         display: flex;
-        background-color: rgb(14, 13, 13);
+        background-color: rgb(38, 38, 38);
         border-radius: 20px;
-        bottom: 45%;
-        left: 2%;
+        width: 6%;
+        padding: 1%;
+        align-items: center;
+        justify-content: center;
     }
     &__wrapper__year{
-       position: absolute;
        padding: 10px;
        padding: 1%;
        border-radius: 20px;
        border: 2px solid rgb(95, 95, 95);
-       bottom: 22%;
-       left: 11%;
        display: flex;
     }
     &__wrapper__ovvw{
@@ -114,29 +118,21 @@
         top:0;
     }
     &__wrapper__title{
-        position: absolute;
-        bottom: 41%;
-        left: 11%;
+      
         color:#02ffa1
     }
    
-
  }
 
 }
 .div__wrapper__genre{
 
      display:flex;
-     margin: 2%;
-     width: 190px;
      flex-direction: row;
-     position: relative;
-     bottom: 30%;
-     background-color: #42ffba;
-     left: 10%;
+   
     &__h4{
-        position: absolute;
-
+       
+       margin: 1%;
         }
     }
 
