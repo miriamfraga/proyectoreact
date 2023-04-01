@@ -51,21 +51,21 @@ return   (<div className="div__searcher">
      </div>
 
 <section className='section__results'> 
-<Link to="/search"> <button className="section__detail__div__button__watch" onClick={searcher} >SEARCH 🍿</button></Link>
+<Link to="/search"> <button className="section__detail__div__button__watch1" onClick={searcher} >SEARCH 🍿</button></Link>
  
  
  {/* --CONDICIONALES PARA QUE NO MUESTRE LAS PELÍCULAS QUE NO TENGAN IMÁGENES-- */}
   {searched && searched?.map((film)=>
   <div key={film.id} className='div__searcher__div'> 
-   <Link to={`/film/${film.id}`}> <div> 
+   <Link to={`/film/${film.id}`}> <div className='div__imgs'> 
   {`${urlImage}${film.backdrop_path}` !== `${urlImage}null` && `${urlImage1}null`  ?
   <h3 className='div__searcher__div__title'>{film.title} </h3> &&
  
-   <img src={`${urlImage}${film.backdrop_path}`} alt={film.title} ></img>: '' } 
+   <img className='div__searcher__div__img' src={`${urlImage}${film.backdrop_path}`} alt={film.title} ></img>: '' } 
 
    {`${urlImage}${film.poster_path}` !== `${urlImage}null` && `${urlImage1}null`  ?
    <h3 className='div__searcher__div__title'>{film.title} </h3> &&
-  <img src={`${urlImage}${film.poster_path}`} alt={film.title} ></img>: '' } 
+  <img className='div__searcher__div__img' src={`${urlImage}${film.poster_path}`} alt={film.title} ></img>: '' } 
 
  
   </div></Link></div>

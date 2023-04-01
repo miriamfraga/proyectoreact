@@ -1,0 +1,29 @@
+.section__lists{
+    display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ 
+    // background-color: rgb(78, 248, 186);
+    &__h3{
+        text-align:center;
+        display:flex;
+        flex-wrap: wrap;
+    }
+    &__div{
+    flex-direction: row;
+     width: calc(10%);
+     margin: 1%;
+    object-fit: cover;
+     
+    &__img{
+        transition: transform 0.3s;
+        &:hover {
+           transform: scale(1.2);
+        }
+    } 
+    }
+
+
+
+
+}

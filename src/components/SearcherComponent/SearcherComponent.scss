@@ -2,14 +2,36 @@
 
 .div__searcher{
     display:flex;
+flex-direction: column;
+   
     &__div{
         margin: 1em;
+        display: flex;
+        flex-direction: row;
+        width: calc(21%);
+       
+        &__img{
+           width: 300px;
+           height: 350px;
+           margin: 2%;
+           object-fit: cover;
+           display: flex;
+           flex-wrap: nowrap;
+           transition: transform 0.3s;
+           &:hover {
+               transform: scale(1.2);
+           }
+        }
         &__title{
             color:white
         }
     }
 }
-
+.div__imgs{
+    display:flex;
+    flex-direction: row;
+    max-width: 100%;
+}
 .section__results{
     display:flex;
     flex-direction: column;
