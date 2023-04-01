@@ -1,0 +1,17 @@
+.section__lists{
+    display:flex;
+    // background-color: pink;
+    background-color: rgb(78, 248, 186);
+    &__h3{
+        text-align:center;
+      
+        display:flex;
+        flex-wrap: wrap;
+    }
+    &__div{
+   
+     width: calc(20%);
+     margin: 1%;
+     height: 20%;
+    }
+}
