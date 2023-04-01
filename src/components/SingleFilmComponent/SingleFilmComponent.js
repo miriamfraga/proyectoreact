@@ -65,22 +65,32 @@ const tryWatchLater = (e)=>{
   
   return(<section className="section__detail">
         <div className='section__detail__div'>
-           <img className="section__detail__div__img__bg" src={`${urlImage}${film.backdrop_path}`} alt={film.title}></img>
-
-        <div className='section__detail__first'> 
-           <h4 className="section__detail__div__wrapper__popularity">{film.popularity}</h4>
-           <img  className="section__detail__div__img__pstr" src={`${urlImage}${film.poster_path}`} alt={film.title}></img>
-        </div>
-
-           <button className="section__detail__div__button__watch__fav" onClick={(e)=>addFav(film)}  onChange={(e)=>setFilmFav(e.target.value)} value={filmFav} > <FontAwesomeIcon icon={faThumbsUp} /> </button>
-           <h1 className="section__detail__div__wrapper__title"> {film.original_title}  </h1>
-           <h4 className="section__detail__div__wrapper__ovvw">{film.overview} </h4>
-           <h3 className="section__detail__div__wrapper__year">{film.release_date}</h3>
-
+              <img className="section__detail__div__img__bg" src={`${urlImage}${film.backdrop_path}`} alt={film.title}></img>
+              <div className='section__detail__first__img'>    
+                 <img  className="section__detail__div__img__pstr" src={`${urlImage}${film.poster_path}`} alt={film.title}></img>
+               </div>
+             
+              <div className='section__detail__first'> 
+                 <h4 className="section__detail__div__wrapper__popularity">{film.popularity}</h4>
+              </div>
+             
+             
+             
+              <button className="section__detail__div__button__watch__fav" onClick={(e)=>addFav(film)}  onChange={(e)=>setFilmFav(e.target.value)} value={filmFav} > <FontAwesomeIcon icon={faThumbsUp} /> </button>
+              <div className="section__detail__first__img__h1">
+                <h1 className="section__detail__div__wrapper__title"> {film.original_title}  </h1>
+              </div>
+              <div className="section__detail__first__img__h4"> 
+                <h4 className="section__detail__div__wrapper__ovvw">{film.overview} </h4>
+              </div>
+              <div className="section__detail__first__img__h3"> 
+                <h3 className="section__detail__div__wrapper__year">{film.release_date}</h3>
+              </div>
       {/* // -- AQUÍ ESTAN LOS NOMBRES DE LOS GÉNEROS EN UN ARRAY Y SOLO FUNCIONAN UNA VEZ QUE LA PAG SE HA CARGADO-- */}
-             {film.genres?.map((genre)=> <div className="div__wrapper__genre" key={genre.id}> 
-             <h4 className='div__wrapper__genre__h4' key={genre.id} > { genre.name } </h4> </div> )}
-  
+             <div className='div__wrapper__genre'>
+              {film.genres?.map((genre)=> 
+             <h4 className='div__wrapper__genre__h4' key={genre.id} > { genre.name } </h4>  )}
+             </div>
   
      {/* { -- METER EL ICONO DE REPRODUCIR EL VÍDEO } */}
           {user && user.id? "" : <button  className="section__detail__div__button__watch"><Link className='section__detail__div__button__watch__link' to="/login">Ver ahora <FontAwesomeIcon icon={faCirclePlay} /></Link></button>  }
