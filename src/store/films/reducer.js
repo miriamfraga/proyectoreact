@@ -25,6 +25,9 @@ const initialState = {
     loadingDocs: false,
     loadingRomanceFilms: false,
     loadingSingle: false,
+    error: {
+        message: "",
+      },
 }
 
 export default function FilmsReducer(state = initialState, action) {
