@@ -1,0 +1,23 @@
+/* -- START NAVIGATIONCOMPONENT STYLES -- */
+
+.main-nav {
+    
+    &__ul {
+        display: flex;
+        gap: 1.5em;
+    }
+
+    &__link {
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        color: white;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+            color: #02ffa1;
+        }
+    }
+}
+
+/* -- END NAVIGATIONCOMPONENT STYLES -- */

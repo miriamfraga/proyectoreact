@@ -1,0 +1,139 @@
+/* -- START SINGLEFILMCOMPONENT STYLES -- */
+.section__detail{
+  display:flex;
+ align-items: center;
+
+  &__first{
+    display:flex;
+    flex-direction: column;
+    // justify-content: center;
+
+    &__img{
+        display:flex;
+
+        &__h4{
+            display:flex;
+        }
+        &__h3{
+            display:flex;
+        }
+        &__h1{
+            display:flex;
+            
+        }
+
+    }
+
+}  
+ &__div{
+
+     position: relative;
+     &__button__watch1{
+        background-color: #02ffa1;
+        font-size: 1.25rem;
+        padding: 0 1rem;
+        height: 2.5rem;
+        user-select: none;
+        border: none;
+        border-radius: 0.25rem;
+        text-transform: uppercase;
+    }
+    &__button__watch{
+            background-color: #02ffa1;
+            font-size: 1.25rem;
+            padding: 0 1rem;
+            height: 2.5rem;
+            user-select: none;
+            border: none;
+            border-radius: 0.25rem;
+            text-transform: uppercase;
+             margin-right:1%;
+             
+            &:hover{
+                background-color: #68fac5;
+            }
+           
+            &__fav{
+                background-color: #68fac5;;
+                font-size: 1.25rem;
+                padding: 0 1.5rem;
+                height: 2.5rem;
+                user-select: none;
+                border: none;
+                border-radius: 0.25rem;
+                font-weight: 600;
+                position: relative;
+                z-index: 0;
+                &:hover{
+                    scale: 1.1;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+            &__link{
+                font-weight: 600px;
+                text-transform: uppercase;
+                font-size: 1.25rem;
+                color: black;
+
+            }
+    }
+    &__img__bg{
+     position: relative;
+     &:hover{
+        filter:sepia(50%);
+     }
+
+    }
+    &__img__pstr{
+           position:absolute;
+           width: 10%;
+           top:0%;
+      
+         &:hover{
+            scale: 1.4;
+            transform: translateX(18px);
+         }
+    }
+ 
+    
+    &__wrapper__popularity{
+        display: flex;
+        background-color: rgb(38, 38, 38);
+        border-radius: 20px;
+        width: 6%;
+        padding: 1%;
+        align-items: center;
+        justify-content: center;
+    }
+    &__wrapper__year{
+       padding: 10px;
+       padding: 1%;
+       border-radius: 20px;
+       border: 2px solid rgb(95, 95, 95);
+       display: flex;
+    }
+    &__wrapper__ovvw{
+        position: relative;
+        top:0;
+    }
+    &__wrapper__title{
+      
+        color:#02ffa1
+    }
+   
+ }
+
+}
+.div__wrapper__genre{
+
+     display:flex;
+     flex-direction: row;
+   
+    &__h4{
+       
+       margin: 1%;
+        }
+    }
+
+/* -- END SINGLEFILMCOMPONENT STYLES -- */

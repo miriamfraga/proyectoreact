@@ -1,10 +1,19 @@
-import React from 'react'
+import React from 'react';
+import PopularFilmsComponent from '../../components/PopularFilmsComponent/PopularFilmsComponent';
+import RomanceFilmsComponent from '../../components/RomanceFilmsComponent/RomanceFilmsComponent';
+import FilmsDocComponent from '../../components/FilmsDocComponent/FilmsDocComponent';
+import SlideshowComponent from '../../components/SlideshowComponent/SlideshowComponent';
+import SearcherComponent from '../../components/SearcherComponent/SearcherComponent';
 
 const HomePage = () => {
+
   return (
-    <div>
-      
-    </div>
+    <>
+    <SlideshowComponent></SlideshowComponent>
+    <PopularFilmsComponent></PopularFilmsComponent>
+    <RomanceFilmsComponent></RomanceFilmsComponent>
+    <FilmsDocComponent></FilmsDocComponent>
+    </>
   )
 }
 

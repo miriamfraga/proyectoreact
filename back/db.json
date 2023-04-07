@@ -1,0 +1,683 @@
+{
+  "favourites": [
+    {
+      "adult": false,
+      "backdrop_path": "/A37vYfRVQhHjcIT3bgV1cCqVVfF.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedy"
+        }
+      ],
+      "homepage": "",
+      "id": 120026,
+      "imdb_id": "tt1260944",
+      "original_language": "fr",
+      "original_title": "Les résultats du féminisme",
+      "overview": "It's a society in which gender roles are switched. Will men stand to be unequal?",
+      "popularity": 2.066,
+      "poster_path": "/7ZzPyv5g4ohGcPbbmkF2ZYMe02N.jpg",
+      "production_companies": [
+        {
+          "id": 9,
+          "logo_path": "/nda3dTUYdDrJ6rZqBpYvY865aDv.png",
+          "name": "Gaumont",
+          "origin_country": "FR"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "FR",
+          "name": "France"
+        }
+      ],
+      "release_date": "1906-01-01",
+      "revenue": 0,
+      "runtime": 7,
+      "spoken_languages": [
+        {
+          "english_name": "French",
+          "iso_639_1": "fr",
+          "name": "Français"
+        },
+        {
+          "english_name": "No Language",
+          "iso_639_1": "xx",
+          "name": "No Language"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "The Consequences of Feminism",
+      "video": false,
+      "vote_average": 6.233,
+      "vote_count": 43
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [],
+      "homepage": "",
+      "id": 603689,
+      "imdb_id": "tt0160554",
+      "original_language": "en",
+      "original_title": "My Feminism",
+      "overview": "In an era of antifeminist backlash, this articulate documentary by the makers of Thank God I’m a Lesbian forcefully reminds us that the revolution continues. Powerful interviews with feminist leaders including bell hooks, Gloria Steinem, and Urvsahi Vaid are intercut with documentary sequences to engagingly explore the past and present status of the women’s movement. Discussing the unique contributions of second wave feminism, they explore their racial, economic and ideological differences and shared vision of achieving equality for women. Anessential component of women’s studies curricula, My Feminism introduces feminism’s key themeswhile exposing the cultural fears underlying lesbian baiting, backlash, and political extremism.",
+      "popularity": 0.6,
+      "poster_path": "/gkR7DNlqUFAAwDpkY1730r8aoEx.jpg",
+      "production_companies": [],
+      "production_countries": [],
+      "release_date": "1997-10-17",
+      "revenue": 0,
+      "runtime": 55,
+      "spoken_languages": [],
+      "status": "Released",
+      "tagline": "",
+      "title": "My Feminism",
+      "video": false,
+      "vote_average": 10,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/69ROnf6s9605ek6Bm7DdY4pX8EL.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 99,
+          "name": "Documentary"
+        },
+        {
+          "id": 36,
+          "name": "History"
+        },
+        {
+          "id": 10770,
+          "name": "TV Movie"
+        }
+      ],
+      "homepage": "https://www.agatfilms-exnihilo.com/en/catalogue/films/dangerous-liaisons-a-feminist-manifesto",
+      "id": 865508,
+      "imdb_id": "tt15475778",
+      "original_language": "fr",
+      "original_title": "Les Liaisons scandaleuses",
+      "overview": "Well known for its exploration of seduction and revenge, the “Dangerous Liaisons” by Choderlos de Laclos caused a scandal from its first publication in 1782. Despite – or because of the scandal – the book was a top-seller. Since then, it stood the test of time. Combining eras, continents and people, the novel is adapted around the world. Marvelous tool for reflection on the female condition, social satire announcing the Revolution, remarkable work on the conflicting nature of love but also of the gender war, consecration of the power of the words, a libertine manual… “Dangerous Liaisons” is all of these at once.",
+      "popularity": 1.401,
+      "poster_path": "/jMgj7GyYTsB8q73KOWvErJXQdot.jpg",
+      "production_companies": [
+        {
+          "id": 207,
+          "logo_path": "/uskenzq65wJe0cT0D8StQI3hJnO.png",
+          "name": "Agat Films & Cie / Ex Nihilo",
+          "origin_country": "FR"
+        },
+        {
+          "id": 201,
+          "logo_path": "/6UIpEURdjnmcJPwgTDRzVRuwADr.png",
+          "name": "ARTE",
+          "origin_country": "FR"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "FR",
+          "name": "France"
+        }
+      ],
+      "release_date": "2021-09-15",
+      "revenue": 0,
+      "runtime": 52,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        },
+        {
+          "english_name": "French",
+          "iso_639_1": "fr",
+          "name": "Français"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Dangerous Liaisons: A Feminist Manifesto?",
+      "video": false,
+      "vote_average": 7,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/kqTm2qxPwbOspuNleAaVwvlG0LP.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10749,
+          "name": "Romance"
+        }
+      ],
+      "homepage": "https://www.defa-stiftung.de/en/films/film-search/biologie/",
+      "id": 423836,
+      "imdb_id": "tt0099140",
+      "original_language": "de",
+      "original_title": "Biologie!",
+      "overview": "A small town shortly before the end of the GDR: 15-year-old Ulla lives with her mother in a dilapidated old building where not even the electricity works properly. Economy of scarcity and national bankruptcy are visible everywhere. Only higher party comrades live in the lap of luxury. When Ulla meets Winfried after a summer bathing trip, the two fall in love. Winfried is the son of an influential general director and owns things from West Germany that others only dream of: a computer, a games console, a walkman. On an excursion with her biology class, the high school student discovers that a dacha is being built in the middle of the nature reserve and the creek has been dammed. Winfried's father turns out to be the culprit, but the mayor is on his side. Ulla rebels against this environmental destruction connected to political corruption and organizes a protest. Her activism not only endangers her own future, but also her first great love.",
+      "popularity": 0.855,
+      "poster_path": "/g74cozOSaqVKEa1vYrqYS3s3yKH.jpg",
+      "production_companies": [
+        {
+          "id": 602,
+          "logo_path": "/pVsXRFbYVDe5BhsATCAh1rt5F0k.png",
+          "name": "DEFA",
+          "origin_country": "DE"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "DE",
+          "name": "Germany"
+        },
+        {
+          "iso_3166_1": "XG",
+          "name": "East Germany"
+        }
+      ],
+      "release_date": "1990-10-12",
+      "revenue": 0,
+      "runtime": 89,
+      "spoken_languages": [
+        {
+          "english_name": "German",
+          "iso_639_1": "de",
+          "name": "Deutsch"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Biology!",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    }
+  ],
+  "later": [
+    {
+      "adult": false,
+      "backdrop_path": "/rshlQ6LfPRSWFhpGL4s5ZkIPR51.jpg",
+      "belongs_to_collection": null,
+      "budget": 40000000,
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 36,
+          "name": "History"
+        },
+        {
+          "id": 10752,
+          "name": "War"
+        }
+      ],
+      "homepage": "https://www.lionsgate.com/movies/hacksaw-ridge",
+      "id": 324786,
+      "imdb_id": "tt2119532",
+      "original_language": "en",
+      "original_title": "Hacksaw Ridge",
+      "overview": "WWII American Army Medic Desmond T. Doss, who served during the Battle of Okinawa, refuses to kill people and becomes the first Conscientious Objector in American history to receive the Congressional Medal of Honor.",
+      "popularity": 181.85,
+      "poster_path": "/jhWbYeUNOA5zAb6ufK6pXQFXqTX.jpg",
+      "production_companies": [
+        {
+          "id": 50481,
+          "logo_path": "/mBgGtJJQ9aOpKBnuKXM75kHYT6D.png",
+          "name": "Vendian Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 491,
+          "logo_path": "/rUp0lLKa1pr4UsPm8fgzmnNGxtq.png",
+          "name": "Summit Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 10246,
+          "logo_path": "/rREvQNWAxkDfY9CDn2c5YxEMPdP.png",
+          "name": "Cross Creek Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 7437,
+          "logo_path": "/e5CcgFrdlxMUwlsS72si8q1yHBr.png",
+          "name": "IM Global",
+          "origin_country": "US"
+        },
+        {
+          "id": 7584,
+          "logo_path": "/eGkfvvyf4fJTvBUR1xt1669IPA3.png",
+          "name": "Screen Australia",
+          "origin_country": "AU"
+        },
+        {
+          "id": 10951,
+          "logo_path": "/48iBaAPgtoirf3C25HNkL9MhWfj.png",
+          "name": "Screen NSW",
+          "origin_country": "AU"
+        },
+        {
+          "id": 455,
+          "logo_path": null,
+          "name": "Permut Presentations",
+          "origin_country": "US"
+        },
+        {
+          "id": 8915,
+          "logo_path": null,
+          "name": "Pandemonium",
+          "origin_country": ""
+        },
+        {
+          "id": 13241,
+          "logo_path": null,
+          "name": "Demarest Films",
+          "origin_country": ""
+        },
+        {
+          "id": 1632,
+          "logo_path": "/cisLn1YAUuptXVBa0xjq7ST9cH0.png",
+          "name": "Lionsgate",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "AU",
+          "name": "Australia"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2016-10-07",
+      "revenue": 175302354,
+      "runtime": 139,
+      "spoken_languages": [
+        {
+          "english_name": "Japanese",
+          "iso_639_1": "ja",
+          "name": "日本語"
+        },
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "One of the greatest heroes in American history never fired a bullet.",
+      "title": "Hacksaw Ridge",
+      "video": false,
+      "vote_average": 8.19,
+      "vote_count": 12085
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        }
+      ],
+      "homepage": "",
+      "id": 717704,
+      "imdb_id": "tt4832530",
+      "original_language": "en",
+      "original_title": "Biology Made Un-easy",
+      "overview": "A close look at the microscopic world that surrounds us. Within each basic human interaction there is something strange festering under the surface, and we just need a good magnifying glass and a strong stomach to see it. This film was made as part of the fourth edition of the NFB's Hothouse apprenticeship.",
+      "popularity": 0.6,
+      "poster_path": "/aAxSD9qcIyE60mg5dQp0d0WH66n.jpg",
+      "production_companies": [
+        {
+          "id": 10473,
+          "logo_path": "/lMUDQZVtg8On4PAW5XFQPaQy6UK.png",
+          "name": "ONF | NFB",
+          "origin_country": "CA"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "CA",
+          "name": "Canada"
+        }
+      ],
+      "release_date": "2007-01-01",
+      "revenue": 0,
+      "runtime": 1,
+      "spoken_languages": [],
+      "status": "Released",
+      "tagline": "",
+      "title": "Biology Made Un-easy",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9j0V8Fw5u4cv9cESUXUmTGmpXU5.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        }
+      ],
+      "homepage": "https://www.disneyplus.com/movies/the-simpsons-meet-the-bocellis-in-feliz-navidad/5BFYPqllnyb4",
+      "id": 1058732,
+      "imdb_id": "tt24082346",
+      "original_language": "en",
+      "original_title": "The Simpsons Meet the Bocellis in Feliz Navidad",
+      "overview": "This Christmas, Homer surprises Marge with the ultimate gift: an unforgettable performance from Italian opera superstar Andrea Bocelli and his children Matteo and Virginia.",
+      "popularity": 360.936,
+      "poster_path": "/9rJFKvYvSyQ3HoTl1gcU55FOzYi.jpg",
+      "production_companies": [
+        {
+          "id": 18,
+          "logo_path": "/uqhagSwM7NAkQWVCQhKTyoqF8XH.png",
+          "name": "Gracie Films",
+          "origin_country": "US"
+        },
+        {
+          "id": 21659,
+          "logo_path": "/uJhjhEJEPDoCSSOci44tYoe5BjZ.png",
+          "name": "20th Television",
+          "origin_country": "US"
+        },
+        {
+          "id": 154887,
+          "logo_path": "/gJjT3IRR7q2lNKomwFkExULRmGU.png",
+          "name": "20th Television Animation",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2022-12-15",
+      "revenue": 0,
+      "runtime": 4,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "The Simpsons Meet the Bocellis in Feliz Navidad",
+      "video": false,
+      "vote_average": 5.227,
+      "vote_count": 33
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/1zgob2Z8xVE3RZUgOKnHKcVPzOE.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 14,
+          "name": "Fantasy"
+        }
+      ],
+      "homepage": "https://www.disneyplus.com/movies/the-simpsons-in-plusaversary/5SbHJwYWYey8",
+      "id": 877183,
+      "imdb_id": "tt15829632",
+      "original_language": "en",
+      "original_title": "The Simpsons in Plusaversary",
+      "overview": "The Simpsons host a Disney+ Day party and everyone is on the list… except Homer. With friends from across the service and music fit for a Disney Princess, Plusaversary is Springfield's event of the year.",
+      "popularity": 67.735,
+      "poster_path": "/p5jzbffrXuBTjsiwrQ3aOMTrvCj.jpg",
+      "production_companies": [
+        {
+          "id": 18,
+          "logo_path": "/uqhagSwM7NAkQWVCQhKTyoqF8XH.png",
+          "name": "Gracie Films",
+          "origin_country": "US"
+        },
+        {
+          "id": 21659,
+          "logo_path": "/uJhjhEJEPDoCSSOci44tYoe5BjZ.png",
+          "name": "20th Television",
+          "origin_country": "US"
+        },
+        {
+          "id": 154887,
+          "logo_path": "/gJjT3IRR7q2lNKomwFkExULRmGU.png",
+          "name": "20th Television Animation",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2021-11-12",
+      "revenue": 0,
+      "runtime": 4,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        },
+        {
+          "english_name": "Esperanto",
+          "iso_639_1": "eo",
+          "name": "Esperanto"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "The Simpsons in Plusaversary",
+      "video": false,
+      "vote_average": 6.57,
+      "vote_count": 356
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/jBUukLTCmXL79itbmK5JtQvImYS.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        }
+      ],
+      "homepage": "https://www.disneyplus.com/movies/the-good-the-bart-and-the-loki/6xwLjCmfTVem",
+      "id": 846214,
+      "imdb_id": "tt14957270",
+      "original_language": "en",
+      "original_title": "The Simpsons: The Good, the Bart, and the Loki",
+      "overview": "Loki is banished from Asgard once again and must face his toughest opponents yet: the Simpsons and Springfield’s mightiest heroes. The God of Mischief teams up with Bart Simpson in the ultimate crossover event paying tribute to the Marvel Cinematic Universe of superheroes and villains.",
+      "popularity": 41.631,
+      "poster_path": "/rtMdtzywcAGOrF6t8fbxJBqpdcq.jpg",
+      "production_companies": [
+        {
+          "id": 18,
+          "logo_path": "/uqhagSwM7NAkQWVCQhKTyoqF8XH.png",
+          "name": "Gracie Films",
+          "origin_country": "US"
+        },
+        {
+          "id": 21659,
+          "logo_path": "/uJhjhEJEPDoCSSOci44tYoe5BjZ.png",
+          "name": "20th Television",
+          "origin_country": "US"
+        },
+        {
+          "id": 80853,
+          "logo_path": null,
+          "name": "AKOM Production Company",
+          "origin_country": "KR"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2021-07-07",
+      "revenue": 0,
+      "runtime": 6,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "The Simpsons: The Good, the Bart, and the Loki",
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 594
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bSteszE2HtIj7xwvE2dxkJ54FG2.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        }
+      ],
+      "homepage": "",
+      "id": 383887,
+      "imdb_id": "",
+      "original_language": "en",
+      "original_title": "The Simpsons: Viva Los Simpsons",
+      "overview": "Homer at the bat / Springfield / Homie the clown / Viva Ned Flanders",
+      "popularity": 9.373,
+      "poster_path": "/AdiiEmjoyrvuHRER4KYtc8Memjs.jpg",
+      "production_companies": [],
+      "production_countries": [],
+      "release_date": "2005-01-01",
+      "revenue": 0,
+      "runtime": 88,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "When the chips are down, bet on the Simpsons.",
+      "title": "The Simpsons: Viva Los Simpsons",
+      "video": true,
+      "vote_average": 7.6,
+      "vote_count": 19
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/76vQNZR7QnTOP9AbOfZBV7XZKiO.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        }
+      ],
+      "homepage": "",
+      "id": 488706,
+      "imdb_id": null,
+      "original_language": "en",
+      "original_title": "The Simpsons - On Your Marks, Get Set, D'oh!",
+      "overview": "",
+      "popularity": 8.751,
+      "poster_path": "/3ToFXOdSvo7ux1q5QBxCzeEEuxm.jpg",
+      "production_companies": [
+        {
+          "id": 1556,
+          "logo_path": "/31h94rG9hzjprXoYNy3L1ErUya2.png",
+          "name": "20th Century Fox Television",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2004-08-16",
+      "revenue": 0,
+      "runtime": 0,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "The Simpsons - On Your Marks, Get Set, D'oh!",
+      "video": true,
+      "vote_average": 8.1,
+      "vote_count": 5
+    }
+  ]
+}

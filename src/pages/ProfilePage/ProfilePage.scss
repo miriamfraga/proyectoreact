@@ -1,0 +1,44 @@
+.div__image{
+    // background-color: aquamarine;
+    width: 50%;
+
+    &__user{
+           border-radius: 100%;
+           object-fit: cover;
+           color: #000;
+           width: 280px;
+           height: 280px;
+           padding: 3%;
+           display: flex;
+
+}
+        &:hover{
+            background-color: #02ffa1;
+            background-size: cover;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 100%;
+            object-fit: cover;
+            width: 280px;
+            height: 280px;
+
+
+        }
+
+    }
+
+
+.div{
+    display:flex;
+    // background-color: aqua;
+    flex-direction:column;
+
+    &__info{
+        display:flex;
+        flex-direction: column;
+        // background-color: pink;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 1%;
+       
+    }
+}

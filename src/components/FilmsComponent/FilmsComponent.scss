@@ -1,0 +1,14 @@
+/* -- START DRAMAFILMSCOMPONENT STYLES -- */
+
+.drama-films {
+
+    &__img {
+        transition: transform 0.3s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+/* -- END DRAMAFILMSCOMPONENT STYLES -- */
+
