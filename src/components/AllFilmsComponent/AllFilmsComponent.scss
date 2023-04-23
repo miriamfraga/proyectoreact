@@ -4,6 +4,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 auto;
+    justify-content: center;
+   
 }
 
 .section__wrapper {
@@ -11,6 +13,7 @@
     justify-content: center;
     margin: 0 auto;
     align-items: space-around;
+    flex-wrap: nowrap;
 
     &__div {
         display:flex;
@@ -19,9 +22,10 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 1%;
+        align-items: center;
 
         &__img {
-            width: 280px;
+            width: 300px;
             height: 400px;
             transition: transform 0.3s;
             &:hover {
@@ -34,7 +38,7 @@
             flex-wrap: nowrap;
             text-align:left;
             height: 90px;
-            align-items: center;
+             align-items:flex-start;
         }
     }
 }
