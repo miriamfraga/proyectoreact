@@ -11,8 +11,8 @@ import {
 
 import axios from 'axios'
 
-const dbUrl = 'http://localhost:3000/favourites'
-const dbUrlLater = 'http://localhost:3000/later '
+const dbUrl = 'https://backfilmshub.vercel.app/favourites'
+const dbUrlLater = 'https://backfilmshub.vercel.app/later '
 export function actionAddFavourites(favouriteData){
     return{
         type: ADD_FAVOURITES,
